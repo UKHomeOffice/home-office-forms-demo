@@ -1,6 +1,6 @@
-const sections = require('../../../../../example/apps/example-app/sections/summary-data-sections.js');
-const pages = require('../../../../../example/apps/example-app/translations/src/en/pages.json');
-const fields = require('../../../../../example/apps/example-app/fields.js');
+const sections = require('../../../../../example/apps/demo/sections/summary-data-sections.js');
+const pages = require('../../../../../example/apps/demo/translations/src/en/pages.json');
+const fields = require('../../../../../example/apps/demo/fields.js');
 const utilities = require('../../../helpers/utilities');
 
 const mappedSections = utilities.mapSections(sections);

@@ -1,12 +1,18 @@
-/* eslint-disable */
 'use strict';
 
-const bootstrap = require('../');
+const hof = require('hof');
+let settings = require('./hof.settings');
 
-bootstrap({
-  translations: './apps/example-app/translations',
-  routes: [
-    require('./apps/example-app')
-  ],
-  getAccessibility: true
+settings = Object.assign({}, settings, {
+  routes: settings.routes.map(require)
 });
+
+const app = hof(settings);
+
+app.use((req, res, next) => {
+  // Set HTML Language
+  res.locals.htmlLang = 'en';
+  next();
+});
+
+module.exports = app;

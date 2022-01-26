@@ -1,7 +1,7 @@
 /* eslint-disable */
 'use strict';
 
-const dateComponent = require('../../../').components.date;
+const dateComponent = require('hof').components.date;
 const staticAppealStages = require('./lib/staticAppealStages');
 
 module.exports = {

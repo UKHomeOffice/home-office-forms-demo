@@ -8,15 +8,23 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start:dev": "ALLOW_SKIP=true SKIP_EMAIL=sas-hof-test@digital.homeoffice.gov.uk hof-build watch",
+    "start:dev": "hof-build watch",
     "build": "hof-build",
     "postinstall": "yarn run build"
   },
   "author": "",
   "dependencies": {
     "hof": "^19.12.2",
+    "homeoffice-countries": "^0.1.0",
     "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "typeahead-aria": "^1.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.2",
+    "chai": "^4.3.5",
+    "mocha": "^9.2.0",
+    "playwright": "^1.18.0"
+  }
 }

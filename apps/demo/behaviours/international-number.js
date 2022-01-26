@@ -1,6 +1,6 @@
 'use strict';
 
-const validators = require('../../../../controller').validators;
+const validators = require('hof').controller.validators;
 
 module.exports = SuperClass => class extends SuperClass {
   validateField(key, req) {

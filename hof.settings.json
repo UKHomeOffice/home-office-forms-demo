@@ -1,0 +1,11 @@
+{
+  "appName": "Home Office Forms Demo",
+  "theme": "govUK",
+  "routes": [
+    "./apps/demo"
+  ],
+  "session": {
+    "name": "home-office-forms-demo.hof.sid"
+  },
+  "getAccessibility": true
+}

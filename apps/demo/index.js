@@ -2,11 +2,11 @@
 'use strict';
 
 const CountrySelect = require('./behaviours/country-select')
-const SummaryPageBehaviour = require('../../../').components.summary;
+const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
 
 module.exports = {
-  name: 'example-app',
+  name: 'demo',
   steps: {
     '/landing-page': {
       fields: [
@@ -68,8 +68,8 @@ module.exports = {
       fields: ['complaintDetails'],
       next: '/select'
     },
-    '/select':{ 
-      fields: ['appealStages'], 
+    '/select':{
+      fields: ['appealStages'],
       next: '/confirm'
     },
     '/confirm': {
