@@ -1,0 +1,227 @@
+{
+  "fields": {
+    "landing-page-radio": {
+      "legend": "Which form would you like to explore?",
+      "options": {
+        "basic-form": {
+          "label": "Basic form - A linear form showcasing the different Field types available in HOF"
+        },
+        "complex-form": {
+          "label": "Complex form - A form demonstrating more complex features such as journey forking, save-and-return and more"
+        },
+        "build-your-own-form": {
+          "label": "Build your own form"
+        }
+      }
+    },
+    "name": {
+      "label": "Full name"
+    },
+    "dateOfBirth": {
+      "legend": "Date of birth",
+      "hint": "For example, 31 10 1990"
+    },
+    "building": {
+      "label": "Building and street"
+    },
+    "street": {
+      "label": "Address line 2"
+    },
+    "townOrCity": {
+      "label": "Town or city"
+    },
+    "postcode": {
+      "label": "Postcode"
+    },
+    "incomeTypes": {
+      "label": "Sources of income",
+      "legend": "Select the options where you receive income from",
+      "hint": "Select all options that apply to you.",
+      "options": {
+        "salary": {
+          "label": "Salary"
+        },
+        "universal_credit": {
+          "label": "Universal Credit"
+        },
+        "child_benefit": {
+          "label": "Child Benefit"
+        },
+        "housing_benefit": {
+          "label": "Housing Benefit"
+        },
+        "other": {
+          "label": "Other"
+        }
+      }
+    },
+    "countryOfHearing": {
+      "label": "Country of hearing",
+      "options": {
+        "englandAndWales": {
+          "label": "England and Wales"
+        },
+        "scotland": {
+          "label": "Scotland"
+        },
+        "northernIreland": {
+          "label": "Northern Ireland"
+        }
+      }
+    },
+    "email": {
+      "label": "Email address"
+    },
+    "phone": {
+      "label": "Phone number",
+      "hint": "International phone numbers require the international dialling code, for example +33235066182"
+    },
+    "int-phone-number": {
+      "legend": "International phone number"
+    },
+    "complaintDetails": {
+      "label": "Complaint details"
+    },
+    "countrySelect": {
+      "label": "Select a country",
+      "hint": "Start to type the country name and options will appear"
+    },
+    "martin": {
+      "label": "hello martin"
+    },
+    "appealStages": {
+      "label": "Appeal stage",
+      "options": {
+        "null": "Select..."
+      }
+    }
+  },
+  "journey": {
+    "header": "HOF Bootstrap Example Form"
+  },
+  "pages": {
+    "landing-page": {
+      "header": "Landing page",
+      "intro": "Choose one of the options below and press continue."
+    },
+    "build-your-own-form": {
+      "title": "Build your own form",
+      "subheader": "Access the build your own form guidance link"
+    },
+    "name": {
+      "header": "What is your full name?"
+    },
+    "dob": {
+      "header": "What is your date of birth?"
+    },
+    "address": {
+      "header": "What is your address in the UK?",
+      "intro": "If you have no fixed address, enter an address where we can contact you."
+    },
+    "checkboxes": {
+      "header": "Where does your money come from each month?"
+    },
+    "radio": {
+      "header": "What country was the appeal lodged?"
+    },
+    "country-select": {
+      "header": "What country is your address located?"
+    },
+    "email": {
+      "header": "Enter your email address"
+    },
+    "phone-number": {
+      "header": "Enter your phone number"
+    },
+    "text-input-area": {
+      "header": "What are the details of your complaint?",
+      "intro": "Briefly summarise your complaint. Include anything that can help our investigation."
+    },
+    "select": {
+      "header": "What is the appeal stage?",
+      "intro": "Choose an appeal stage from the drop down menu"
+    },
+    "confirm": {
+      "header": "Check your answers before submitting your application.",
+      "sections": {
+        "applicantsDetails": {
+          "header": "Applicant's details"
+        },
+        "address": {
+          "header": "Address"
+        },
+        "income": {
+          "header": "Income"
+        },
+        "appealDetails": {
+          "header": "Appeal details"
+        },
+        "countrySelect": {
+          "header": "Country of residence"
+        },
+        "contactDetails": {
+          "header": "Contact details"
+        },
+        "complaintDetails": {
+          "header": "Complaint details"
+        }
+      }
+    },
+    "confirmation": {
+      "title": "Application sent",
+      "alert": "Application sent",
+      "subheader": "What happens next",
+      "content": "We’ll contact you with the decision of your application or if we need more information from you."
+    }
+  },
+  "validation": {
+    "landing-page-radio": {
+      "required": "Select an option below and press continue"
+    },
+    "name": {
+      "default": "Enter your full name"
+    },
+    "dateOfBirth": {
+      "default": "Enter your date of birth in the correct format; for example, 31 10 1990",
+      "after": "Enter a date after 1 1 1900",
+      "before": "Enter a date that is in the past"
+    },
+    "building": {
+      "default": "Enter details of your building and street"
+    },
+    "townOrCity": {
+      "default": "Enter a town or city",
+      "regex": "Enter a town or city without including digits"
+    },
+    "postcode": {
+      "default": "Enter your postcode"
+    },
+    "incomeTypes": {
+      "default": "Select all options that apply to you."
+    },
+    "countryOfHearing": {
+      "default": "Select where the appeal hearing is to be held"
+    },
+    "countrySelect": {
+      "default": "Enter a valid country of residence",
+      "required": "Enter your country of residence"
+    },
+    "email": {
+      "default": "Enter your email address in the correct format"
+    },
+    "phone": {
+      "default": "Enter your phone number"
+    },
+    "int-phone-number": {
+      "required": "Enter an international phone number",
+      "internationalPhoneNumber": "Enter a valid international phone number"
+    },
+    "complaintDetails": {
+      "default": "Enter details about why you are making a complaint",
+      "maxlength": "Keep to the 5000 character limit"
+    },
+    "appealStages": {
+      "required": "Select an appeal stage from the list"
+    }
+  }
+}
