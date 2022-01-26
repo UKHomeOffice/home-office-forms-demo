@@ -1,12 +1,12 @@
-# HOF Example App
+# Home Office Forms Demo Application
 
-Currently a work in progress. The Home Office Forms (HOF) Example app will be used by developers to learn and understand more about the HOF framework. Developers will be able to learn and test out different components in the framework and build their own app using the framework. There will be forms built using the framework available for demoing. 
+Currently a work in progress. The Home Office Forms (HOF) Example app will be used by developers to learn and understand more about the HOF framework. Developers will be able to learn and test out different components in the framework and build their own app using the framework. There will be forms built using the framework available for demoing.
 
-#### How to run the app locally 
+#### How to run the app locally
 
-Install [Homebrew](https://brew.sh/), if it is not installed 
+Install [Homebrew](https://brew.sh/), if it is not installed
 
-Once Homebrew is installed run 
+Once Homebrew is installed run
 
 ```bash
 brew install nvm
@@ -30,34 +30,34 @@ nvm use 14.15.0
 Clone the service locally
 
 ```bash
-git clone ... 
+git clone ...
 ```
 
-Install yarn 
+Install yarn
 
 ```bash
-npm i yarn -g 
+npm i yarn -g
 ```
 
-Install the dependencies 
+Install the dependencies
 
 ```bash
 yarn
 ```
 
-Move into the example folder 
+Move into the example folder
 
 ```bash
 cd example
 ```
 
-Install any example app specific dependencies 
+Install any example app specific dependencies
 
 ```bash
 yarn
 ```
 
-Run in development mode 
+Run in development mode
 
 ```bash
 yarn start:dev
