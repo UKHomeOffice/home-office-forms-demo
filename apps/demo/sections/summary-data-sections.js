@@ -1,3 +1,5 @@
+'use strict';
+
 const moment = require('moment');
 const PRETTY_DATE_FORMAT = 'Do MMMM YYYY';
 const APPEAL_STAGES = require('../lib/staticAppealStages').getstaticAppealStages();

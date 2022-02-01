@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = superclass => class extends superclass {
   configure(req, res, next) {
     const homeOfficeCountries = [''].concat(require('homeoffice-countries').allCountries);
