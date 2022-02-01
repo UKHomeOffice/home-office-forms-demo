@@ -66,6 +66,11 @@ module.exports = {
     },
     '/text-input-area': {
       fields: ['complaintDetails'],
+      next: '/checkbox-not-both-options'
+    },
+    '/checkbox-not-both-options':{
+      template: 'weapons',
+      fields: ['weaponsTypes'],
       next: '/select'
     },
     '/select':{

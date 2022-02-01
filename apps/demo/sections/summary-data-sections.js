@@ -36,5 +36,8 @@ module.exports = {
   ],
   complaintDetails: [
     'complaintDetails'
+  ],
+  weaponsTypes: [
+    'weaponsTypes'
   ]
 };
