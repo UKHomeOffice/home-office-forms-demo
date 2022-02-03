@@ -20,6 +20,27 @@ module.exports = {
     },
     options: ['basic-form', 'complex-form', 'build-your-own-form']
   },
+  continueSavedForms: {
+    mixin: 'radio-group',
+    validate: 'required',
+    legend: {
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: 'yes',
+      toggle: 'savedFormEmail',
+      child: 'partials/saved-form-email'
+    }, {
+      value: 'no'
+    }]
+  },
+  savedFormEmail: {
+    validate: ['email', 'required'],
+    dependent: {
+      field: 'continueSavedForms',
+      value: 'yes'
+    }
+  },
   name: {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
