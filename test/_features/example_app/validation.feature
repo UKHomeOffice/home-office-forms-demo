@@ -63,11 +63,14 @@ Feature: validations
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
   @complex_form
-  Scenario: Full Complex Form Submission
+  Scenario: Full Complex Form Submission Without Continuing A Saved Form
     Given I start the 'base' application journey
     Then I continue to the next step
     Then I should see the 'Select an option below and press continue' error
     Then I choose 'Complex form'
+    Then I continue to the next step
+    Then I should see the 'Do you want to continue a form you have previously saved?' error
+    Then I choose 'No'
     Then I continue to the next step
     Then I click the 'Continue' button
     Then I should see the 'Enter your full name' error
@@ -132,3 +135,16 @@ Feature: validations
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+
+  @complex_form @continue-saved-form
+  Scenario: Partial Complex Form Submission Continuing A Saved Form
+    Given I start the 'base' application journey
+    Then I continue to the next step
+    Then I should see the 'Select an option below and press continue' error
+    Then I choose 'Complex form'
+    Then I continue to the next step
+    Then I continue to the next step
+    Then I should see the 'Do you want to continue a form you have previously saved?' error
+    Then I choose 'Yes'
+    Then I continue to the next step
+    Then I should see the 'Enter the email address used to save the form in the correct format' error
