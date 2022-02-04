@@ -20,7 +20,7 @@ if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} ]]; then
   $kd -f kube/configmaps -f kube/certs
   $kd -f kube/redis -f kube/app
 elif [[ ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
-  $kd -f kube/configmaps -f kube/certs
+  $kd -f kube/configmaps
   $kd -f kube/redis -f kube/app
 fi
 

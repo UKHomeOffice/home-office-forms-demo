@@ -65,8 +65,8 @@ spec:
             - name: SESSION_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: session
-                  key: token
+                  name: session-secret
+                  key: session-secret
             {{ end }}
           {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
           livenessProbe:
