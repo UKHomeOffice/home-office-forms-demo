@@ -116,7 +116,7 @@ spec:
               value: "TRUE"
             - name: EXTRA_NAXSI_RULES
               value: |-
-                BasicRule wl:2,1000,1001,1002,1007,1008,1009,1010,1011,1013,1015,1101,1200,1205,1310,1314 "mz:BODY";
+                BasicRule wl:0 "mz:BODY";
                 BasicRule wl:0 "mz:$HEADERS_VAR:Cookie";
                 BasicRule wl:1500 "mz:FILE_EXT";
             - name: ADD_NGINX_SERVER_CFG
