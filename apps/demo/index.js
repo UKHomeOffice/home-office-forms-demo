@@ -102,6 +102,18 @@ module.exports = {
     },
     '/select':{
       fields: ['appealStages'],
+      next: '/save-form'
+    },
+    '/save-form': {
+      fields: ['saveForm', 'saveEmail', 'saveRef'],
+      forks: [{
+        target: '/save-confirmation',
+        condition: {
+          field: ['saveForm'],
+          value: 'yes'
+        }
+      }
+      ],
       next: '/confirm'
     },
     '/confirm': {

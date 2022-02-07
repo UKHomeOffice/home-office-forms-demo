@@ -58,5 +58,14 @@
   },
   "appealStages": {
     "required": "Select an appeal stage from the list"
+  },
+  "saveForm": {
+    "required": "Select an option below"
+  },
+  "saveEmail": {
+    "required": "Enter your email address"
+  },
+  "saveRef": {
+    "required": "Create a memorable reference"
   }
 }
