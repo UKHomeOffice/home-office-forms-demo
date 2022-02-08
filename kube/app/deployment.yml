@@ -114,11 +114,6 @@ spec:
               value: "FALSE"
             - name: VERBOSE_ERROR_PAGES
               value: "TRUE"
-            - name: EXTRA_NAXSI_RULES
-              value: |-
-                BasicRule wl:0 "mz:BODY";
-                BasicRule wl:0 "mz:$HEADERS_VAR:Cookie";
-                BasicRule wl:1500 "mz:FILE_EXT";
             - name: ADD_NGINX_SERVER_CFG
               value: |
                 add_header Cache-Control private;
