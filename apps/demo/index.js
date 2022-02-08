@@ -43,7 +43,7 @@ module.exports = {
     '/radio':{
       fields: ['countryOfHearing'],
       forks: [{
-        target: '/country-select',
+        target: '/country',
         condition: {
           field: 'landing-page-radio',
           value: 'complex-form'
@@ -59,7 +59,7 @@ module.exports = {
       fields: ['phone'],
       next: '/confirm'
     },
-    '/country-select': {
+    '/country': {
       behaviours: CountrySelect,
       fields: ['countrySelect'],
       next: '/text-input-area'
