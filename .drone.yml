@@ -61,14 +61,14 @@ steps:
         include:
           - master
       event: push
- #
- - name: unit_tests_deploy
-   <<: *unit_tests
-   when:
-     branch:
-       include:
-         - master
-     event: push
+
+  - name: unit_tests_deploy
+    <<: *unit_tests
+    when:
+      branch:
+        include:
+          - master
+      event: push
 
   - name: build_image
     image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
@@ -136,14 +136,14 @@ steps:
           - feature/*
       event: pull_request
 
- - name: unit_tests_branch
-   <<: *unit_tests
-   when:
-     branch:
-       include:
-         - master
-         - feature/*
-     event: pull_request
+  - name: unit_tests_branch
+    <<: *unit_tests
+    when:
+      branch:
+        include:
+          - master
+          - feature/*
+      event: pull_request
 
   - name: acceptance_tests_branch
     <<: *acceptance_tests
@@ -205,14 +205,14 @@ steps:
       branch: master
       event: push
 
- - name: acceptance_tests_deploy
-   <<: *acceptance_tests
-   commands:
-     - export ACCEPTANCE_HOST_NAME=$${PRODUCTION_URL}
-     - npm run test:acceptance
-   when:
-     branch: master
-     event: push
+  - name: acceptance_tests_deploy
+    <<: *acceptance_tests
+    commands:
+      - export ACCEPTANCE_HOST_NAME=$${PRODUCTION_URL}
+      - npm run test:acceptance
+    when:
+      branch: master
+      event: push
 
   # CRON job step that tears down our pull request UAT environments
   - name: cron_tear_down
