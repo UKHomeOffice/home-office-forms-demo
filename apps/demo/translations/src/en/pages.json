@@ -23,7 +23,7 @@
   "radio": {
     "header": "What country was the appeal lodged?"
   },
-  "country-select": {
+  "country": {
     "header": "What country is your address located?"
   },
   "email": {
