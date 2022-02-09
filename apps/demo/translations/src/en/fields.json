@@ -1,18 +1,17 @@
 {
   "landing-page-radio": {
-    "legend": "Which form would you like to explore?",
     "options": {
       "basic-form": {
         "label": "Basic form",
-        "hint": "An example of a simple form produced using the hof framework. This form demos common components used by services using the hof framework."
+        "hint": "An example of a simple form produced using the HOF framework. This form showcases components and features available in the HOF framework."
       },
       "complex-form": {
         "label": "Complex form",
-        "hint": "An example of a form produced using the hof framework. This longer demo includes some steps from the basic form and features less common components used in other services using hof."
+        "hint": "An example of a form produced using the HOF framework. This form showcases more advanced features available in the HOF framework."
       },
       "build-your-own-form": {
         "label": "Build your own form",
-        "hint": "Link to the HOF documentation, with instructions on how to build your own hof form."
+        "hint": "Link to the HOF documentation, with instructions on how to build your own HOF form."
       }
     }
   },
