@@ -67,9 +67,9 @@
     }
   },
   "confirmation": {
-    "title": "Application sent",
-    "alert": "Application sent", 
-    "subheader": "What happens next",
-    "content": "We’ll contact you with the decision of your application or if we need more information from you."
+    "title": "Application complete",
+    "alert": "Application complete", 
+    "subheader": "Thank you",
+    "content": "You have completed an example of a form built using hof."
   }
 }
