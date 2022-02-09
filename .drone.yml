@@ -149,6 +149,7 @@ steps:
     <<: *acceptance_tests
     commands:
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.$${BRANCH_ENV}.homeoffice.gov.uk
+      - npx playwright install
       - npm run test:acceptance
     when:
       branch: master
@@ -209,6 +210,7 @@ steps:
     <<: *acceptance_tests
     commands:
       - export ACCEPTANCE_HOST_NAME=$${PRODUCTION_URL}
+      - npx playwright install
       - npm run test:acceptance
     when:
       branch: master
