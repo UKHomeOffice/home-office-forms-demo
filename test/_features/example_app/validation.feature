@@ -54,7 +54,7 @@ Feature: validations
     Then I should see the 'Enter your phone number' error
     Then I fill 'phone' with '020 0000 000000'
     Then I click the 'Continue' button
-    Then I should see the 'Enter your phone number' error
+    Then I should see the 'Enter a valid phone number' error
     Then I fill 'phone' with '020 0000 0000'
     Then I click the 'Continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'

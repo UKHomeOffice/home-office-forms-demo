@@ -34,7 +34,8 @@
     "default": "Enter your email address in the correct format"
   },
   "phone": {
-    "default": "Enter your phone number"
+    "default": "Enter your phone number",
+    "internationalPhoneNumber": "Enter a valid phone number"
   },
   "int-phone-number": {
     "required": "Enter an international phone number",

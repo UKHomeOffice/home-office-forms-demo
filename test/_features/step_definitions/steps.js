@@ -11,7 +11,7 @@ Given('I start the {string} application journey', async function (subApp) {
   await this.page.goto(`${domain}${this.subApp}`);
 }.bind(World));
 
-Then('I select {string}', async function (name) {
+Then('I select {string}', {timeout: 5000}, async function (name) {
   await this.page.click(`text=${name}`);
 }.bind(World));
 
