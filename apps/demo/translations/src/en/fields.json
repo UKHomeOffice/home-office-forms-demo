@@ -75,7 +75,7 @@
   },
   "phone": {
     "label": "Phone number",
-    "hint": "International phone numbers require the international dialling code, for example +33235066182"
+    "hint": "International phone numbers require the international dialling code, for example +44 808 157 0192"
   },
   "int-phone-number": {
     "legend": "International phone number"
