@@ -36,8 +36,8 @@ Feature: validations
     Then I click the 'Continue' button
     Then I click the 'Continue' button
     Then I should see the 'Select all options that apply to you.' error
-    Then I select 'Salary' 
-    Then I select 'Child Benefit' 
+    Then I select 'Salary'
+    Then I select 'Child Benefit'
     Then I click the 'Continue' button
     Then I click the 'Continue' button
     Then I should see the 'Select where the appeal hearing is to be held' error
@@ -58,7 +58,7 @@ Feature: validations
     Then I fill 'phone' with '020 0000 0000'
     Then I click the 'Continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
-    Then I click the 'Confirm submission' button
+    Then I continue to the next step
     Then I should see 'Application sent' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
@@ -96,8 +96,8 @@ Feature: validations
     Then I click the 'Continue' button
     Then I click the 'Continue' button
     Then I should see the 'Select all options that apply to you.' error
-    Then I select 'Salary' 
-    Then I select 'Child Benefit' 
+    Then I select 'Salary'
+    Then I select 'Child Benefit'
     Then I click the 'Continue' button
     Then I click the 'Continue' button
     Then I should see the 'Select where the appeal hearing is to be held' error
@@ -119,7 +119,7 @@ Feature: validations
     Then I should see the 'Select an appeal stage from the list' error
     Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
     Then I click the 'Continue' button
-    Then I click the 'Confirm submission' button
+    Then I continue to the next step
     Then I should see 'Application sent' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'

@@ -4,6 +4,7 @@ const World = require('../test.setup.js');
 const config = require('../../../config');
 
 const domain = config.hosts.acceptanceTests;
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 Given('I start the {string} application journey', async function (subApp) {
   this.subApp = subApp === 'base' ? '' : `/${subApp}`;
@@ -36,6 +37,7 @@ Then('I click the {string} button', async function (name) {
 
 Then('I continue to the next step', { timeout: 4 * 5000 }, async function () {
   await this.page.click('input[type="submit"]');
+  await delay(2000);
 }.bind(World));
 
 Then('I fill {string} with {string}', async function (field, value) {

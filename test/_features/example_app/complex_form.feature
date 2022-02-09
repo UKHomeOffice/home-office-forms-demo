@@ -19,8 +19,8 @@ Feature: Complex Form
     Then I fill 'postcode' with 'W12 3DE'
     Then I click the 'Continue' button
     Then I should be on the 'checkboxes' page showing 'Where does your money come from each month?'
-    Then I select 'Salary' 
-    Then I select 'Child Benefit' 
+    Then I select 'Salary'
+    Then I select 'Child Benefit'
     Then I click the 'Continue' button
     Then I should be on the 'radio' page showing 'What country was the appeal lodged?'
     Then I select 'England and Wales'
@@ -36,7 +36,7 @@ Feature: Complex Form
     Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
     Then I click the 'Continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
-    Then I click the 'Confirm submission' button
+    Then I continue to the next step
     Then I should see 'Application sent' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
