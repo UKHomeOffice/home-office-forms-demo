@@ -45,18 +45,6 @@ Install the dependencies
 yarn
 ```
 
-Move into the example folder
-
-```bash
-cd example
-```
-
-Install any example app specific dependencies
-
-```bash
-yarn
-```
-
 Run in development mode
 
 ```bash

@@ -1,8 +1,15 @@
 /* eslint-disable */
 'use strict';
 
+const _ = require('lodash');
+
 const dateComponent = require('hof').components.date;
 const staticAppealStages = require('./lib/staticAppealStages');
+
+function notBothOptions(vals) {
+  const values = _.castArray(vals);
+  return !(values.length > 1 && values.indexOf('unspecified') > -1);
+}
 
 module.exports = {
   'landing-page-radio': {
@@ -87,12 +94,34 @@ module.exports = {
     'ignore-defaults': true,
     // apply the other default formatters
     formatter: ['trim', 'hyphens'],
-    // attributes here are passed to the field element
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    // attributes here are passed to the field element
     attributes: [{
       attribute: 'rows',
       value: 8
     }]
+  },
+  weaponsTypes:{
+    mixin: 'checkbox-group',
+    labelClassName: 'visuallyhidden',
+    validate: ['required', notBothOptions],
+    options: [
+      {
+        value: 'unspecified',
+        child: 'partials/or'
+      },        
+      'fully_automatic',
+      'self_loading',
+      'short_pistols',
+      'short_self_loading',
+      'large_revolvers',
+      'rocket_launchers',
+      'air_rifles',
+      'fire_noxious_substance',
+      'disguised_firearms',
+      'military_use_rockets',
+      'projecting_launchers'
+    ]
   },
   appealStages: {
     mixin: 'select',
