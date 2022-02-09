@@ -209,7 +209,7 @@ steps:
   - name: acceptance_tests_deploy
     <<: *acceptance_tests
     commands:
-      - export ACCEPTANCE_HOST_NAME=$${PRODUCTION_URL}
+      - export ACCEPTANCE_HOST_NAME=https://$${PRODUCTION_URL}
       - npx playwright install
       - npm run test:acceptance
     when:
