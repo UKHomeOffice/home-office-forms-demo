@@ -59,7 +59,7 @@ Feature: validations
     Then I click the 'Continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
     Then I continue to the next step
-    Then I should see 'Application sent' on the page
+    Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
   @complex_form
@@ -120,6 +120,6 @@ Feature: validations
     Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
     Then I click the 'Continue' button
     Then I continue to the next step
-    Then I should see 'Application sent' on the page
+    Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
