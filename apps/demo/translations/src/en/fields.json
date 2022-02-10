@@ -15,6 +15,20 @@
       }
     }
   },
+  "continueSavedForms": {
+    "options":{
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "savedFormEmail": {
+    "label": "Enter the email address you used to save the form",
+    "hint": "Email address"
+  },
   "name": {
     "label": "Full name"
   },

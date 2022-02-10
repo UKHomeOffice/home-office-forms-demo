@@ -2,6 +2,13 @@
   "landing-page-radio": {
     "required": "Select an option below and press continue"
   },
+  "continueSavedForms": {
+    "required": "Do you want to continue a form you have previously saved?"
+  },
+  "savedFormEmail": { 
+    "required": "Enter the email address you used to save the form",
+    "email": "Enter the email address you used to save the form in the correct format"
+  },
   "name":{
     "default": "Enter your full name"
   },

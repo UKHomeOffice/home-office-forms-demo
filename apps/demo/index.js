@@ -13,16 +13,43 @@ module.exports = {
         'landing-page-radio'
       ],
       next: '/name',
-      forks: [{
-        target: '/build-your-own-form',
-        condition: {
-          field: 'landing-page-radio',
-          value: 'build-your-own-form'
+      forks: [
+        {
+          target: '/build-your-own-form',
+          condition: {
+            field: 'landing-page-radio',
+            value: 'build-your-own-form'
+          }
+        },
+        {
+          target: '/continue-saved-form',
+          condition: {
+            field: 'landing-page-radio',
+            value: 'complex-form'
+          }
         }
-      }],
+      ],
     },
     '/build-your-own-form': {
       template: 'form-guidance-link'
+    },
+    '/continue-saved-form': {
+      template: 'continue-saved-form',
+      fields: [
+        'continueSavedForms', 
+        'savedFormEmail'
+      ],
+      next: '/forms',
+      forks: [{
+        target: '/name',
+        condition: {
+          field: 'continueSavedForms',
+          value: 'no'
+        }
+      }]
+    },
+    '/forms':{
+
     },
     '/name': {
       fields: ['name'],

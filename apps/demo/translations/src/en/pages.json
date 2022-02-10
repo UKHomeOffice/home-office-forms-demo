@@ -7,6 +7,9 @@
     "title": "Build your own form",
     "subheader": "Access the build your own form guidance link"
   },
+  "continue-saved-form": {
+    "header": "Do you want to continue a saved form?"
+  },
   "name": {
     "header": "What is your full name?"
   },
