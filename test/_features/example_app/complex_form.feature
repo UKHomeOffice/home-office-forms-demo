@@ -62,7 +62,7 @@ Feature: Complex Form
     Then I fill 'savedFormEmail' with 'email@test.com'
     Then I continue to the next step
 
-  @save-form
+  @save_form
   Scenario: Complex Form Submission Saving A Form
     Given I start the 'base' application journey
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
@@ -70,6 +70,7 @@ Feature: Complex Form
     Then I continue to the next step
     Then I should be on the 'continue-saved-form' page showing 'Do you want to continue a saved form?'
     Then I choose 'No'
+    Then I continue to the next step
     Then I should be on the 'name' page showing 'What is your full name?'
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Continue' button
@@ -88,12 +89,16 @@ Feature: Complex Form
     Then I should be on the 'radio' page showing 'What country was the appeal lodged?'
     Then I select 'England and Wales'
     Then I click the 'Continue' button
-    Then I should be on the 'country-select' page showing 'What country is your address located?'
+    Then I should be on the 'country' page showing 'What country is your address located?'
     Then I fill 'countrySelect' with 'United'
     Then I select 'United Kingdom'
     Then I click the 'Continue' button
     Then I should be on the 'text-input-area' page showing 'What are the details of your complaint?'
     Then I fill 'complaintDetails' text area with 'I would like to make a complaint'
+    Then I click the 'Continue' button
+    Then I should be on the 'checkbox-not-both-options' page showing 'Which sections do the weapons or components fall under?'
+    Then I check 'weaponsTypes-fully_automatic'
+    Then I check 'weaponsTypes-large_revolvers'
     Then I click the 'Continue' button
     Then I should be on the 'select' page showing 'What is the appeal stage?'
     Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
@@ -103,6 +108,4 @@ Feature: Complex Form
     Then I fill 'saveEmail' with 'test@email.com'
     Then I fill 'saveRef' with 'My saved form'
     Then I click the 'Continue' button
-    Then I should be on the 'save-confirmation' page showing 'Page not found'
-    Then I click the 'Start again' button
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+
