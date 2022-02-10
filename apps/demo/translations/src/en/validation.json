@@ -60,12 +60,12 @@
     "required": "Select an appeal stage from the list"
   },
   "saveForm": {
-    "required": "Select an option below"
+    "required": "Select if you want to save your form or not"
   },
   "saveEmail": {
     "required": "Enter your email address"
   },
   "saveRef": {
-    "required": "Create a memorable reference"
+    "required": "You must enter a reference"
   }
 }

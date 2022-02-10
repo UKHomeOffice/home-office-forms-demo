@@ -163,7 +163,7 @@
     "label": "Enter your email address"
   },
   "saveRef": {
-    "label": "Create a memorable reference for your form",
-    "hint": "Ensure your reference is something that is easy to remember, for example your name"
+    "label": "What is your reference for this form?",
+    "hint": "This is for you to keep track of your saved forms"
   }
 }
