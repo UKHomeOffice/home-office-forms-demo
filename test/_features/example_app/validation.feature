@@ -69,6 +69,7 @@ Feature: validations
     Then I should see the 'Select an option below and press continue' error
     Then I choose 'Complex form'
     Then I continue to the next step
+    Then I continue to the next step
     Then I should see the 'Do you want to continue a form you have previously saved?' error
     Then I choose 'No'
     Then I continue to the next step
@@ -147,4 +148,9 @@ Feature: validations
     Then I should see the 'Do you want to continue a form you have previously saved?' error
     Then I choose 'Yes'
     Then I continue to the next step
-    Then I should see the 'Enter the email address used to save the form in the correct format' error
+    Then I should see the 'Enter the email address you used to save the form' error
+    Then I fill 'savedFormEmail' with 'Fake email'
+    Then I continue to the next step
+    Then I should see the 'Enter the email address you used to save the form in the correct format' error
+    Then I fill 'savedFormEmail' with 'email@test.com'
+    Then I continue to the next step
