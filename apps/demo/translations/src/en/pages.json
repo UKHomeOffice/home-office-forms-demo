@@ -10,6 +10,9 @@
   "continue-saved-form": {
     "header": "Do you want to continue a saved form?"
   },
+  "forms":{
+    "title": "Forms"
+  },
   "name": {
     "header": "What is your full name?"
   },

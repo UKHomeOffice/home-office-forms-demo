@@ -1,0 +1,47 @@
+<title>{{#t}}pages.forms.title{{/t}} – GOV.UK</title>
+
+{{<partials-page}}
+{{$back}}{{/back}}
+{{$page-content}}
+  {{#fields}}
+    {{#renderField}}{{/renderField}}
+  {{/fields}}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Your reference</th>
+            <th scope="col" class="govuk-table__header">Created on</th>
+            <th scope="col" class="govuk-table__header">Expires on</th>
+            <th scope="col" class="govuk-table__header">Days remaining</th>
+            <th scope="col" class="govuk-table__header">Next steps</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {{#previousForms}}
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{reference}}</td>
+              <td class="govuk-table__cell">{{createdAt}}</td>
+              <td class="govuk-table__cell">{{expiresAt}}</td>
+              <td class="govuk-table__cell">{{daysRemaining}} days</td>
+              <td class="govuk-table__cell">
+                <a href="/nrm/continue-report?id={{id}}" name="resume" class="govuk-button" >Go to form</a>&nbsp;
+                <a href="/nrm/are-you-sure?id={{id}}&reference={{reference}}" name="delete" class="govuk-button govuk-button--secondary">Delete form</a>
+              </td>
+            </tr>
+          {{/previousForms}}
+          {{^previousForms}}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" colspan="5">You do not currently have any draft forms</td>
+          </tr>
+          {{/previousForms}}
+        </tbody>
+      </table>
+      <h2>Create a new form</h2>
+      <p>Create a form and try out the save and return function with Home Office Forms Demo.</p>
+      {{#input-submit}}create-form{{/input-submit}}
+    </div>
+  </div>
+{{/page-content}}
+{{/partials-page}}

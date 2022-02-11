@@ -50,7 +50,8 @@ module.exports = {
       }]
     },
     '/forms':{
-
+      template: 'forms',
+      next: '/name'
     },
     '/name': {
       fields: ['name'],
