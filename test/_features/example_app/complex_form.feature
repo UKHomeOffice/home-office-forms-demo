@@ -51,7 +51,7 @@ Feature: Complex Form
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
 
-  @continue-saved-form 
+  @continue_saved_form 
   Scenario: Complex Form Submission Continuing A Saved Form
     Given I start the 'base' application journey
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
