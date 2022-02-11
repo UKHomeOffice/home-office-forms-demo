@@ -150,6 +150,8 @@ Feature: validations
     Given I start the 'base' application journey
     Then I choose 'Complex form'
     Then I continue to the next step
+    Then I continue to the next step
+    Then I should see the 'Do you want to continue a form you have previously saved?' error
     Then I choose 'Yes'
     Then I continue to the next step
     Then I should see the 'Enter the email address you used to save the form' error
