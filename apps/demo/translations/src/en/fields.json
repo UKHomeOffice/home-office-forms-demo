@@ -92,7 +92,7 @@
     "legend": "Select all that apply",
     "options": {
       "unspecified": {
-        "label": "Unspecified sections and quantities"
+        "label": "Unspecified sections"
       },
       "fully_automatic": {
         "label": "Fully automatic or burst-fire weapons - Section 5(1)(a)"
