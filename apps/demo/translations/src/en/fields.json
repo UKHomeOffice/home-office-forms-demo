@@ -148,5 +148,22 @@
     "options": {
       "null": "Select..."
     }
+  },
+  "saveForm": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "saveEmail": {
+    "label": "Enter your email address"
+  },
+  "saveRef": {
+    "label": "What is your reference for this form?",
+    "hint": "This is for you to keep track of your saved forms"
   }
 }

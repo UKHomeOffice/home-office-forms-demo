@@ -48,6 +48,9 @@
     "header": "What is the appeal stage?",
     "intro": "Choose an appeal stage from the drop down menu"
   },
+  "save-form": {
+    "header": "Would you like to save your form?"
+  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
