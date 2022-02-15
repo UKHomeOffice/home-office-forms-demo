@@ -61,6 +61,7 @@ Feature: Complex Form
     Then I choose 'Yes'
     Then I fill 'savedFormEmail' with 'email@test.com'
     Then I continue to the next step
+    Then I should be on the 'forms' page showing 'Create a new form'
 
   @save_form
   Scenario: Complex Form Submission Saving A Form
