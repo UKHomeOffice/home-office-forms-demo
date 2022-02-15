@@ -4,6 +4,7 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
+const SaveFormSession = require('./behaviours/save-form-session');
 
 module.exports = {
   name: 'demo',
@@ -105,6 +106,7 @@ module.exports = {
       next: '/save-form'
     },
     '/save-form': {
+      behaviours: SaveFormSession,
       fields: ['saveForm', 'saveEmail', 'saveRef'],
       forks: [{
         target: '/save-confirmation',
