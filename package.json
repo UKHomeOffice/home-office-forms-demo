@@ -21,6 +21,7 @@
   },
   "author": "",
   "dependencies": {
+    "axios": "^0.26.0",
     "hof": "^19.12.2",
     "homeoffice-countries": "^0.1.0",
     "jquery": "^3.6.0",
