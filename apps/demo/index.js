@@ -3,6 +3,7 @@
 
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
+const getFormSession = require('./behaviours/get-form-session')
 const InternationalPhoneNumber = require('./behaviours/international-number');
 const SaveFormSession = require('./behaviours/save-form-session');
 
@@ -50,6 +51,7 @@ module.exports = {
       }]
     },
     '/forms':{
+      behaviours: getFormSession,
       template: 'forms',
       next: '/name'
     },
