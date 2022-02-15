@@ -1,20 +1,4 @@
 {
-  "landing-page-radio": {
-    "options": {
-      "basic-form": {
-        "label": "Basic form",
-        "hint": "An example of a simple form produced using the HOF framework. This form showcases components and features available in the HOF framework."
-      },
-      "complex-form": {
-        "label": "Complex form",
-        "hint": "An example of a form produced using the HOF framework. This form showcases more advanced features available in the HOF framework."
-      },
-      "build-your-own-form": {
-        "label": "Build your own form",
-        "hint": "Link to the HOF documentation, with instructions on how to build your own HOF form."
-      }
-    }
-  },
   "name": {
     "label": "Full name"
   },
@@ -30,8 +14,8 @@
   },
   "townOrCity": {
     "label": "Town or city"
-   }, 
-  "postcode": { 
+   },
+  "postcode": {
     "label": "Postcode"
   },
   "incomeTypes" : {
@@ -67,8 +51,8 @@
       },
       "northernIreland": {
         "label": "Northern Ireland"
-      } 
-    } 
+      }
+    }
   },
   "email" : {
     "label": "Email address"
