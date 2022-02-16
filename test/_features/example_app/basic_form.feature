@@ -1,11 +1,10 @@
 @feature @example_app @basic_form
 Feature: Basic Form
-  A user should select basic form on the landing page
+  A user goes through the basic form
 
   Scenario: Full Basic Form Submission
     Given I start the 'base' application journey
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
-    Then I choose 'Basic form'
+    Then I go to the 'name' page on the 'basic' form journey
     Then I continue to the next step
     Then I should be on the 'name' page showing 'What is your full name?'
     Then I fill 'name' with 'Jane Doe'
@@ -35,4 +34,4 @@ Feature: Basic Form
     Then I continue to the next step
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+    Then I should be on the '' page showing 'The Home Office Forms Framework Demo'

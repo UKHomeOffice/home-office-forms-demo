@@ -11,6 +11,10 @@ Given('I start the {string} application journey', async function (subApp) {
   await this.page.goto(`${domain}${this.subApp}`);
 }.bind(World));
 
+Then('I go to the {string} page on the {string} form journey', async function (page, journey) {
+  await this.page.goto(`${domain}/${page}?type=${journey}`);
+}.bind(World));
+
 Then('I select {string}', {timeout: 5000}, async function (name) {
   await this.page.click(`text=${name}`);
 }.bind(World));
