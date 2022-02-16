@@ -1,7 +1,4 @@
 {
-  "landing-page-radio": {
-    "required": "Select an option below and press continue"
-  },
   "name":{
     "default": "Enter your full name"
   },

@@ -5,9 +5,7 @@ Feature: validations
   @basic_form
   Scenario: Full Basic Form Submission
     Given I start the 'base' application journey
-    Then I continue to the next step
-    Then I should see the 'Select an option below and press continue' error
-    Then I choose 'Basic form'
+    Then I go to the 'name' page on the 'basic' form journey
     Then I continue to the next step
     Then I click the 'Continue' button
     Then I should see the 'Enter your full name' error
@@ -61,13 +59,11 @@ Feature: validations
     Then I continue to the next step
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+    Then I should be on the '' page showing 'The Home Office Forms Framework Demo'
   @complex_form
   Scenario: Full Complex Form Submission
     Given I start the 'base' application journey
-    Then I continue to the next step
-    Then I should see the 'Select an option below and press continue' error
-    Then I choose 'Complex form'
+    Then I go to the 'name' page on the 'complex' form journey
     Then I continue to the next step
     Then I click the 'Continue' button
     Then I should see the 'Enter your full name' error
@@ -131,4 +127,4 @@ Feature: validations
     Then I continue to the next step
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+    Then I should be on the '' page showing 'The Home Office Forms Framework Demo'

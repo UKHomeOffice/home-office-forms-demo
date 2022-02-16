@@ -1,11 +1,10 @@
 @feature @example_app @complex_form
 Feature: Complex Form
-  A user should select complex form on the landing page
+  A user goes through the complex form
 
   Scenario: Complex Form Submission
     Given I start the 'base' application journey
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
-    Then I choose 'Complex form'
+    Then I go to the 'name' page on the 'complex' form journey
     Then I continue to the next step
     Then I should be on the 'name' page showing 'What is your full name?'
     Then I fill 'name' with 'Jane Doe'
@@ -43,4 +42,4 @@ Feature: Complex Form
     Then I continue to the next step
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
-    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
+    Then I should be on the '' page showing 'The Home Office Forms Framework Demo'
