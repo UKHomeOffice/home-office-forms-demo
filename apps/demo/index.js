@@ -122,6 +122,7 @@ module.exports = {
       next: '/confirm'
     },
     '/save-confirmation': {
+      backLink: false
     },
     '/confirm': {
       behaviours: [SummaryPageBehaviour, 'complete'],

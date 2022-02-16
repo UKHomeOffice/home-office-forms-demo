@@ -109,4 +109,6 @@ Feature: Complex Form
     Then I fill 'saveEmail' with 'test@email.com'
     Then I fill 'saveRef' with 'My saved form'
     Then I click the 'Continue' button
-
+    Then I should see 'Form saved' on the page
+    Then I click the 'Start again' button
+    Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'

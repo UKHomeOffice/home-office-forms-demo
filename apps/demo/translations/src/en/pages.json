@@ -88,5 +88,11 @@
     "alert": "Application complete", 
     "subheader": "Thank you",
     "content": "You have completed an example of a form built using HOF."
+  },
+  "save-confirmation": {
+    "title": "Form saved",
+    "alert": "Form saved",
+    "subheader": "What happens next",
+    "content": "You can use your email to view your saved form"
   }
 }
