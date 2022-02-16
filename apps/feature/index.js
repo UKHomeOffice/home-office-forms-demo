@@ -22,6 +22,9 @@ module.exports = {
       template: 'forms',
       next: '/reference'
     },
+    '/continue-form':{
+      template: 'continue-form'
+    },
     '/reference': {
       behaviours: SaveFormSession,
       fields: ['reference'],
