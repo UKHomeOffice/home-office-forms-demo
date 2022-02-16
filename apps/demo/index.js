@@ -1,9 +1,9 @@
 /* eslint-disable */
 'use strict';
 
-const CountrySelect = require('./behaviours/country-select')
+const CountrySelect = require('./behaviours/country-select');
 const SummaryPageBehaviour = require('hof').components.summary;
-const getFormSession = require('./behaviours/get-form-session')
+const getFormSession = require('./behaviours/get-form-session');
 const InternationalPhoneNumber = require('./behaviours/international-number');
 const SaveFormSession = require('./behaviours/save-form-session');
 
@@ -24,7 +24,7 @@ module.exports = {
           }
         },
         {
-          target: '/continue-saved-form',
+          target: '/name',
           condition: {
             field: 'landing-page-radio',
             value: 'complex-form'
@@ -43,7 +43,7 @@ module.exports = {
       ],
       next: '/forms',
       forks: [{
-        target: '/name',
+        target: '/text-input-area',
         condition: {
           field: 'continueSavedForms',
           value: 'no'
@@ -106,7 +106,7 @@ module.exports = {
     },
     '/select':{
       fields: ['appealStages'],
-      next: '/save-form'
+      next: '/confirm'
     },
     '/save-form': {
       behaviours: SaveFormSession,
