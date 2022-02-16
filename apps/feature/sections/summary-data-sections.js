@@ -2,12 +2,12 @@
 
 module.exports = {
   applicantsDetails: [
-    'name',
+    'name'
   ],
   income: [
     'incomeTypes'
   ],
   textArea: [
     'textArea'
-  ],
+  ]
 };
