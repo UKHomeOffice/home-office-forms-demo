@@ -1,0 +1,18 @@
+{
+  "saveEmail": {
+    "default": "Enter your email address in the correct format"
+  },
+  "reference": {
+    "required": "You must enter a reference"
+  },
+  "name":{
+    "default": "Enter your full name"
+  },
+  "incomeTypes": {
+    "default": "Select all options that apply to you."
+  },
+  "textArea": {
+    "default": "Enter details about why you are making a complaint",
+    "maxlength": "Keep to the 5000 character limit"
+  }
+}

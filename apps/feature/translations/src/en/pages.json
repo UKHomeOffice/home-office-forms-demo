@@ -1,0 +1,44 @@
+{
+  "save-and-return": {
+    "title": "Save and return feature",
+    "header": "Save and return feature",
+    "subheader": "Try an example of the save and return feature using a HOF form",
+    "text": "In this demo you can try out a simplified version of the save and return feature which has been implemented by a service, Modern Slavery, which uses the hof framework."
+  },
+  "start": {
+    "header": "Enter your email address",
+    "intro": "Enter your email address to view your previous forms or to start a new form"
+  },
+  "forms": {
+    "title": "Forms"
+  },
+  "reference": {
+    "header": "Give your form a reference"
+  },
+  "name": {
+    "header": "What is your name?"
+  },
+  "checkboxes": {
+    "header": "Where does your money come from each month?"
+  },
+  "text-area-input": {
+    "header": "What are the details of your complaint?",
+    "intro": "Briefly summarise your complaint. Include anything that can help our investigation."
+  },
+  "confirm": {
+    "header": "Check your answers before submitting your application.",
+    "sections": {
+      "applicantsDetails": {
+        "header": "Applicant's details"
+      },
+      "income": {
+        "header": "Income"
+      },
+      "textArea": {
+        "header": "Complaint details"
+      }
+    }
+  },
+  "confirmation": {
+  }
+}
