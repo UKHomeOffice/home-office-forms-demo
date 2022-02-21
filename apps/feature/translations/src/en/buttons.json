@@ -2,5 +2,7 @@
   "start-form": "Start a form",
   "create-form": "Create a form",
   "save-and-exit": "Save and exit",
-  "continue": "Save and continue"
+  "continue": "Save and continue",
+  "continue-to-next-question": "Continue to next question",
+  "back-to-reports": "Back to the forms dashboard" 
 }

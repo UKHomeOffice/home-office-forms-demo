@@ -12,6 +12,9 @@
   "forms": {
     "title": "Forms"
   },
+  "continue-form": {
+    "header": "Do you want to continue this form"
+  },
   "reference": {
     "header": "Give your form a reference"
   },

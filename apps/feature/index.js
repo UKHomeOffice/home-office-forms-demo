@@ -1,9 +1,10 @@
 /* eslint-disable */
 'use strict';
 
-const SummaryPageBehaviour = require('hof').components.summary;
-const getFormSession = require('./behaviours/get-form-session');
+const GetFormSession = require('./behaviours/get-form-session');
+const ContinueForm = require('./behaviours/continue-form');
 const SaveFormSession = require('./behaviours/save-form-session');
+const SummaryPageBehaviour = require('hof').components.summary;
 
 module.exports = {
   name: 'feature',
@@ -18,9 +19,13 @@ module.exports = {
       next: '/forms'
     },
     '/forms': {
-      behaviours: getFormSession,
+      behaviours: GetFormSession,
       template: 'forms',
       next: '/reference'
+    },
+    '/continue-form':{
+      behaviours: [ContinueForm, SummaryPageBehaviour],
+      template: 'continue-form',
     },
     '/reference': {
       behaviours: SaveFormSession,
