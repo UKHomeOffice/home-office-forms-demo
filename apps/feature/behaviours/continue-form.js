@@ -28,6 +28,9 @@ module.exports = superclass => class extends superclass {
 
   getValues(req, res, next) {
     super.getValues(req, res, err => {
+      if (err) {
+        next(err);
+      }
       const id = req.query.id;
       if (!id) {
         return res.redirect('/feature/forms');
@@ -35,32 +38,29 @@ module.exports = superclass => class extends superclass {
       this.cleanSession(req);
 
       const url = baseUrl + encodeEmail(req.sessionModel.get('saveEmail')) + '/' + id;
-      axios.get(url)
+      return axios.get(url)
         .then(function (response) {
           const resBody = response.data;
           if (resBody && resBody.length && resBody[0].session) {
             const session = resBody[0].session;
-
             delete session['csrf-secret'];
             delete session.errors;
-            
             session.steps = session.steps.filter(step => !step.match(/\/change|edit$/));
-
             req.sessionModel.set(session);
             req.sessionModel.set('id', id);
-            next()
-          }         
-        })
-    })
+            next();
+          }
+        });
+    });
   }
 
   // redirects to the next question
   saveValues(req, res, next) {
     super.saveValues(req, res, err => {
       if (err) {
-        next(err)
+        next(err);
       }
       return res.redirect('/feature/confirm');
-    })
+    });
   }
-}
+};
