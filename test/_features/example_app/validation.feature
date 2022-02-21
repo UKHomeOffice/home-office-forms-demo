@@ -63,12 +63,10 @@ Feature: validations
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
     
-  @complex_form @complex_form_without_saving
-  Scenario: Full Complex Form Submission Without Continuing A Saved Form And Without Saving The Form
+  @complex_form
+  Scenario: Full Complex Form Submission
     Given I start the 'base' application journey
     Then I choose 'Complex form'
-    Then I continue to the next step
-    Then I choose 'No'
     Then I continue to the next step
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Continue' button
@@ -108,75 +106,8 @@ Feature: validations
     Then I should see the 'Select an appeal stage from the list' error
     Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
     Then I click the 'Continue' button
-    Then I check 'saveForm-no'
-    Then I click the 'Continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
-    Then I continue to the next step
-    Then I should see 'Application complete' on the page
+    Then I click the 'Confirm submission' button
+    Then I should be on the 'confirmation' page showing 'Application complete'
     Then I click the 'Start again' button
     Then I should be on the 'landing-page' page showing 'Choose one of the options below and press continue.'
-
-  @complex_form @continue_saved_form
-  Scenario: Partial Complex Form Submission Continuing A Saved Form
-    Given I start the 'base' application journey
-    Then I choose 'Complex form'
-    Then I continue to the next step
-    Then I continue to the next step
-    Then I should see the 'Do you want to continue a form you have previously saved?' error
-    Then I choose 'Yes'
-    Then I continue to the next step
-    Then I should see the 'Enter the email address you used to save the form' error
-    Then I fill 'savedFormEmail' with 'Fake email'
-    Then I continue to the next step
-    Then I should see the 'Enter the email address you used to save the form in the correct format' error
-    Then I fill 'savedFormEmail' with 'email@test.com'
-    Then I continue to the next step
-
-  @complex_form @save_form
-  Scenario: Full Complex Form Submission With Saving The Form
-    Given I start the 'base' application journey
-    Then I choose 'Complex form'
-    Then I continue to the next step
-    Then I choose 'No'
-    Then I continue to the next step
-    Then I fill 'name' with 'Jane Doe'
-    Then I click the 'Continue' button
-    Then I enter a date of birth for a 30 year old
-    Then I click the 'Continue' button
-    Then I fill 'building' with '10 Downing Street'
-    Then I fill 'townOrCity' with 'London'
-    Then I fill 'postcode' with 'W12 3DE'
-    Then I click the 'Continue' button
-    Then I select 'Salary' 
-    Then I select 'Child Benefit' 
-    Then I click the 'Continue' button
-    Then I select 'England and Wales'
-    Then I click the 'Continue' button
-    Then I fill 'countrySelect' with 'United'
-    Then I select 'United Kingdom'
-    Then I click the 'Continue' button
-    Then I fill 'complaintDetails' text area with 'I would like to make a complaint'
-    Then I click the 'Continue' button
-    Then I should be on the 'checkbox-not-both-options' page showing 'Which sections do the weapons or components fall under?'
-    Then I check 'weaponsTypes-fully_automatic'
-    Then I check 'weaponsTypes-large_revolvers'
-    Then I click the 'Continue' button
-    Then I select 'appealStages' and '01. First Tier IAC Appeal - In Country Appeals'
-    Then I click the 'Continue' button
-    Then I continue to the next step
-    Then I should see the 'Select if you want to save your form or not' error
-    Then I check 'saveForm-no'
-    Then I select 'Yes'
-    Then I click the 'Continue' button
-    Then I should see the 'Enter your email address' error
-    Then I should see the 'You must enter a reference' error
-    Then I fill 'saveEmail' with '=testemail.com'
-    Then I click the 'Continue' button
-    Then I should see the 'Enter your email address in the correct format' error
-    Then I should see the 'You must enter a reference' error
-    Then I fill 'saveEmail' with 'test@email.com'
-    Then I click the 'Continue' button
-    Then I should see the 'You must enter a reference' error
-    Then I fill 'saveRef' with 'My saved form'
-    Then I click the 'Continue' button
-    
