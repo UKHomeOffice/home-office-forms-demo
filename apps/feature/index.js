@@ -34,19 +34,19 @@ module.exports = {
       next: '/name' 
     },
     '/name': {
-      // behaviours: SaveFormSession,
+      behaviours: SaveFormSession,
       fields: ['name'],
       template: 'save-and-continue-field',
       next: '/checkboxes'
     },
     '/checkboxes': {
-      // behaviours: SaveFormSession,
+      behaviours: SaveFormSession,
       fields: ['incomeTypes'],
       template: 'save-and-continue-field',
       next: '/text-area-input'
     },
     '/text-area-input': {
-      // behaviours: SaveFormSession,
+      behaviours: SaveFormSession,
       fields: ['textArea'],
       template: 'save-and-continue-field',
       next: '/confirm'
