@@ -2,6 +2,7 @@
 'use strict';
 
 const axios = require('axios');
+const baseUrl = 'http://localhost:3000/forms/';
 
 module.exports = superclass => class extends superclass {
   saveValues(req, res, next) {
@@ -12,7 +13,7 @@ module.exports = superclass => class extends superclass {
       const session = req.sessionModel.toJSON();
       delete session['csrf-secret'];
       delete session.errors;
-      axios.post('http://localhost:3000/forms', {
+      axios.post(baseUrl, {
         email: req.sessionModel.get('saveEmail'),
         id: req.sessionModel.get('id'),
         session: session
