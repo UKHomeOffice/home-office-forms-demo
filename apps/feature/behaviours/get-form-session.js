@@ -8,6 +8,16 @@ const _ = require('lodash');
 const encodeEmail = email => Buffer.from(email).toString('hex');
 
 module.exports = superclass => class extends superclass {
+  cleanSession(req) {
+    let cleanList = Object.keys(req.sessionModel.attributes);
+    const keepList = ['saveEmail', 'csrf-secret'];
+
+    cleanList = cleanList.filter(item => keepList.indexOf(item) === -1);
+
+    req.sessionModel.unset(cleanList);
+    req.sessionModel.set('steps', ['/start', '/forms']);
+  }
+
   locals(req, res) {
     const superlocals = super.locals(req, res);
     const data = Object.assign({}, {
@@ -18,6 +28,8 @@ module.exports = superclass => class extends superclass {
   }
 
   getValues(req, res, next) {
+    this.cleanSession(req);
+
     super.getValues(req, res, err => {
       if (err) {
         next(err);
@@ -41,9 +53,9 @@ module.exports = superclass => class extends superclass {
           }
         })
         // redirect to /name if the localhost database is not running
-        .catch(function () {
-          return res.redirect('/name');
-        })
+        // .catch(function () {
+        //   return res.redirect('/feature/forms');
+        // })
         .then(function () {
           next();
         });
