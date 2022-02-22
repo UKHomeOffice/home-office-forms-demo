@@ -2,8 +2,8 @@
 Feature: Save and return
   A user should save their form
 
-  @save_form
-  Scenario: Saving a form
+  @save_and_continue
+  Scenario: Going through the form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
     Then I click the 'Start a form' button
@@ -45,7 +45,7 @@ Feature: Save and return
     Then I should be on the 'name' page showing 'What is your name?'
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Save and exit' button
-    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I should be on the 'save-and-exit' page showing 'You can return to your form at any time from the save and return page.'
 
   @delete_form
   Scenario: Creating and deleting a form
