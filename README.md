@@ -1,4 +1,4 @@
-# Home Office Forms Demo Application
+ # Home Office Forms Demo Application
 
 Currently a work in progress. The Home Office Forms (HOF) Example app will be used by developers to learn and understand more about the HOF framework. Developers will be able to learn and test out different components in the framework and build their own app using the framework. There will be forms built using the framework available for demoing.
 
