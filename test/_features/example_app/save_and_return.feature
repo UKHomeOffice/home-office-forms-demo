@@ -63,6 +63,8 @@ Feature: Save and return
     Then I should be on the 'name' page showing 'What is your name?'
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Save and exit' button
+    Then I click the 'Start again' button
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
     Then I click the 'Start a form' button
     Then I should be on the 'start' page showing 'Enter your email address'
     Then I fill 'saveEmail' with 'testdelete@email.com'
