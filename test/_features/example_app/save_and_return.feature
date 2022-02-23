@@ -47,7 +47,7 @@ Feature: Save and return
     Then I click the 'Save and exit' button
     Then I should be on the 'save-and-exit' page showing 'You can return to your form at any time from the save and return page.'
 
-  @delete_form
+  @save_and_delete_form
   Scenario: Creating and deleting a form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
@@ -74,7 +74,7 @@ Feature: Save and return
     Then I click the 'Delete this form' button
     Then I should be on the 'forms' page showing 'You do not currently have any draft forms'
 
-    @save_and_update
+    @save_and_update_form
     Scenario: Save and exit of a form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
