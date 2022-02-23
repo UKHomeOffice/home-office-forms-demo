@@ -93,3 +93,8 @@ Then('I select {string} and {string}', async function (field, value) {
   await this.page.selectOption(`select#${field}`, { label: `${value}`});
   expect(await this.page.innerText('body')).to.include(value);
 }.bind(World));
+
+Then('I navigate to journey {string} and {string} page', async function (subApp, page) {
+  this.subApp = subApp === 'base' ? '' : `/${subApp}`;
+  await this.page.goto(`${domain}${this.subApp}/${page}`);
+}.bind(World));

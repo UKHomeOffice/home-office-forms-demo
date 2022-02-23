@@ -46,3 +46,60 @@ Feature: Save and return
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Save and exit' button
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
+
+  @delete_form
+  Scenario: Creating and deleting a form
+    Given I start the 'feature' application journey
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testdelete@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I continue to the next step
+    Then I should be on the 'reference' page showing 'Give your form a reference'
+    Then I fill 'reference' with '1234'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'name' page showing 'What is your name?'
+    Then I fill 'name' with 'Jane Doe'
+    Then I click the 'Save and exit' button
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testdelete@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I click the 'Delete form' button
+    Then I click the 'Delete this form' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+
+  @delete_form @check_after_deletion
+  Scenario: Creating and deleting a form and checking the email does not have any forms after deletion
+    Given I start the 'feature' application journey
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testcheckdelete@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I continue to the next step
+    Then I should be on the 'reference' page showing 'Give your form a reference'
+    Then I fill 'reference' with '1234'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'name' page showing 'What is your name?'
+    Then I fill 'name' with 'Jane Doe'
+    Then I click the 'Save and exit' button
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testcheckdelete@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I click the 'Delete form' button
+    Then I click the 'Delete this form' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I navigate to journey 'feature' and 'save-and-return' page
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testcheckdelete@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'You do not currently have any draft forms'
