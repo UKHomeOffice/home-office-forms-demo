@@ -4,6 +4,7 @@
 const GetFormSession = require('./behaviours/get-form-session');
 const ContinueForm = require('./behaviours/continue-form');
 const SaveFormSession = require('./behaviours/save-form-session');
+const AreYouSure = require('./behaviours/are-you-sure');
 const SummaryPageBehaviour = require('hof').components.summary;
 
 module.exports = {
@@ -22,6 +23,9 @@ module.exports = {
       behaviours: GetFormSession,
       template: 'forms',
       next: '/reference'
+    },
+    '/are-you-sure': {
+      behaviours: AreYouSure
     },
     '/continue-form':{
       behaviours: [ContinueForm, SummaryPageBehaviour],

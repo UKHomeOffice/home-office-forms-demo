@@ -12,6 +12,10 @@
   "forms": {
     "title": "Forms"
   },
+  "are-you-sure": {
+    "title": "Are you sure",
+    "header": "Delete form"
+  },
   "continue-form": {
     "header": "Do you want to continue this form"
   },
