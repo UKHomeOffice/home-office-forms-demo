@@ -44,7 +44,7 @@ module.exports = superclass => class extends superclass {
               const updated = moment(form.updated_at);
               const formSession = {
                 id: form.id,
-                reference: (form.session.reference),
+                reference: form.session.reference,
                 createdAt: created.format('DD MMMM YYYY'),
                 updatedAt: updated.format('DD MMMM YYYY')
               };
