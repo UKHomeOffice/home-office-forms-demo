@@ -73,3 +73,29 @@ Feature: Save and return
     Then I click the 'Delete form' button
     Then I click the 'Delete this form' button
     Then I should be on the 'forms' page showing 'You do not currently have any draft forms'
+
+    @save_and_update
+    Scenario: Save and exit of a form
+    Given I start the 'feature' application journey
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testupdate@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'Create a new form'
+    Then I continue to the next step
+    Then I should be on the 'reference' page showing 'Give your form a reference'
+    Then I fill 'reference' with '1234'
+    Then I click the 'Save and exit' button
+    Then I should be on the 'save-and-exit' page showing 'You can return to your form at any time from the save and return page.'
+    Then I click the 'Start again' button
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testupdate@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing '1234'
+    Then I click the 'Go to form' button
+    Then I should be on the 'continue-form' page showing 'Do you want to continue this form'
+    Then I click the 'Continue to next question' button
+    Then I should be on the 'reference' page showing 'Give your form a reference'  
