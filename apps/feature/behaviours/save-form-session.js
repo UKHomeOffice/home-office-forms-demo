@@ -31,8 +31,7 @@ module.exports = superclass => class extends superclass {
             req.sessionModel.unset('id');
           }
           if (req.body['save-and-exit']) {
-            req.sessionModel.reset();
-            return res.redirect('/feature/start');
+            return res.redirect('/feature/save-and-exit');
           } else {
             next();
           }

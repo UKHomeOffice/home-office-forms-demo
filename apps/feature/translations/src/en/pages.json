@@ -47,5 +47,9 @@
     }
   },
   "confirmation": {
+  },
+  "save-and-exit": {
+    "title": "Save and exit",
+    "alert": "Form Saved"
   }
 }

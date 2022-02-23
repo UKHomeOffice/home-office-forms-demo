@@ -52,10 +52,6 @@ module.exports = superclass => class extends superclass {
             });
           }
         })
-        // redirect to /name if the localhost database is not running
-        // .catch(function () {
-        //   return res.redirect('/feature/forms');
-        // })
         .then(function () {
           next();
         });

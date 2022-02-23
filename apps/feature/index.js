@@ -5,6 +5,7 @@ const GetFormSession = require('./behaviours/get-form-session');
 const ContinueForm = require('./behaviours/continue-form');
 const SaveFormSession = require('./behaviours/save-form-session');
 const AreYouSure = require('./behaviours/are-you-sure');
+const SaveAndExit = require('./behaviours/save-and-exit')
 const SummaryPageBehaviour = require('hof').components.summary;
 
 module.exports = {
@@ -61,6 +62,11 @@ module.exports = {
       next: '/confirmation'
     },
     '/confirmation': {
+      backLink: false
+    },
+    '/save-and-exit': {
+      behaviours: SaveAndExit,
+      template: 'save-and-exit',
       backLink: false
     }
   }

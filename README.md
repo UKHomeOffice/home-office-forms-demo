@@ -52,3 +52,17 @@ yarn start:dev
 ```
 
 go to http://localhost:8080/
+
+### Try out the Save and Return Feature 
+
+In the example app, you can try out a simplified version of the save and return feature present in the NRM service, which allows users to save a form and return back to it later. To try out this feature locally, you will need to set up a local database and have a local version of the hof-example-app-save-and-return-api running. 
+
+#### Set up you local database.
+
+Clone the hof-example-app-schema and follow the instructions on how to set up an database locally. 
+Clone the hof-example-app-save-and-return-api and have this running locally, by running
+
+```bash
+yarn start
+```
+then run this app locally, following the instructions above and go to http://localhost:8080/feature
