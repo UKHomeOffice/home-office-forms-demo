@@ -32,11 +32,10 @@ spec:
                   name: users
                   key: reports
             - name: DB_HOST
-              {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
-              value: hof-demo.prod.acp.homeoffice.gov.uk
-              {{ else }}
-              value: hof-demo-branch.notprod.acp.homeoffice.gov.uk
-              {{ end }}
+              valueFrom:
+                secretKeyRef:
+                  name: rds-info
+                  key: host
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
@@ -48,11 +47,10 @@ spec:
                   name: rds-secret
                   key: password
             - name: DB_NAME
-              {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
-              value: hofdemo
-              {{ else }}
-              value: hofdemobranch
-              {{ end }}
+              valueFrom:
+                secretKeyRef:
+                  name: rds-info
+                  key: database
             - name: NODE_ENV
               value: production
       restartPolicy: Never

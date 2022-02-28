@@ -1,9 +1,6 @@
 #! /bin/bash
 set -e
 
-export KUBE_NAMESPACE=hof-demo-branch
-export PROD_ENV=hof-demo
-
 export SCHEMA_ACTION=$1
 
 kd='kd --timeout 10m --check-interval 5s'
