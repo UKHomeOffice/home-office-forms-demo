@@ -40,12 +40,20 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: rds-secret
+                  {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
+                  key: rds-username
+                  {{ else }}
                   key: user
+                  {{ end }}
             - name: DB_PASS
               valueFrom:
                 secretKeyRef:
                   name: rds-secret
+                  {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
+                  key: rds-password
+                  {{ else }}
                   key: password
+                  {{ end }}
             - name: DB_NAME
               valueFrom:
                 secretKeyRef:
