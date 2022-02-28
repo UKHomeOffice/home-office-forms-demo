@@ -1,0 +1,59 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ms-schema
+spec:
+  template:
+    spec:
+      containers:
+        - name: ms-schema
+          # release v1.6.0
+          image: quay.io/ukhomeofficedigital/ms-schema:e4a8f7be112bcf5a4380b0cfe49f743fa1232b36
+          command: ["npm",  "run", "db:{{ .SCHEMA_ACTION }}"]
+          env:
+            - name: HOF_USER_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: users
+                  key: hof
+            - name: RESOLVER_USER_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: users
+                  key: resolver
+            - name: GRAFANA_USER_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: users
+                  key: grafana
+            - name: REPORTS_USER_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: users
+                  key: reports
+            - name: DB_HOST
+              {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
+              value: hof-demo.prod.acp.homeoffice.gov.uk
+              {{ else }}
+              value: hof-demo-branch.notprod.acp.homeoffice.gov.uk
+              {{ end }}
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: rds-secret
+                  key: user
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: rds-secret
+                  key: password
+            - name: DB_NAME
+              {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
+              value: hofdemo
+              {{ else }}
+              value: hofdemobranch
+              {{ end }}
+            - name: NODE_ENV
+              value: production
+      restartPolicy: Never
+  backoffLimit: 0
