@@ -3,12 +3,12 @@ Feature: Save and return
   A user should save their form
 
   @save_and_continue
-  Scenario: Going through the form
+  Scenario: Got through and delete submitted form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
     Then I click the 'Start a form' button
     Then I should be on the 'start' page showing 'Enter your email address'
-    Then I fill 'saveEmail' with 'test@email.com'
+    Then I fill 'saveEmail' with 'testsubmission@email.com'
     Then I click the 'Save and continue' button
     Then I should be on the 'forms' page showing 'Create a new form'
     Then I continue to the next step
@@ -27,7 +27,14 @@ Feature: Save and return
     Then I click the 'Save and continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
     Then I click the 'Confirm submission' button
-    Then I should be on the 'confirmation' page showing 'Application successful'
+    Then I should be on the 'confirmation' page showing 'Application complete'
+    Then I click the 'Start again' button
+    Then I should be on the 'save-and-return' page showing 'Save and return feature'
+    Then I click the 'Start a form' button
+    Then I should be on the 'start' page showing 'Enter your email address'
+    Then I fill 'saveEmail' with 'testsubmission@email.com'
+    Then I click the 'Save and continue' button
+    Then I should be on the 'forms' page showing 'You do not currently have any draft forms'
 
   @save_and_exit
   Scenario: Save and exit of a form
@@ -48,7 +55,7 @@ Feature: Save and return
     Then I should be on the 'save-and-exit' page showing 'You can return to your form at any time from the save and return page.'
 
   @save_and_delete_form
-  Scenario: Creating and deleting a form
+  Scenario: Create and delete a form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
     Then I click the 'Start a form' button

@@ -37,6 +37,6 @@ Feature: Database validations
     Then I click the 'Save and continue' button
     Then I should be on the 'confirm' page showing 'Check your answers before submitting your application.'
     Then I click the 'Confirm submission' button
-    Then I should be on the 'confirmation' page showing 'Application successful'
+    Then I should be on the 'confirmation' page showing 'Application complete'
 
     

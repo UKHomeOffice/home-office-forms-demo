@@ -3,7 +3,7 @@
     "title": "Save and return feature",
     "header": "Save and return feature",
     "subheader": "Try an example of the save and return feature using a HOF form",
-    "text": "In this demo you can try out a simplified version of the save and return feature which has been implemented by a service, Modern Slavery, which uses the hof framework."
+    "text": "In this demo you can try out a simplified version of the save and return feature which has been implemented by a service, Modern Slavery, which uses the HOF framework. You will be able to save, update and delete the forms you create and when you submit the form it will be deleted from the database."
   },
   "start": {
     "header": "Enter your email address",
@@ -47,6 +47,10 @@
     }
   },
   "confirmation": {
+    "title": "Confirmation",
+    "alert": "Application complete",
+    "subheader": "Save and return demo complete",
+    "content": "The submitted form has now been deleted from the database"
   },
   "save-and-exit": {
     "title": "Save and exit",

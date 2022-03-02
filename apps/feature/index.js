@@ -7,6 +7,7 @@ const SaveFormSession = require('./behaviours/save-form-session');
 const AreYouSure = require('./behaviours/are-you-sure');
 const SaveAndExit = require('./behaviours/save-and-exit')
 const SummaryPageBehaviour = require('hof').components.summary;
+const DeleteFormSession = require('./behaviours/delete-form-session');
 
 module.exports = {
   name: 'feature',
@@ -57,7 +58,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
+      behaviours: [SummaryPageBehaviour, 'complete', DeleteFormSession],
       sections: require('./sections/summary-data-sections'),
       next: '/confirmation'
     },
