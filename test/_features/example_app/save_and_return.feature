@@ -3,7 +3,7 @@ Feature: Save and return
   A user should save their form
 
   @save_and_continue
-  Scenario: Got through and delete submitted form
+  Scenario: Go through and delete submitted form
     Given I start the 'feature' application journey
     Then I should be on the 'save-and-return' page showing 'Save and return feature'
     Then I click the 'Start a form' button
