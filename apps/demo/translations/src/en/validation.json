@@ -2,13 +2,6 @@
   "landing-page-radio": {
     "required": "Select an option below and press continue"
   },
-  "continueSavedForms": {
-    "required": "Do you want to continue a form you have previously saved?"
-  },
-  "savedFormEmail": { 
-    "required": "Enter the email address you used to save the form",
-    "email": "Enter the email address you used to save the form in the correct format"
-  },
   "name":{
     "default": "Enter your full name"
   },
@@ -44,10 +37,6 @@
     "default": "Enter your phone number",
     "internationalPhoneNumber": "Enter a valid phone number"
   },
-  "int-phone-number": {
-    "required": "Enter an international phone number",
-    "internationalPhoneNumber": "Enter a valid international phone number"
-  },
   "complaintDetails": {
     "default": "Enter details about why you are making a complaint",
     "maxlength": "Keep to the 5000 character limit"
@@ -58,14 +47,5 @@
   },
   "appealStages": {
     "required": "Select an appeal stage from the list"
-  },
-  "saveForm": {
-    "required": "Select if you want to save your form or not"
-  },
-  "saveEmail": {
-    "required": "Enter your email address"
-  },
-  "saveRef": {
-    "required": "You must enter a reference"
   }
 }

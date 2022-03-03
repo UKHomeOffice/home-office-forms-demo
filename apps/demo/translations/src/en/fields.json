@@ -15,20 +15,6 @@
       }
     }
   },
-  "continueSavedForms": {
-    "options":{
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "savedFormEmail": {
-    "label": "Enter the email address you used to save the form",
-    "hint": "Email address"
-  },
   "name": {
     "label": "Full name"
   },
@@ -91,9 +77,6 @@
     "label": "Phone number",
     "hint": "International phone numbers require the international dialling code, for example +44 808 157 0192"
   },
-  "int-phone-number": {
-    "legend": "International phone number"
-  },
   "complaintDetails": {
     "label": "Complaint details"
   },
@@ -148,22 +131,5 @@
     "options": {
       "null": "Select..."
     }
-  },
-  "saveForm": {
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "saveEmail": {
-    "label": "Enter your email address"
-  },
-  "saveRef": {
-    "label": "What is your reference for this form?",
-    "hint": "This is for you to keep track of your saved forms"
   }
 }

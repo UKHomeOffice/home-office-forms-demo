@@ -7,12 +7,6 @@
     "title": "Build your own form",
     "subheader": "Access the build your own form guidance link"
   },
-  "continue-saved-form": {
-    "header": "Do you want to continue a saved form?"
-  },
-  "forms":{
-    "title": "Forms"
-  },
   "name": {
     "header": "What is your full name?"
   },
@@ -50,9 +44,6 @@
   "select":{
     "header": "What is the appeal stage?",
     "intro": "Choose an appeal stage from the drop down menu"
-  },
-  "save-form": {
-    "header": "Would you like to save your form?"
   },
   "confirm": {
     "header": "Check your answers before submitting your application.",

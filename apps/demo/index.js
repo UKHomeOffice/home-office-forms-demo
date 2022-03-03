@@ -3,9 +3,6 @@
 
 const CountrySelect = require('./behaviours/country-select');
 const SummaryPageBehaviour = require('hof').components.summary;
-const getFormSession = require('./behaviours/get-form-session');
-const InternationalPhoneNumber = require('./behaviours/international-number');
-const SaveFormSession = require('./behaviours/save-form-session');
 
 module.exports = {
   name: 'demo',
@@ -34,26 +31,6 @@ module.exports = {
     },
     '/build-your-own-form': {
       template: 'form-guidance-link'
-    },
-    '/continue-saved-form': {
-      template: 'continue-saved-form',
-      fields: [
-        'continueSavedForms', 
-        'savedFormEmail'
-      ],
-      next: '/forms',
-      forks: [{
-        target: '/text-input-area',
-        condition: {
-          field: 'continueSavedForms',
-          value: 'no'
-        }
-      }]
-    },
-    '/forms':{
-      behaviours: getFormSession,
-      template: 'forms',
-      next: '/name'
     },
     '/name': {
       fields: ['name'],
@@ -108,21 +85,6 @@ module.exports = {
       fields: ['appealStages'],
       next: '/confirm'
     },
-    '/save-form': {
-      behaviours: SaveFormSession,
-      fields: ['saveForm', 'saveEmail', 'saveRef'],
-      forks: [{
-        target: '/save-confirmation',
-        condition: {
-          field: ['saveForm'],
-          value: 'yes'
-        }
-      }
-      ],
-      next: '/confirm'
-    },
-    '/save-confirmation': {
-    },
     '/confirm': {
       behaviours: [SummaryPageBehaviour, 'complete'],
       sections: require('./sections/summary-data-sections'),
@@ -130,13 +92,6 @@ module.exports = {
     },
     '/confirmation': {
       backLink: false
-    },
-    '/international-phone-number': {
-      behaviours: InternationalPhoneNumber,
-      fields: [
-        'int-phone-number'
-      ],
-      next: '/confirm'
     },
   }
 };

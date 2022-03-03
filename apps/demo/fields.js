@@ -20,27 +20,6 @@ module.exports = {
     },
     options: ['basic-form', 'complex-form', 'build-your-own-form']
   },
-  continueSavedForms: {
-    mixin: 'radio-group',
-    validate: 'required',
-    legend: {
-      className: 'visuallyhidden'
-    },
-    options: [{
-      value: 'yes',
-      toggle: 'savedFormEmail',
-      child: 'partials/saved-form-email'
-    }, {
-      value: 'no'
-    }]
-  },
-  savedFormEmail: {
-    validate: ['email', 'required'],
-    dependent: {
-      field: 'continueSavedForms',
-      value: 'yes'
-    }
-  },
   name: {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
@@ -93,10 +72,6 @@ module.exports = {
   },
   phone: {
     validate: ['required', 'internationalPhoneNumber']
-  },
-  'int-phone-number': {
-    validate: ['required'],
-    labelClassName: 'visuallyhidden'
   },
   countrySelect: {
     mixin: 'select',
@@ -153,33 +128,4 @@ module.exports = {
       label: 'fields.appealStages.options.null'
     }].concat(staticAppealStages.getstaticAppealStages())
   },
-  saveForm: {
-    mixin: 'radio-group',
-    validate: ['required'],
-    legend: {
-      className: 'visuallyhidden'
-    },
-    options: [
-      {
-        value: 'yes',
-        toggle: ['saveEmail'],
-        child: 'partials/save-email-ref',
-      },
-      'no'
-    ]
-  },
-  saveEmail: {
-    validate: ['required', 'email'],
-    dependent: {
-      value: 'yes',
-      field: 'saveForm'
-    }
-  },
-  saveRef: {
-    validate: ['required'],
-    dependent: {
-      value: 'yes',
-      field: 'saveForm'
-    }
-  }
 }
