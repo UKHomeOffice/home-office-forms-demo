@@ -2,7 +2,7 @@
 
 const axios = require('axios');
 const baseUrl = 'http://localhost:3000/forms/';
-const encodeEmail = require('../lib/encode-email');
+const encodeEmail = require('../util/encode-email');
 
 
 module.exports = superclass => class extends superclass {
