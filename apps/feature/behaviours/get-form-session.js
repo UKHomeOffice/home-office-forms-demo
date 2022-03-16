@@ -4,8 +4,7 @@ const axios = require('axios');
 const moment = require('moment');
 const baseUrl = 'http://localhost:3000/forms/';
 const _ = require('lodash');
-
-const encodeEmail = email => Buffer.from(email).toString('hex');
+const encodeEmail = require('../util/encode-email');
 
 module.exports = superclass => class extends superclass {
   cleanSession(req) {

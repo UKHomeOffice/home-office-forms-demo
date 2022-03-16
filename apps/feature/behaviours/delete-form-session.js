@@ -2,7 +2,7 @@
 
 const axios = require('axios');
 const baseUrl = 'http://localhost:3000/forms/';
-const encodeEmail = email => Buffer.from(email).toString('hex');
+const encodeEmail = require('../util/encode-email');
 
 module.exports = superclass => class extends superclass {
   saveValues(req, res, next) {
