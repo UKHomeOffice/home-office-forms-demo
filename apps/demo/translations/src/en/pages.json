@@ -51,6 +51,19 @@
     "header": "What is the appeal stage?",
     "intro": "Choose an appeal stage from the drop down menu"
   },
+  "rra-prototype": {
+    "header": "Recruitment and Retention Allowance (RRA) Application ",
+    "subheader": "Guidance on completing the self-assessment"
+  },
+  "personalDetails": {
+    "header": "Personal Details"
+  },
+  "professionDetails": {
+    "header": "Profession Details"
+  },
+  "datm": {
+    "header": "Data Management (DATM)"
+  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
@@ -74,9 +87,18 @@
       },
       "complaintDetails": {
         "header": "Complaint details"
-      }, 
+      },
       "weaponsTypes": {
         "header": "Weapons details"
+      },
+      "personalDetails": {
+        "header": "Personal Details"
+      },
+      "professionDetails": {
+        "header": "Profession Details"
+      },
+      "datm": {
+        "header": "Data Management (DATM)"
       }
     }
   },

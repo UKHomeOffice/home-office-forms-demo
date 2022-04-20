@@ -118,5 +118,38 @@
     "options": {
       "null": "Select..."
     }
+  },
+  "rraEvidence": {
+    "label": "Please provide evidence"
+  },
+  "rraName": {
+    "label": "Full Name"
+  },
+  "rraAdelphiNumber": {
+    "label":"Adelphi Number"
+  },
+  "rraFunction": {
+    "label": "Function or Portfolio"
+  },
+  "rraEmail": {
+    "label": "HO Email Address"
+  },
+  "rraRole": {
+    "label": "Role"
+  },
+  "rraGrouping": {
+    "label": "RRA Grouping"
+  },
+  "rraSkills": {
+    "label": "Skill"
+  },
+  "rraScores": {
+    "label": "Score"
+  },
+  "rraGrade": {
+    "label": "Substantive Grade"
+  },
+  "rraLevels": {
+    "label": "Applying for Proficiency Level"
   }
 }

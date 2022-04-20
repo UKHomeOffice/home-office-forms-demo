@@ -82,5 +82,21 @@ module.exports = {
       ],
       next: '/confirm'
     },
+    '/rra-prototype': {
+      template: 'rra-prototype',
+      next: '/personalDetails',
+    },
+    '/personalDetails': {
+      fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/professionDetails',
+    },
+    '/professionDetails': {
+      fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],
+      next: '/datm',
+    },
+    '/datm': {
+      fields: ['rraScores', 'rraEvidence'],
+      next: '/confirm'
+    },
   }
 };
