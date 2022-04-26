@@ -5,13 +5,13 @@
 module.exports = {
   getstaticRraLevels: function () {
     return [
-      { value: 'practioner',
+      { value: 'Practioner',
         label: 'Practioner'
       },
-      { value: 'expert',
+      { value: 'Expert',
         label: 'Expert'
       },
-      { value: 'guru',
+      { value: 'Guru',
         label: 'Guru'
       }
     ];

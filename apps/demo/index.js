@@ -4,6 +4,7 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
+const EmailBehaviour = require('./behaviours/send-email');
 
 module.exports = {
   name: 'demo',
@@ -68,7 +69,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
+      behaviours: [SummaryPageBehaviour, EmailBehaviour, 'complete'],
       sections: require('./sections/summary-data-sections'),
       next: '/confirmation'
     },
