@@ -97,10 +97,14 @@ module.exports = {
     },
     '/professionDetails': {
       fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],
-      next: '/skill',
+      next: '/skill1',
     },
-    '/skill': {
-      fields: ['rraSkill', 'rraScores', 'rraEvidence', 'rraSupportingDocuments'],
+    '/skill1': {
+      fields: ['sfiaSkill', 'rraScores', 'rraEvidence'],
+      next: '/skill2'
+    },
+    '/skill2': {
+      fields: ['sfiaSkill', 'rraScores', 'rraEvidence'],
       next: '/confirm'
     },
   }

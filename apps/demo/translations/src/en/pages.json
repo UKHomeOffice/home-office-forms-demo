@@ -97,8 +97,11 @@
       "professionDetails": {
         "header": "Profession Details"
       },
-      "skill": {
+      "skill1": {
         "header": "Skill 1"
+      },
+      "skill2": {
+        "header": "Skill 2"
       }
     }
   },
