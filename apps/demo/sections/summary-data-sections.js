@@ -63,7 +63,16 @@ module.exports = {
       parse: v => _.get(_.find(RRA_LEVELS, group => group.value === v), 'label', '')
     }
   ],
-  datm: [
+  'skill1': [
+    'sfiaSkill',
+    {
+      field: 'rraScores',
+      parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
+    },
+    'rraEvidence'
+  ],
+  'skill2': [
+    'sfiaSkill',
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
