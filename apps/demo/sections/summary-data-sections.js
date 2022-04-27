@@ -6,6 +6,7 @@ const APPEAL_STAGES = require('../lib/staticAppealStages').getstaticAppealStages
 const RRA_GROUPING = require('../lib/staticRraGrouping').getstaticRraGrouping();
 const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
+const SFIA_SKILLS = require('../lib/staticSfiaSkills').getstaticSfiaSkills();
 const _ = require('lodash');
 
 module.exports = {
@@ -63,11 +64,16 @@ module.exports = {
       parse: v => _.get(_.find(RRA_LEVELS, group => group.value === v), 'label', '')
     }
   ],
-  datm: [
+  skill: [
+    {
+      field: 'rraSkill',
+      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
+    },
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence'
+    'rraEvidence',
+    'rraSupportingDocuments'
   ]
 };

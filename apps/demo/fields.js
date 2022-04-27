@@ -5,9 +5,11 @@ const _ = require('lodash');
 
 const dateComponent = require('hof').components.date;
 const staticAppealStages = require('./lib/staticAppealStages');
+const staticRraGrades = require('./lib/staticRraGrades');
 const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
+const staticSfiaSkills = require('./lib/staticSfiaSkills');
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -127,6 +129,37 @@ module.exports = {
       label: 'fields.appealStages.options.null'
     }].concat(staticAppealStages.getstaticAppealStages())
   },
+  rraName: {
+    validate: 'required'
+  },
+  rraAdelphiNumber: {
+    validate: ['required', 'numeric']
+  },
+  rraEmail: {
+    validate: ['required', 'email']
+  },
+  'applied-before': {
+    legend: {
+      className: 'visuallyhidden'
+    },
+    mixin: 'radio-group',
+    validate: ['required'],
+    options: [
+      'yes',
+      'no'
+    ]
+  },
+  rraFunction: {
+    validate: 'required',
+  },
+  rraGrade: {
+    mixin: 'select',
+    validate: 'required',
+    options:
+      [{ value: ' ', 
+      label: 'fields.appealStages.options.null' 
+    }].concat(staticRraGrades.getstaticRraGrades())
+  },
   rraGrouping: {
     mixin: 'select',
     validate: ['required'],
@@ -142,6 +175,14 @@ module.exports = {
       value: '',
       label: 'fields.appealStages.options.null'
     }].concat(staticRraLevels.getstaticRraLevels())
+  },
+  rraSkill: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{ 
+      value: ' ', 
+      label: 'fields.appealStages.options.null' 
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
   },
   rraScores: {
     mixin: 'select',
@@ -164,5 +205,8 @@ module.exports = {
       attribute: 'rows',
       value: 8
     }]
+  },
+  rraSupportingDocuments: {
+    mixin: 'input-file'
   }
 }

@@ -20,8 +20,8 @@ const sendEmail = (data, reference) => {
         'grouping': data.rraGrouping,
         'grade': data.rraGrade,
         'level': data.rraLevels,
-        'datm-score': data.rraScores,
-        'datm-evidence': data.rraEvidence
+        'skill-score': data.rraScores,
+        'skill-evidence': data.rraEvidence
       },
       reference
   });

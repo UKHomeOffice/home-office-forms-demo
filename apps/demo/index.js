@@ -89,14 +89,18 @@ module.exports = {
     },
     '/personalDetails': {
       fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/applied-before'
+    },
+    '/applied-before': {
+      fields: ['applied-before'],
       next: '/professionDetails',
     },
     '/professionDetails': {
       fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],
-      next: '/datm',
+      next: '/skill',
     },
-    '/datm': {
-      fields: ['rraScores', 'rraEvidence'],
+    '/skill': {
+      fields: ['rraSkill', 'rraScores', 'rraEvidence', 'rraSupportingDocuments'],
       next: '/confirm'
     },
   }
