@@ -119,6 +119,17 @@
       "null": "Select..."
     }
   },
+  "appliedBefore": {
+    "legend": "Have you applied for RRA whilst in this role before?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
   "sfiaSkill":{
     "label": "Please enter a skill"
   },
@@ -154,5 +165,17 @@
   },
   "rraLevels": {
     "label": "Applying for Proficiency Level"
+  },
+  "sfiaSkill2":{
+    "label": "Please enter a skill"
+  },
+  "rraSkills2": {
+    "label": "Skill"
+  },
+  "rraScores2": {
+    "label": "Score"
+  },
+  "rraEvidence2": {
+    "label": "Please provide evidence"
   }
 }

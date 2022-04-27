@@ -94,6 +94,9 @@
       "personalDetails": {
         "header": "Personal Details"
       },
+      "appliedBefore": {
+        "header": "Application Details"
+      },
       "professionDetails": {
         "header": "Profession Details"
       },

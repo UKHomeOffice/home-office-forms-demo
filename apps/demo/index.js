@@ -89,6 +89,10 @@ module.exports = {
     },
     '/personalDetails': {
       fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/applied-before'
+    },
+    '/applied-before': {
+      fields: ['appliedBefore'],
       next: '/professionDetails',
     },
     '/professionDetails': {
@@ -100,7 +104,7 @@ module.exports = {
       next: '/skill2'
     },
     '/skill2': {
-      fields: ['sfiaSkill', 'rraScores', 'rraEvidence'],
+      fields: ['sfiaSkill2', 'rraScores2', 'rraEvidence2'],
       next: '/confirm'
     },
   }
