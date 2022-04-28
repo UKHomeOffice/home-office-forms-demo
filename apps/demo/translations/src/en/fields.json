@@ -146,7 +146,19 @@
     "label": "Function or Portfolio"
   },
   "rraEmail": {
-    "label": "HO Email Address"
+    "label": "HO Email Address",
+    "hint": "Please enter your home office email address"
+  },
+  "applied-before": {
+    "legend": "Have you applied for RRA whilst in this role before?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
   },
   "rraRole": {
     "label": "Role"
@@ -156,6 +168,12 @@
   },
   "rraSkills": {
     "label": "Skill"
+  },
+  "rraSkill": {
+    "label": "Skill 1"
+  },
+  "rraSupportingDocuments": {
+    "label": "Supporting Documents"
   },
   "rraScores": {
     "label": "Score"
