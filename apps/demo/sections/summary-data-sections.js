@@ -52,6 +52,9 @@ module.exports = {
     'rraFunction',
     'rraEmail'
   ],
+  appliedBefore: [
+    'appliedBefore'
+  ],
   professionDetails: [
     'rraRole',
     {
@@ -73,11 +76,12 @@ module.exports = {
     'rraEvidence'
   ],
   skill2: [
-    'sfiaSkill',
+    'sfiaSkill2',
     {
-      field: 'rraScores',
+      field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
+    'rraEvidence2'
     'rraEvidence',
     'rraSupportingDocuments'
   ]
