@@ -138,7 +138,7 @@ module.exports = {
   rraEmail: {
     validate: ['required', 'email']
   },
-  'applied-before': {
+  appliedBefore: {
     legend: {
       className: 'visuallyhidden'
     },

@@ -92,7 +92,7 @@ module.exports = {
       next: '/applied-before'
     },
     '/applied-before': {
-      fields: ['applied-before'],
+      fields: ['appliedBefore'],
       next: '/professionDetails',
     },
     '/professionDetails': {
