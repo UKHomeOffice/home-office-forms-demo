@@ -89,6 +89,10 @@ module.exports = {
     },
     '/personalDetails': {
       fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/applied-before'
+    },
+    '/applied-before': {
+      fields: ['appliedBefore'],
       next: '/professionDetails',
     },
     '/professionDetails': {

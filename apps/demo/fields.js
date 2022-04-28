@@ -8,6 +8,7 @@ const staticAppealStages = require('./lib/staticAppealStages');
 const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
+const staticRraGrades = require('./lib/staticRraGrades');
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -126,6 +127,37 @@ module.exports = {
       value: '',
       label: 'fields.appealStages.options.null'
     }].concat(staticAppealStages.getstaticAppealStages())
+  },
+  rraName: {
+    validate: 'required'
+  },
+  rraAdelphiNumber: {
+    validate: ['required', 'numeric']
+  },
+  rraEmail: {
+    validate: ['required', 'email']
+  },
+  appliedBefore: {
+    legend: {
+      className: 'visuallyhidden'
+    },
+    mixin: 'radio-group',
+    validate: ['required'],
+    options: [
+      'yes',
+      'no'
+    ]
+  },
+  rraFunction: {
+    validate: 'required',
+  },
+  rraGrade: {
+    mixin: 'select',
+    validate: 'required',
+    options:
+      [{ value: ' ', 
+      label: 'fields.appealStages.options.null' 
+    }].concat(staticRraGrades.getstaticRraGrades())
   },
   rraGrouping: {
     mixin: 'select',
