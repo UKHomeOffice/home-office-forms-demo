@@ -81,8 +81,7 @@ module.exports = {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence2'
-    'rraEvidence',
+    'rraEvidence2',
     'rraSupportingDocuments'
   ]
 };
