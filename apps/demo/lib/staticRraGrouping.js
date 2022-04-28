@@ -8,8 +8,8 @@ module.exports = {
       { value: 'Business Analyst',
         label: 'Business Analyst'
       },
-      { value: 'Business Architecture ',
-        label: 'Business Architecture '
+      { value: 'Business Architecture',
+        label: 'Business Architecture'
       },
       { value: 'Content Designer',
         label: 'Content Designer'

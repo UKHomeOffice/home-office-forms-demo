@@ -68,20 +68,27 @@ module.exports = {
     }
   ],
   skill1: [
-    'sfiaSkill',
+    {
+      field: 'rraSkill',
+      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
+    },
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence'
+    'rraEvidence',
+    'rraSupportingDocuments'
   ],
   skill2: [
-    'sfiaSkill2',
+    {
+      field: 'rraSkill2',
+      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
+    },
     {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
     'rraEvidence2',
-    'rraSupportingDocuments'
+    'rraSupportingDocuments2'
   ]
 };

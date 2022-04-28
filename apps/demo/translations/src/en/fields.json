@@ -130,9 +130,6 @@
       }
     }
   },
-  "sfiaSkill":{
-    "label": "Please enter a skill"
-  },
   "rraEvidence": {
     "label": "Please provide evidence"
   },
@@ -166,9 +163,6 @@
   "rraGrouping": {
     "label": "RRA Grouping"
   },
-  "rraSkills": {
-    "label": "Skill"
-  },
   "rraSkill": {
     "label": "Skill 1"
   },
@@ -184,16 +178,16 @@
   "rraLevels": {
     "label": "Applying for Proficiency Level"
   },
-  "sfiaSkill2":{
-    "label": "Please enter a skill"
-  },
-  "rraSkills2": {
-    "label": "Skill"
+  "rraSkill2":{
+    "label": "Skill 2"
   },
   "rraScores2": {
     "label": "Score"
   },
   "rraEvidence2": {
     "label": "Please provide evidence"
+  },
+  "rraSupportingDocuments2": {
+    "label": "Supporting Documents"
   }
 }

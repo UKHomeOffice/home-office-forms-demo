@@ -86,7 +86,7 @@
   },
   "rraEvidence": {
     "required": "Please provide evidence"
-  }
+  },
   "rraSkill2": {
     "required": "Please select a skill"
   },

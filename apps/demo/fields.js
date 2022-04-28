@@ -206,6 +206,17 @@ module.exports = {
       value: 8
     }]
   },
+  rraSupportingDocuments: {
+    mixin: 'input-file'
+  },
+  rraSkill2: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{ 
+      value: ' ', 
+      label: 'fields.appealStages.options.null' 
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+  },
   rraScores2: {
     mixin: 'select',
     validate: ['required'],
@@ -227,7 +238,8 @@ module.exports = {
       attribute: 'rows',
       value: 8
     }]
-  rraSupportingDocuments: {
+  },
+  rraSupportingDocuments2: {
     mixin: 'input-file'
   }
 }
