@@ -5,10 +5,11 @@ const _ = require('lodash');
 
 const dateComponent = require('hof').components.date;
 const staticAppealStages = require('./lib/staticAppealStages');
+const staticRraGrades = require('./lib/staticRraGrades');
 const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
-const staticRraGrades = require('./lib/staticRraGrades');
+const staticSfiaSkills = require('./lib/staticSfiaSkills');
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -175,6 +176,14 @@ module.exports = {
       label: 'fields.appealStages.options.null'
     }].concat(staticRraLevels.getstaticRraLevels())
   },
+  rraSkill: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{ 
+      value: ' ', 
+      label: 'fields.appealStages.options.null' 
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+  },
   rraScores: {
     mixin: 'select',
     validate: ['required'],
@@ -196,5 +205,8 @@ module.exports = {
       attribute: 'rows',
       value: 8
     }]
+  },
+  rraSupportingDocuments: {
+    mixin: 'input-file'
   }
 }

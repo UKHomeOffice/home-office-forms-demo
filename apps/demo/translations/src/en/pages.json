@@ -61,8 +61,8 @@
   "professionDetails": {
     "header": "Profession Details"
   },
-  "datm": {
-    "header": "Data Management (DATM)"
+  "skill": {
+    "header": "Skill 1"
   },
   "confirm": {
     "header": "Check your answers before submitting your application.",
