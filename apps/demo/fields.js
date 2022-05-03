@@ -10,6 +10,9 @@ const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
 const staticSfiaSkills = require('./lib/staticSfiaSkills');
+// const staticSfiaSkills = require('./lib/staticSfiaSkills').getstaticSfiaSkills().filter((value, index, self) => {
+//   return self.findIndex(v => v.value === value.value) === index;
+// });
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -77,7 +80,7 @@ module.exports = {
   countrySelect: {
     mixin: 'select',
     className: ['typeahead'],
-    options:[''].concat(require('homeoffice-countries').allCountries),
+    options: [''].concat(require('homeoffice-countries').allCountries),
     legend: {
       className: 'visuallyhidden'
     },
@@ -98,7 +101,7 @@ module.exports = {
       value: 8
     }]
   },
-  weaponsTypes:{
+  weaponsTypes: {
     mixin: 'checkbox-group',
     labelClassName: 'visuallyhidden',
     validate: ['required', notBothOptions],
@@ -156,9 +159,10 @@ module.exports = {
     mixin: 'select',
     validate: 'required',
     options:
-      [{ value: ' ', 
-      label: 'fields.appealStages.options.null' 
-    }].concat(staticRraGrades.getstaticRraGrades())
+      [{
+        value: ' ',
+        label: 'fields.appealStages.options.null'
+      }].concat(staticRraGrades.getstaticRraGrades())
   },
   rraGrouping: {
     mixin: 'select',
@@ -179,9 +183,9 @@ module.exports = {
   rraSkill: {
     mixin: 'select',
     validate: 'required',
-    options: [{ 
-      value: ' ', 
-      label: 'fields.appealStages.options.null' 
+    options: [{
+      value: ' ',
+      label: 'fields.rraSkill.options.null'
     }].concat(staticSfiaSkills.getstaticSfiaSkills())
   },
   rraScores: {
@@ -189,7 +193,7 @@ module.exports = {
     validate: ['required'],
     options: [{
       value: '',
-      label: 'fields.appealStages.options.null'
+      label: 'fields.rraScores.options.null'
     }].concat(staticRraScores.getstaticRraScores())
   },
   rraEvidence: {
@@ -212,9 +216,9 @@ module.exports = {
   rraSkill2: {
     mixin: 'select',
     validate: 'required',
-    options: [{ 
-      value: ' ', 
-      label: 'fields.appealStages.options.null' 
+    options: [{
+      value: ' ',
+      label: 'fields.rraSkill2.options.null'
     }].concat(staticSfiaSkills.getstaticSfiaSkills())
   },
   rraScores2: {
@@ -222,7 +226,7 @@ module.exports = {
     validate: ['required'],
     options: [{
       value: '',
-      label: 'fields.appealStages.options.null'
+      label: 'fields.rraScores2.options.null'
     }].concat(staticRraScores.getstaticRraScores())
   },
   rraEvidence2: {

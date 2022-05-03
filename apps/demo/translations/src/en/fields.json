@@ -164,13 +164,19 @@
     "label": "RRA Grouping"
   },
   "rraSkill": {
-    "label": "Skill 1"
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
   },
   "rraSupportingDocuments": {
     "label": "Supporting Documents"
   },
   "rraScores": {
-    "label": "Score"
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
   },
   "rraGrade": {
     "label": "Substantive Grade"
@@ -179,10 +185,16 @@
     "label": "Applying for Proficiency Level"
   },
   "rraSkill2":{
-    "label": "Skill 2"
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
   },
   "rraScores2": {
-    "label": "Score"
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
   },
   "rraEvidence2": {
     "label": "Please provide evidence"
