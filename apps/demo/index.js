@@ -96,12 +96,12 @@ module.exports = {
       next: '/skill1',
     },
     '/skill1': {
-      fields: ['sfiaSkill', 'rraScores', 'rraEvidence'],
+      fields: ['sfiaSkill1', 'rraScores', 'rraEvidence'],
       next: '/skill2'
     },
     '/skill2': {
-      fields: ['sfiaSkill', 'rraScores', 'rraEvidence'],
+      fields: ['sfiaSkill2', 'rraScores2', 'rraEvidence2'],
       next: '/confirm'
-    },
+    }
   }
 };

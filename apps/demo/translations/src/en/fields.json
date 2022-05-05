@@ -119,11 +119,17 @@
       "null": "Select..."
     }
   },
-  "sfiaSkill":{
+  "sfiaSkill1":{
+    "label": "Please enter a skill"
+  },
+  "sfiaSkill2":{
     "label": "Please enter a skill"
   },
   "rraEvidence": {
-    "label": "Please provide evidence"
+    "label": "Evidence Statement:"
+  },
+  "rraEvidence2": {
+    "label": "Evidence Statement:"
   },
   "rraName": {
     "label": "Full Name"
@@ -138,7 +144,8 @@
     "label": "HO Email Address"
   },
   "rraRole": {
-    "label": "Role"
+    "label": "Role",
+    "hint": "For example, Associate Developer"
   },
   "rraGrouping": {
     "label": "RRA Grouping"
@@ -149,8 +156,12 @@
   "rraScores": {
     "label": "Score"
   },
+  "rraScores2": {
+    "label": "Score"
+  },
   "rraGrade": {
-    "label": "Substantive Grade"
+    "label": "Substantive Grade",
+    "hint": "For example, SEO"
   },
   "rraLevels": {
     "label": "Applying for Proficiency Level"
