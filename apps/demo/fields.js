@@ -5,6 +5,14 @@ const _ = require('lodash');
 
 const dateComponent = require('hof').components.date;
 const staticAppealStages = require('./lib/staticAppealStages');
+const staticRraGrades = require('./lib/staticRraGrades');
+const staticRraGrouping = require('./lib/staticRraGrouping');
+const staticRraLevels = require('./lib/staticRraLevels');
+const staticRraScores = require('./lib/staticRraScores');
+const staticSfiaSkills = require('./lib/staticSfiaSkills');
+// const staticSfiaSkills = require('./lib/staticSfiaSkills').getstaticSfiaSkills().filter((value, index, self) => {
+//   return self.findIndex(v => v.value === value.value) === index;
+// });
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -72,7 +80,7 @@ module.exports = {
   countrySelect: {
     mixin: 'select',
     className: ['typeahead'],
-    options:[''].concat(require('homeoffice-countries').allCountries),
+    options: [''].concat(require('homeoffice-countries').allCountries),
     legend: {
       className: 'visuallyhidden'
     },
@@ -93,7 +101,7 @@ module.exports = {
       value: 8
     }]
   },
-  weaponsTypes:{
+  weaponsTypes: {
     mixin: 'checkbox-group',
     labelClassName: 'visuallyhidden',
     validate: ['required', notBothOptions],
@@ -101,7 +109,7 @@ module.exports = {
       {
         value: 'unspecified',
         child: 'partials/or'
-      },        
+      },
       'fully_automatic',
       'self_loading',
       'short_pistols',
@@ -123,5 +131,119 @@ module.exports = {
       value: '',
       label: 'fields.appealStages.options.null'
     }].concat(staticAppealStages.getstaticAppealStages())
+  },
+  rraName: {
+    validate: 'required'
+  },
+  rraAdelphiNumber: {
+    validate: ['required', 'numeric']
+  },
+  rraEmail: {
+    validate: ['required', 'email']
+  },
+  appliedBefore: {
+    legend: {
+      className: 'visuallyhidden'
+    },
+    mixin: 'radio-group',
+    validate: ['required'],
+    options: [
+      'yes',
+      'no'
+    ]
+  },
+  rraFunction: {
+    validate: 'required',
+  },
+  rraGrade: {
+    mixin: 'select',
+    validate: 'required',
+    options:
+      [{
+        value: ' ',
+        label: 'fields.appealStages.options.null'
+      }].concat(staticRraGrades.getstaticRraGrades())
+  },
+  rraGrouping: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.appealStages.options.null'
+    }].concat(staticRraGrouping.getstaticRraGrouping())
+  },
+  rraLevels: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.appealStages.options.null'
+    }].concat(staticRraLevels.getstaticRraLevels())
+  },
+  rraSkill: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{
+      value: ' ',
+      label: 'fields.rraSkill.options.null'
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+  },
+  rraScores: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.rraScores.options.null'
+    }].concat(staticRraScores.getstaticRraScores())
+  },
+  rraEvidence: {
+    mixin: 'textarea',
+    // we want to ignore default formatters as we want
+    // to preserve white space
+    'ignore-defaults': true,
+    // apply the other default formatters
+    formatter: ['trim', 'hyphens'],
+    // attributes here are passed to the field element
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{
+      attribute: 'rows',
+      value: 8
+    }]
+  },
+  rraSupportingDocuments: {
+    mixin: 'input-file'
+  },
+  rraSkill2: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{
+      value: ' ',
+      label: 'fields.rraSkill2.options.null'
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+  },
+  rraScores2: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.rraScores2.options.null'
+    }].concat(staticRraScores.getstaticRraScores())
+  },
+  rraEvidence2: {
+    mixin: 'textarea',
+    // we want to ignore default formatters as we want
+    // to preserve white space
+    'ignore-defaults': true,
+    // apply the other default formatters
+    formatter: ['trim', 'hyphens'],
+    // attributes here are passed to the field element
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{
+      attribute: 'rows',
+      value: 8
+    }]
+  },
+  rraSupportingDocuments2: {
+    mixin: 'input-file'
   }
 }

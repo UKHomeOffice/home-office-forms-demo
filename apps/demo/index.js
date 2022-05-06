@@ -4,6 +4,9 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
+const EmailBehaviour = require('./behaviours/send-email');
+const SkillBehaviour = require('./behaviours/skills');
+const Skill2Behaviour = require('./behaviours/skills2');
 
 module.exports = {
   name: 'demo',
@@ -68,7 +71,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
+      behaviours: [SummaryPageBehaviour, EmailBehaviour, 'complete'],
       sections: require('./sections/summary-data-sections'),
       next: '/confirmation'
     },
@@ -82,5 +85,31 @@ module.exports = {
       ],
       next: '/confirm'
     },
+    '/rra-prototype': {
+      template: 'rra-prototype',
+      next: '/personalDetails',
+    },
+    '/personalDetails': {
+      fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/applied-before'
+    },
+    '/applied-before': {
+      fields: ['appliedBefore'],
+      next: '/professionDetails',
+    },
+    '/professionDetails': {
+      fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],
+      next: '/skill1',
+    },
+    '/skill1': {
+      behaviours: [SkillBehaviour],
+      fields: ['rraSkill', 'rraScores', 'rraEvidence', 'rraSupportingDocuments'],
+      next: '/skill2'
+    },
+    '/skill2': {
+      behaviours: [Skill2Behaviour],
+      fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
+      next: '/confirm'
+    }
   }
 };
