@@ -111,6 +111,9 @@
       },
       "skill2": {
         "header": "Skill 2"
+      },
+      "totalScore": {
+        "header": "Total Score"
       }
     }
   },

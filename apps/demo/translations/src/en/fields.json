@@ -128,9 +128,6 @@
   "rraEvidence": {
     "label": "Evidence Statement:"
   },
-  "rraEvidence2": {
-    "label": "Evidence Statement"
-  },
   "rraName": {
     "label": "Full Name"
   },
@@ -177,9 +174,6 @@
       "null": "Select..."
     }
   },
-  "rraScores2": {
-    "label": "Score"
-  },
   "rraGrade": {
     "label": "Substantive Grade",
     "hint": "For example, SEO"
@@ -204,5 +198,8 @@
   },
   "rraSupportingDocuments2": {
     "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
   }
 }
