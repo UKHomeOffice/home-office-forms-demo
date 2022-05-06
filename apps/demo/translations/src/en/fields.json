@@ -119,16 +119,6 @@
       "null": "Select..."
     }
   },
-  "appliedBefore": {
-    "legend": "Have you applied for RRA whilst in this role before?",
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    },
   "sfiaSkill1":{
     "label": "Please enter a skill"
   },
