@@ -85,7 +85,7 @@
     "required": "Please select a score"
   },
   "rraEvidence": {
-    "required": "Please provide evidence"
+    "required": "Evidence Statement"
   },
   "rraSkill2": {
     "required": "Please select a skill"
@@ -94,6 +94,6 @@
     "required": "Please select a score"
   },
   "rraEvidence2": {
-     "required": "Please provide evidence"
+     "required": "Evidence Statement"
   }
 }
