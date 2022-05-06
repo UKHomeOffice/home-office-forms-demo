@@ -61,8 +61,8 @@
   "professionDetails": {
     "header": "Profession Details"
   },
-  "datm": {
-    "header": "Data Management (DATM)"
+  "skill": {
+    "header": "Skill 1"
   },
   "skill1": {
     "header": "Skill 1"
@@ -99,6 +99,9 @@
       },
       "personalDetails": {
         "header": "Personal Details"
+      },
+      "appliedBefore": {
+        "header": "Application Details"
       },
       "professionDetails": {
         "header": "Profession Details"

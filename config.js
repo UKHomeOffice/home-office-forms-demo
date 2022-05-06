@@ -1,7 +1,17 @@
 'use strict';
 
 /* eslint no-process-env: 0 */
+const env = process.env.NODE_ENV || 'production';
+const localhost = () => `${process.env.LISTEN_HOST || '0.0.0.0'}:${process.env.PORT || 8080}`;
+
 module.exports = {
+  env: env,
+  upload: {
+    maxfilesize: '100mb',
+    hostname: (!env || env === 'ci') ?
+      `http://${localhost()}/api/file-upload` :
+      process.env.FILE_VAULT_URL
+  },
   email: {
     caseworker: process.env.CASEWORKER_EMAIL || 'sas-hof-test@digital.homeoffice.gov.uk',
     notifyApiKey: process.env.NOTIFY_KEY ||
