@@ -110,6 +110,6 @@ module.exports = {
       behaviours: [Skill2Behaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
       next: '/confirm'
-    },
+    }
   }
 };

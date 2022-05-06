@@ -64,6 +64,12 @@
   "skill": {
     "header": "Skill 1"
   },
+  "skill1": {
+    "header": "Skill 1"
+  },
+  "skill2": {
+    "header": "Skill 2"
+  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
