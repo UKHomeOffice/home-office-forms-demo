@@ -10,9 +10,6 @@ const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
 const staticSfiaSkills = require('./lib/staticSfiaSkills');
-// const staticSfiaSkills = require('./lib/staticSfiaSkills').getstaticSfiaSkills().filter((value, index, self) => {
-//   return self.findIndex(v => v.value === value.value) === index;
-// });
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);

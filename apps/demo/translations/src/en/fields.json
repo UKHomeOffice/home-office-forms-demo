@@ -144,7 +144,7 @@
     "label": "HO Email Address",
     "hint": "Please enter your home office email address"
   },
-  "applied-before": {
+  "appliedBefore": {
     "legend": "Have you applied for RRA whilst in this role before?",
     "options": {
       "yes": {
