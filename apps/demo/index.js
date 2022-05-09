@@ -90,12 +90,13 @@ module.exports = {
       next: '/rraLogin',
     },
     '/rraLogin': {
+      template: 'rra-login',
       fields: ['rraEmail', 'rraPassword'],
       next: '/applied-before',
     },
     '/applied-before': {
       fields: ['appliedBefore'],
-      next: '/professionDetails',
+      next: '/personalDetails',
     },
     '/personalDetails': {
       fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],

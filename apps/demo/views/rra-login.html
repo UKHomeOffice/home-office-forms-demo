@@ -1,12 +1,7 @@
-<title>{{#t}}pages.rra-prototype.title{{/t}} – GOV.UK</title>
-
 {{<partials-page}}
   {{$page-content}}
-    <h2>{{#t}}pages.rra-prototype.subheader{{/t}}</h2>
-    <p>Login with your RRA account</p>
-    <br/>
-    <br/>
     {{#renderField}}rraEmail{{/renderField}}
-    {{#input-submit}}continue{{/input-submit}}
+    {{#renderField}}rraPassword{{/renderField}}
+    {{#input-submit}}login{{/input-submit}}
   {{/page-content}}
 {{/partials-page}}
