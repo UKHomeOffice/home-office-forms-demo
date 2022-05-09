@@ -141,9 +141,13 @@
     "label": "Function or Portfolio"
   },
   "rraEmail": {
-    "label": "HO Email Address",
+    "label": "Email Address",
     "hint": "Please enter your home office email address"
   },
+  "rraPassword": {
+    "label": "Password"
+  },
+
   "appliedBefore": {
     "legend": "Have you applied for RRA whilst in this role before?",
     "options": {

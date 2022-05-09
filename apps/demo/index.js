@@ -87,15 +87,19 @@ module.exports = {
     },
     '/rra-prototype': {
       template: 'rra-prototype',
-      next: '/personalDetails',
+      next: '/rraLogin',
     },
-    '/personalDetails': {
-      fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
-      next: '/applied-before'
+    '/rraLogin': {
+      fields: ['rraEmail', 'rraPassword'],
+      next: '/applied-before',
     },
     '/applied-before': {
       fields: ['appliedBefore'],
       next: '/professionDetails',
+    },
+    '/personalDetails': {
+      fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
+      next: '/professionDetails'
     },
     '/professionDetails': {
       fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],

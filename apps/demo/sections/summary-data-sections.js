@@ -6,7 +6,6 @@ const APPEAL_STAGES = require('../lib/staticAppealStages').getstaticAppealStages
 const RRA_GROUPING = require('../lib/staticRraGrouping').getstaticRraGrouping();
 const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
-const SFIA_SKILLS = require('../lib/staticSfiaSkills').getstaticSfiaSkills();
 const _ = require('lodash');
 
 module.exports = {
@@ -52,9 +51,6 @@ module.exports = {
     'rraFunction',
     'rraEmail'
   ],
-  appliedBefore: [
-    'appliedBefore'
-  ],
   professionDetails: [
     'rraRole',
     {
@@ -68,27 +64,19 @@ module.exports = {
     }
   ],
   skill1: [
-    {
-      field: 'rraSkill',
-      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
-    },
+    'sfiaSkill1',
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence',
-    'rraSupportingDocuments'
+    'rraEvidence'
   ],
   skill2: [
-    {
-      field: 'rraSkill2',
-      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
-    },
+    'sfiaSkill2',
     {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence2',
-    'rraSupportingDocuments2'
+    'rraEvidence'
   ]
 };

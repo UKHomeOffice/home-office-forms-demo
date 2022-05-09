@@ -55,6 +55,9 @@
     "header": "Recruitment and Retention Allowance (RRA) Application ",
     "subheader": "Guidance on completing the self-assessment"
   },
+  "rraLogin": {
+    "header": "Login in to your RRA account"
+  },
   "personalDetails": {
     "header": "Personal Details"
   },
