@@ -70,6 +70,12 @@
   "skill2": {
     "header": "Skill 2"
   },
+  "has-additionalSkills": {
+    "header": "Do you want to add another skill?"
+  },
+  "skill-details": {
+    "header": "Skills"
+  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
@@ -111,6 +117,9 @@
       },
       "skill2": {
         "header": "Skill 2"
+      },
+      "skill-details": {
+        "header": "Skills"
       }
     }
   },

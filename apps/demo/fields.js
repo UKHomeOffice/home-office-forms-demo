@@ -242,5 +242,50 @@ module.exports = {
   },
   rraSupportingDocuments2: {
     mixin: 'input-file'
-  }
+  },
+  hasAdditionalSkills: {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required',
+    legend: {
+      className: 'visuallyhidden'
+    }
+  },
+  addSkill: {
+    validate: ['required'],
+    autocomplete: 'additional-skills'
+  },
+  skillAddSkill: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{
+      value: ' ',
+      label: 'fields.skillAddSkill.options.null'
+    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+  },
+  skillAddScore: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.rraScores2.options.null'
+    }].concat(staticRraScores.getstaticRraScores())
+  },
+  skillAddEvidence: {
+    mixin: 'textarea',
+    // we want to ignore default formatters as we want
+    // to preserve white space
+    'ignore-defaults': true,
+    // apply the other default formatters
+    formatter: ['trim', 'hyphens'],
+    // attributes here are passed to the field element
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{
+      attribute: 'rows',
+      value: 8
+    }]
+  },
+  skillAddSupportingDocument: {
+    mixin: 'input-file'
+  },
 }

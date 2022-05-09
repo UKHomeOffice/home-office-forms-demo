@@ -8,6 +8,7 @@ const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
 const SFIA_SKILLS = require('../lib/staticSfiaSkills').getstaticSfiaSkills();
 const _ = require('lodash');
+const sumValues = values => values.map(it => Number(it)).reduce((a, b) => a + b, 0);
 
 module.exports = {
   applicantsDetails: [
@@ -90,5 +91,25 @@ module.exports = {
     },
     'rraEvidence2',
     'rraSupportingDocuments2'
+  ],
+  'skill-details': [
+    {
+      step: '/skill-details',
+      field: 'skills',
+      addElementSeparators: true,
+      dependsOn: 'hasAdditionalSkills'
+    }
+  ],
+  totalScore: [
+    {
+      field: 'totalScore',
+      derivation: {
+        fromFields: [
+          'rraScores',
+          'rraScores2'
+        ],
+        combiner: sumValues
+      }
+    }
   ]
 };

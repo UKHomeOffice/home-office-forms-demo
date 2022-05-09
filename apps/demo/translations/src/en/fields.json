@@ -128,9 +128,6 @@
   "rraEvidence": {
     "label": "Evidence Statement:"
   },
-  "rraEvidence2": {
-    "label": "Evidence Statement"
-  },
   "rraName": {
     "label": "Full Name"
   },
@@ -177,9 +174,6 @@
       "null": "Select..."
     }
   },
-  "rraScores2": {
-    "label": "Score"
-  },
   "rraGrade": {
     "label": "Substantive Grade",
     "hint": "For example, SEO"
@@ -200,9 +194,47 @@
     }
   },
   "rraEvidence2": {
-    "label": "Evidence Statement"
+    "label": "Evidence Statement",
+    "changeLinkDescription": "Skill Evidence Statement"
   },
   "rraSupportingDocuments2": {
+    "label": "Supporting Document",
+    "changeLinkDescription": "Skill Supporting Document"
+  },
+  "hasAdditionalSkills": {
+    "legend": "Do you want to add another skill?",
+    "options":{
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "skills": {
+    "label": "Skill",
+    "changeLinkDescription": "Skill"
+  },
+  "skillAddSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "skillAddScore": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "skillAddEvidence": {
+    "label": "Evidence Statement"
+  },
+  "skillAddSupportingDocument": {
     "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
   }
 }

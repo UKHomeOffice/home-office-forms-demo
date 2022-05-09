@@ -7,9 +7,11 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
-
+const AddSkillBehaviour = require('./behaviours/addSkills');
+const Aggregate = require('./behaviours/aggregator');
 module.exports = {
   name: 'demo',
+  params: '/:action?/:id?/:edit?',
   steps: {
     '/': {
       template: 'start'
@@ -109,7 +111,43 @@ module.exports = {
     '/skill2': {
       behaviours: [Skill2Behaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
-      next: '/confirm'
-    }
+      next: '/has-additionalSkills'
+    },
+    '/has-additionalSkills': {
+      fields: ['hasAdditionalSkills'],
+      next: '/confirm',
+      forks: [{
+        target: '/skill-details',
+        condition: {
+          field: 'hasAdditionalSkills',
+          value: 'yes'
+        }
+      }],
+      continueOnEdit: true
+    },
+    '/add-skill': {
+      backLink: 'has-additionalSkills',
+      behaviours: [AddSkillBehaviour],
+      fields: ['skillAddSkill', 'skillAddScore', 'skillAddEvidence', 'skillAddSupportingDocument'],
+      continueOnEdit: true,
+      next: '/skill-details'
+    },
+    '/skill-details': {
+      backLink: 'has-additionalSkills',
+      behaviours: [Aggregate],
+      aggregateTo: 'skills',
+      aggregateFrom: [
+        'skillAddSkill',
+        'skillAddScore',
+        'skillAddEvidence',
+        'skillAddSupportingDocument'
+      ],
+      titleField: 'skillAddSkill',
+      addStep: 'add-skill',
+      addAnotherLinkText: 'skill',
+      template: 'add-another',
+      next: '/confirm',
+      continueOnEdit: true
+    },
   }
 };
