@@ -206,7 +206,7 @@
     "changeLinkDescription": "Skill Supporting Document"
   },
   "hasAdditionalCpd": {
-    "legend": "Do you want to add information on CPD?",
+    "legend": "Do you want to add information on Continuous Professional Development?",
     "options":{
       "yes": {
         "label": "Yes"
@@ -217,8 +217,8 @@
     }
   },
   "cpds": {
-    "label": "CPD",
-    "changeLinkDescription": "CPD"
+    "label": "Continuous Professional Development",
+    "changeLinkDescription": "Continuous Professional Development"
   },
   "cpdAddTitle": {
     "label": "Title"

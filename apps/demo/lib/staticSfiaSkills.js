@@ -61,26 +61,26 @@ module.exports = {
 
 
       // Security Architecture
-      // {
-      //   value: 'ITSP - Strategic planning',
-      //   label: 'ITSP - Strategic planning'
-      // },
-      // {
-      //   value: 'CNSL - Consultancy',
-      //   label: 'CNSL - Consultancy'
-      // },
+      {
+        value: 'ITSP - Strategic planning',
+        label: 'ITSP - Strategic planning'
+      },
+      {
+        value: 'CNSL - Consultancy',
+        label: 'CNSL - Consultancy'
+      },
       {
         value: 'TECH - Specialist Advise',
         label: 'TECH - Specialist Advise'
       },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'STPL - Enterprise and Business Architecture',
-      //   label: 'STPL - Enterprise and Business Architecture'
-      // },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'STPL - Enterprise and Business Architecture',
+        label: 'STPL - Enterprise and Business Architecture'
+      },
       {
         value: 'ARCH - Solution Architecture',
         label: 'ARCH - Solution Architecture'
@@ -88,30 +88,30 @@ module.exports = {
 
 
       // Technical Architecture
-      // {
-      //   value: 'ITSP - Strategic planning',
-      //   label: 'ITSP - Strategic planning'
-      // },
-      // {
-      //   value: 'CNSL - Consultancy',
-      //   label: 'CNSL - Consultancy'
-      // },
-      // {
-      //   value: 'TECH - Specialist Advise',
-      //   label: 'TECH - Specialist Advise'
-      // },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'STPL - Enterprise and Business Architecture',
-      //   label: 'STPL - Enterprise and Business Architecture'
-      // },
-      // {
-      //   value: 'ARCH - Solution Architecture',
-      //   label: 'ARCH - Solution Architecture'
-      // },
+      {
+        value: 'ITSP - Strategic planning',
+        label: 'ITSP - Strategic planning'
+      },
+      {
+        value: 'CNSL - Consultancy',
+        label: 'CNSL - Consultancy'
+      },
+      {
+        value: 'TECH - Specialist Advise',
+        label: 'TECH - Specialist Advise'
+      },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'STPL - Enterprise and Business Architecture',
+        label: 'STPL - Enterprise and Business Architecture'
+      },
+      {
+        value: 'ARCH - Solution Architecture',
+        label: 'ARCH - Solution Architecture'
+      },
 
       // *******************DATA*****************
       //	Data Analysis
@@ -119,18 +119,18 @@ module.exports = {
         value: 'INAN - Analytics',
         label: 'INAN - Analytics'
       },
-      // {
-      //   value: 'DTAN - Data Modelling and Design',
-      //   label: 'DTAN - Data Modelling and Design'
-      // },
-      // {
-      //   value: 'PROG - Programming/Software Development',
-      //   label: 'PROG - Programming/Software Development'
-      // },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
+      {
+        value: 'DTAN - Data Modelling and Design',
+        label: 'DTAN - Data Modelling and Design'
+      },
+      {
+        value: 'PROG - Programming/Software Development',
+        label: 'PROG - Programming/Software Development'
+      },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
       {
         value: 'QUAS - Quality Assurance',
         label: 'QUAS - Quality Assurance'
@@ -142,26 +142,26 @@ module.exports = {
 
 
       // Data Engineering
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'DTAN - Data Modelling and Design',
-      //   label: 'DTAN - Data Modelling and Design'
-      // },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'DTAN - Data Modelling and Design',
+        label: 'DTAN - Data Modelling and Design'
+      },
       {
         value: 'DBDS - Database design',
         label: 'DBDS - Database design'
       },
-      // {
-      //   value: 'METL - Methods and Tools',
-      //   label: 'METL - Methods and Tools'
-      // },
-      // {
-      //   value: 'DATM - Data Management',
-      //   label: 'DATM - Data Management'
-      // },
+      {
+        value: 'METL - Methods and Tools',
+        label: 'METL - Methods and Tools'
+      },
+      {
+        value: 'DATM - Data Management',
+        label: 'DATM - Data Management'
+      },
       {
         value: 'DBAD - Database Administration',
         label: 'DBAD - Database Administration'
@@ -169,22 +169,22 @@ module.exports = {
 
 
       // Data Science
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'INAN - Analytics',
-      //   label: 'INAN - Analytics'
-      // },
-      // {
-      //   value: 'DTAN - Data Modelling and Design',
-      //   label: 'DTAN - Data Modelling and Design'
-      // },
-      // {
-      //   value: 'PROG - Programming/Software Development',
-      //   label: 'PROG - Programming/Software Development'
-      // },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'INAN - Analytics',
+        label: 'INAN - Analytics'
+      },
+      {
+        value: 'DTAN - Data Modelling and Design',
+        label: 'DTAN - Data Modelling and Design'
+      },
+      {
+        value: 'PROG - Programming/Software Development',
+        label: 'PROG - Programming/Software Development'
+      },
       {
         value: 'Professional standards & quality',
         label: 'Professional standards & quality'
@@ -195,30 +195,30 @@ module.exports = {
       },
 
       // Head of Role for Data
-      // {
-      //   value: 'INAN - Analytics',
-      //   label: 'INAN - Analytics'
-      // },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'DATM - Data Management',
-      //   label: 'DATM - Data Management'
-      // },
-      // {
-      //   value: 'DTAN - Data Modelling and Design',
-      //   label: 'DTAN - Data Modelling and Design'
-      // },
-      // {
-      //   value: 'QUAS - Quality Assurance',
-      //   label: 'QUAS - Quality Assurance'
-      // },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
+      {
+        value: 'INAN - Analytics',
+        label: 'INAN - Analytics'
+      },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'DATM - Data Management',
+        label: 'DATM - Data Management'
+      },
+      {
+        value: 'DTAN - Data Modelling and Design',
+        label: 'DTAN - Data Modelling and Design'
+      },
+      {
+        value: 'QUAS - Quality Assurance',
+        label: 'QUAS - Quality Assurance'
+      },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
 
       // *******************DELIVERY*****************
       // Technology Delivery Manager, Outcome Technology Delivery Manager AND Head of Role for Delivery
@@ -252,18 +252,18 @@ module.exports = {
       },
       // *******************ENGINEERING*****************
       // Infrastructure Engineering
-      // {
-      // 	value: 'ITMG - IT management',
-      // 	label: 'ITMG - IT management'
-      // },
+      {
+      	value: 'ITMG - IT management',
+      	label: 'ITMG - IT management'
+      },
       {
         value: 'DESN - Systems design',
         label: 'DESN - Systems design'
       },
-      // {
-      // 	value: 'HSIN - Systems installation/decommissioning',
-      // 	label: 'HSIN - Systems installation/decommissioning'
-      // },
+      {
+      	value: 'HSIN - Systems installation/decommissioning',
+      	label: 'HSIN - Systems installation/decommissioning'
+      },
       {
         value: 'ITOP - IT infrastructure',
         label: 'ITOP - IT infrastructure'
@@ -272,16 +272,16 @@ module.exports = {
         value: 'PBMG - Problem management',
         label: 'PBMG - Problem management'
       },
-      // {
-      // 	value: 'USUP - Incident management',
-      // 	label: 'USUP - Incident management'
-      // },
+      {
+      	value: 'USUP - Incident management',
+      	label: 'USUP - Incident management'
+      },
 
       // Network Engineering
-      // {
-      //   value: 'TECH - Specialist Advise',
-      //   label: 'TECH - Specialist Advise'
-      // },
+      {
+        value: 'TECH - Specialist Advise',
+        label: 'TECH - Specialist Advise'
+      },
       {
         value: 'ITMG - IT management',
         label: 'ITMG - IT management'
@@ -294,14 +294,14 @@ module.exports = {
         value: 'HSIN - Systems installation/decommissioning',
         label: 'HSIN - Systems installation/decommissioning'
       },
-      // {
-      //   value: 'PBMG - Problem management',
-      //   label: 'PBMG - Problem management'
-      // },
-      // {
-      // 	value: 'USUP - Incident management',
-      // 	label: 'USUP - Incident management'
-      // },
+      {
+        value: 'PBMG - Problem management',
+        label: 'PBMG - Problem management'
+      },
+      {
+      	value: 'USUP - Incident management',
+      	label: 'USUP - Incident management'
+      },
 
       // Software Engineering and Devops
       {
@@ -362,18 +362,18 @@ module.exports = {
         value: 'SCAD - Security Administration',
         label: 'SCAD - Security Administration'
       },
-      // {
-      // 	value: 'USUP - Incident management',
-      // 	label: 'USUP - Incident management'
-      // },
-      // {
-      // 	value: 'SCTY - Information Security',
-      // 	label: 'SCTY - Information Security'
-      // },
-      // {
-      // 	value: 'INAN - Analytics',
-      // 	label: 'INAN - Analytics'
-      // },
+      {
+      	value: 'USUP - Incident management',
+      	label: 'USUP - Incident management'
+      },
+      {
+      	value: 'SCTY - Information Security',
+      	label: 'SCTY - Information Security'
+      },
+      {
+      	value: 'INAN - Analytics',
+      	label: 'INAN - Analytics'
+      },
       {
         value: 'PENT - Penetration Testing',
         label: 'PENT - Penetration Testing'
@@ -383,72 +383,72 @@ module.exports = {
         label: 'DGFS - Digital Forensics'
       },
       // Engineering Leadership
-      // {
-      //   value: 'DLMG - Systems Development Management',
-      //   label: 'DLMG - Systems Development Management'
-      // },
-      // {
-      //   value: 'SWDN - Software Design',
-      //   label: 'SWDN - Software Design'
-      // },
-      // {
-      //   value: 'PROG - Programming/Software Development',
-      //   label: 'PROG - Programming/Software Development'
-      // },
-      // {
-      //   value: 'PEMT - Performance Management',
-      //   label: 'PEMT - Performance Management'
-      // },
-      // {
-      //   value: 'PDSV - Professional Development',
-      //   label: 'PDSV - Professional Development'
-      // },
-      // {
-      //   value: 'QUMG - Quality Management',
-      //   label: 'QUMG - Quality Management'
-      // },
+      {
+        value: 'DLMG - Systems Development Management',
+        label: 'DLMG - Systems Development Management'
+      },
+      {
+        value: 'SWDN - Software Design',
+        label: 'SWDN - Software Design'
+      },
+      {
+        value: 'PROG - Programming/Software Development',
+        label: 'PROG - Programming/Software Development'
+      },
+      {
+        value: 'PEMT - Performance Management',
+        label: 'PEMT - Performance Management'
+      },
+      {
+        value: 'PDSV - Professional Development',
+        label: 'PDSV - Professional Development'
+      },
+      {
+        value: 'QUMG - Quality Management',
+        label: 'QUMG - Quality Management'
+      },
 
 
       // Head of Role for Engineering
-      // {
-      //   value: 'METL - Methods and Tools',
-      //   label: 'METL - Methods and Tools'
-      // },
-      // {
-      //   value: 'SWDN - Software Design',
-      //   label: 'SWDN - Software Design'
-      // },
-      // {
-      //   value: 'PROG - Programming/Software Development',
-      //   label: 'PROG - Programming/Software Development'
-      // },
-      // {
-      //   value: 'PDSV - Professional Development',
-      //   label: 'PDSV - Professional Development'
-      // },
+      {
+        value: 'METL - Methods and Tools',
+        label: 'METL - Methods and Tools'
+      },
+      {
+        value: 'SWDN - Software Design',
+        label: 'SWDN - Software Design'
+      },
+      {
+        value: 'PROG - Programming/Software Development',
+        label: 'PROG - Programming/Software Development'
+      },
+      {
+        value: 'PDSV - Professional Development',
+        label: 'PDSV - Professional Development'
+      },
       {
         value: 'ETMG - Emerging Technology Monitoring',
         label: 'ETMG - Emerging Technology Monitoring'
       },
-      // {
-      //   value: 'OCDV - Organisational Capability Development',
-      //   label: 'OCDV - Organisational Capability Development'
-      // },
+      {
+        value: 'OCDV - Organisational Capability Development',
+        label: 'OCDV - Organisational Capability Development'
+      },
 
       // *******************IT OPERATIONS*****************
       // Plan, Engage & Improve
-      // {
-      //   value: 'TECH - Specialist Advise',
-      //   label: 'TECH - Specialist Advise'
-      // },
+      {
+        value: 'TECH - Specialist Advise',
+        label: 'TECH - Specialist Advise'
+      },
       {
         value: 'SLMO - Service Level Management',
         label: 'SLMO - Service Level Management'
       },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
       {
         value: 'BURM - Business Risk Management',
         label: 'BURM - Business Risk Management'
@@ -503,14 +503,14 @@ module.exports = {
         value: 'SEAC - Service Acceptance',
         label: 'SEAC - Service Acceptance'
       },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
-      // {
-      //   value: 'METL - Methods and Tools',
-      //   label: 'METL - Methods and Tools'
-      // },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
+      {
+        value: 'METL - Methods and Tools',
+        label: 'METL - Methods and Tools'
+      },
       {
         value: 'PRMG - Project Management',
         label: 'PRMG - Project Management'
@@ -537,60 +537,60 @@ module.exports = {
         value: 'KNOW - Knowledge Management',
         label: 'KNOW - Knowledge Management'
       },
-      // {
-      //   value: 'SLMO - Service Level Management',
-      //   label: 'SLMO - Service Level Management'
-      // },
-      // {
-      //   value: 'ITOP - IT infrastructure',
-      //   label: 'ITOP - IT infrastructure'
-      // },
-      // {
-      //   value: 'PBMG - Problem management',
-      //   label: 'PBMG - Problem management'
-      // },
+      {
+        value: 'SLMO - Service Level Management',
+        label: 'SLMO - Service Level Management'
+      },
+      {
+        value: 'ITOP - IT infrastructure',
+        label: 'ITOP - IT infrastructure'
+      },
+      {
+        value: 'PBMG - Problem management',
+        label: 'PBMG - Problem management'
+      },
       {
         value: 'USUP - Incident management',
         label: 'USUP - Incident management'
       },
-      // {
-      //   value: 'CSMG - Customer Service Support',
-      //   label: 'CSMG - Customer Service Support'
-      // },
+      {
+        value: 'CSMG - Customer Service Support',
+        label: 'CSMG - Customer Service Support'
+      },
 
       // IT Operations Leadership
-      // {
-      //   value: 'TECH - Specialist Advise',
-      //   label: 'TECH - Specialist Advise'
-      // },
-      // {
-      //   value: 'SLMO - Service Level Management',
-      //   label: 'SLMO - Service Level Management'
-      // },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
-      // {
-      //   value: 'FMIT - Financial Management',
-      //   label: 'FMIT - Financial Management'
-      // },
-      // {
-      //   value: 'ITSP - Strategic planning',
-      //   label: 'ITSP - Strategic planning'
-      // },
-      // {
-      //   value: 'PDSV - Professional Development',
-      //   label: 'PDSV - Professional Development'
-      // },
-      // {
-      //   value: 'PEMT - Performance Management',
-      //   label: 'PEMT - Performance Management'
-      // },
-      // {
-      //   value: 'ETMG - Learning and Development Management',
-      //   label: 'ETMG - Learning and Development Management'
-      // },
+      {
+        value: 'TECH - Specialist Advise',
+        label: 'TECH - Specialist Advise'
+      },
+      {
+        value: 'SLMO - Service Level Management',
+        label: 'SLMO - Service Level Management'
+      },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
+      {
+        value: 'FMIT - Financial Management',
+        label: 'FMIT - Financial Management'
+      },
+      {
+        value: 'ITSP - Strategic planning',
+        label: 'ITSP - Strategic planning'
+      },
+      {
+        value: 'PDSV - Professional Development',
+        label: 'PDSV - Professional Development'
+      },
+      {
+        value: 'PEMT - Performance Management',
+        label: 'PEMT - Performance Management'
+      },
+      {
+        value: 'ETMG - Learning and Development Management',
+        label: 'ETMG - Learning and Development Management'
+      },
       {
         value: 'RESC - Resourcing',
         label: 'RESC - Resourcing'
@@ -606,14 +606,14 @@ module.exports = {
         value: 'BSMO - Business modelling',
         label: 'BSMO - Business modelling'
       },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
       {
         value: 'REQM - Requirements definition and management',
         label: 'REQM - Requirements definition and management'
@@ -629,22 +629,22 @@ module.exports = {
         value: 'BPRE - Business process improvement',
         label: 'BPRE - Business process improvement'
       },
-      // {
-      //   value: 'INOV - Innovation',
-      //   label: 'INOV - Innovation'
-      // },
+      {
+        value: 'INOV - Innovation',
+        label: 'INOV - Innovation'
+      },
       {
         value: 'PROD - Product management',
         label: 'PROD - Product management'
       },
-      // {
-      //   value: 'REQM - Requirements definition and management',
-      //   label: 'REQM - Requirements definition and management'
-      // },
-      // {
-      //   value: 'DLMG - Systems development management',
-      //   label: 'DLMG - Systems development management'
-      // },
+      {
+        value: 'REQM - Requirements definition and management',
+        label: 'REQM - Requirements definition and management'
+      },
+      {
+        value: 'DLMG - Systems development management',
+        label: 'DLMG - Systems development management'
+      },
       {
         value: 'UNAN - User experience analysis',
         label: 'UNAN - User experience analysis'
@@ -656,33 +656,33 @@ module.exports = {
         value: 'TECH - Specialist Advice',
         label: 'TECH - Specialist Advice'
       },
-      // {
-      //   value: 'INAN - Analytics',
-      //   label: 'INAN - Analytics'
-      // },
-      // {
-      //   value: 'RLMT - Relationship Management',
-      //   label: 'RLMT - Relationship Management'
-      // },
+      {
+        value: 'INAN - Analytics',
+        label: 'INAN - Analytics'
+      },
+      {
+        value: 'RLMT - Relationship Management',
+        label: 'RLMT - Relationship Management'
+      },
       {
         value: 'VISL - Data Visualisation',
         label: 'VISL - Data Visualisation'
       },
-      // {
-      //   value: 'METL - Methods and Tools',
-      //   label: 'METL - Methods and Tools'
-      // },
-      // {
-      //   value: 'DATM - Data Management',
-      //   label: 'DATM - Data Management'
-      // },
+      {
+        value: 'METL - Methods and Tools',
+        label: 'METL - Methods and Tools'
+      },
+      {
+        value: 'DATM - Data Management',
+        label: 'DATM - Data Management'
+      },
 
       // *******************QUALITY ASSURANCE AND TESTING*****************
       // QAT
-      // {
-      //   value: 'ITSP - Strategic Planning',
-      //   label: 'ITSP - Strategic Planning'
-      // },
+      {
+        value: 'ITSP - Strategic Planning',
+        label: 'ITSP - Strategic Planning'
+      },
       {
         value: 'Test Analysis, Design and Execution',
         label: 'Test Analysis, Design and Execution'
@@ -746,44 +746,44 @@ module.exports = {
         value: 'Interfaces',
         label: 'Interfaces'
       },
-      // {
-      //   value: 'User Focus',
-      //   label: 'User Focus'
-      // },
-      // {
-      //   value: 'Inclusion',
-      //   label: 'Inclusion'
-      // },
-      // {
-      //   value: 'Technical Breadth',
-      //   label: 'Technical Breadth'
-      // },
+      {
+        value: 'User Focus',
+        label: 'User Focus'
+      },
+      {
+        value: 'Inclusion',
+        label: 'Inclusion'
+      },
+      {
+        value: 'Technical Breadth',
+        label: 'Technical Breadth'
+      },
 
       // Service
       {
         value: 'Service Analysis',
         label: 'Service Analysis'
       },
-      // {
-      //   value: 'User Centred Design',
-      //   label: 'User Centred Design'
-      // },
+      {
+        value: 'User Centred Design',
+        label: 'User Centred Design'
+      },
       {
         value: 'Measurement',
         label: 'Measurement'
       },
-      // {
-      //   value: 'Prototyping',
-      //   label: 'Prototyping'
-      // },
+      {
+        value: 'Prototyping',
+        label: 'Prototyping'
+      },
       {
         value: 'Assisted Digital and Inclusion',
         label: 'Assisted Digital and Inclusion'
       },
-      // {
-      //   value: 'Technical Breadth',
-      //   label: 'Technical Breadth'
-      // },
+      {
+        value: 'Technical Breadth',
+        label: 'Technical Breadth'
+      },
 
       // User Researcher
       {
@@ -798,24 +798,24 @@ module.exports = {
         value: 'Ethics',
         label: 'Ethics'
       },
-      // {
-      //   value: 'Inclusion',
-      //   label: 'Inclusion'
-      // },
-      // {
-      //   value: 'Negotiating and Influencing',
-      //   label: 'Negotiating and Influencing'
-      // },
-      // {
-      //   value: 'Technical Breadth',
-      //   label: 'Technical Breadth'
-      // },
+      {
+        value: 'Inclusion',
+        label: 'Inclusion'
+      },
+      {
+        value: 'Negotiating and Influencing',
+        label: 'Negotiating and Influencing'
+      },
+      {
+        value: 'Technical Breadth',
+        label: 'Technical Breadth'
+      },
 
       // Accessibility & Digital Inclusion
-      // {
-      //   value: 'User Focus',
-      //   label: 'User Focus'
-      // },
+      {
+        value: 'User Focus',
+        label: 'User Focus'
+      },
       {
         value: 'Communicating Information',
         label: 'Communicating Information'
@@ -824,10 +824,10 @@ module.exports = {
         value: 'Leadership & Guidance',
         label: 'Leadership & Guidance'
       },
-      // {
-      //   value: 'Test Analysis, Design and Execution',
-      //   label: 'Test Analysis, Design and Execution'
-      // },
+      {
+        value: 'Test Analysis, Design and Execution',
+        label: 'Test Analysis, Design and Execution'
+      },
       {
         value: 'Accessibility Policy, Standards and Assurance',
         label: 'Accessibility Policy, Standards and Assurance'
