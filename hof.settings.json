@@ -10,5 +10,6 @@
   "session": {
     "name": "home-office-forms-demo.hof.sid"
   },
-  "getAccessibility": true
+  "getAccessibility": true,
+  "sanitiseInputs": true
 }
