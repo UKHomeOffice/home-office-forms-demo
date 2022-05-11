@@ -7,6 +7,7 @@ const RRA_GROUPING = require('../lib/staticRraGrouping').getstaticRraGrouping();
 const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
 const _ = require('lodash');
+const sumValues = values => values.map(it => Number(it)).reduce((a, b) => a + b, 0);
 
 module.exports = {
   applicantsDetails: [
@@ -82,6 +83,18 @@ module.exports = {
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
     'rraEvidence2',
-    'rraSupportingDocuments'
-  ]
+    'rraSupportingDocuments2'
+  ],
+  totalScore: [
+    {
+      field: 'totalScore',
+      derivation: {
+        fromFields: [
+          'rraScores',
+          'rraScores2'
+        ],
+        combiner: sumValues
+      }
+    }
+  ],
 };

@@ -208,5 +208,8 @@
   },
   "rraSupportingDocuments2": {
     "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
   }
 }

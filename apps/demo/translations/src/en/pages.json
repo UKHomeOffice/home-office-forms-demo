@@ -73,6 +73,9 @@
   "skill2": {
     "header": "Skill 2"
   },
+  "totalScore": {
+    "header": "Total Score"
+  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
