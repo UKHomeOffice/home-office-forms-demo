@@ -55,6 +55,9 @@
     "header": "Recruitment and Retention Allowance (RRA) Application ",
     "subheader": "Guidance on completing the self-assessment"
   },
+  "rraLogin": {
+    "header": "Login in to your RRA account"
+  },
   "personalDetails": {
     "header": "Personal Details"
   },
@@ -75,6 +78,9 @@
   },
   "skill-details": {
     "header": "Skills"
+  },
+  "totalScore": {
+    "header": "Total Score"
   },
   "confirm": {
     "header": "Check your answers before submitting your application.",

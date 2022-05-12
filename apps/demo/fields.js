@@ -138,6 +138,10 @@ module.exports = {
   rraEmail: {
     validate: ['required', 'email']
   },
+  rraPassword: {
+    type:'password',
+    validate: 'required'
+  },
   appliedBefore: {
     legend: {
       className: 'visuallyhidden'
@@ -202,10 +206,7 @@ module.exports = {
     formatter: ['trim', 'hyphens'],
     // attributes here are passed to the field element
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
-    attributes: [{
-      attribute: 'rows',
-      value: 8
-    }]
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
   rraSupportingDocuments: {
     mixin: 'input-file'
@@ -235,10 +236,7 @@ module.exports = {
     formatter: ['trim', 'hyphens'],
     // attributes here are passed to the field element
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
-    attributes: [{
-      attribute: 'rows',
-      value: 8
-    }]
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
   rraSupportingDocuments2: {
     mixin: 'input-file'

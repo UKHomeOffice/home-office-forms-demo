@@ -6,7 +6,6 @@ const APPEAL_STAGES = require('../lib/staticAppealStages').getstaticAppealStages
 const RRA_GROUPING = require('../lib/staticRraGrouping').getstaticRraGrouping();
 const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
-const SFIA_SKILLS = require('../lib/staticSfiaSkills').getstaticSfiaSkills();
 const _ = require('lodash');
 const sumValues = values => values.map(it => Number(it)).reduce((a, b) => a + b, 0);
 
@@ -69,10 +68,7 @@ module.exports = {
     }
   ],
   skill1: [
-    {
-      field: 'rraSkill',
-      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
-    },
+    'sfiaSkill1',
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
@@ -81,10 +77,7 @@ module.exports = {
     'rraSupportingDocuments'
   ],
   skill2: [
-    {
-      field: 'rraSkill2',
-      parse: v => _.get(_.find(SFIA_SKILLS, group => group.value === v), 'label', '')
-    },
+    'sfiaSkill2',
     {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
