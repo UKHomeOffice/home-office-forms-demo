@@ -7,7 +7,6 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
-const AddSkillBehaviour = require('./behaviours/addSkills');
 const Aggregate = require('./behaviours/aggregator');
 module.exports = {
   name: 'demo',
@@ -116,40 +115,37 @@ module.exports = {
     '/skill2': {
       behaviours: [Skill2Behaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
-      next: '/has-additionalSkills'
+      next: '/has-additionalCpd'
     },
-    '/has-additionalSkills': {
-      fields: ['hasAdditionalSkills'],
+    '/has-additionalCpd': {
+      fields: ['hasAdditionalCpd'],
       next: '/confirm',
       forks: [{
-        target: '/skill-details',
+        target: '/cpd-details',
         condition: {
-          field: 'hasAdditionalSkills',
+          field: 'hasAdditionalCpd',
           value: 'yes'
         }
       }],
       continueOnEdit: true
     },
-    '/add-skill': {
-      backLink: 'has-additionalSkills',
-      behaviours: [AddSkillBehaviour],
-      fields: ['skillAddSkill', 'skillAddScore', 'skillAddEvidence', 'skillAddSupportingDocument'],
+    '/add-cpd': {
+      backLink: 'has-additionalCpd',
+      fields: ['cpdAddTitle', 'cpdAddDescription'],
       continueOnEdit: true,
-      next: '/skill-details'
+      next: '/cpd-details'
     },
-    '/skill-details': {
-      backLink: 'has-additionalSkills',
+    '/cpd-details': {
+      backLink: 'has-additionalCpd',
       behaviours: [Aggregate],
-      aggregateTo: 'skills',
+      aggregateTo: 'cpds',
       aggregateFrom: [
-        'skillAddSkill',
-        'skillAddScore',
-        'skillAddEvidence',
-        'skillAddSupportingDocument'
+        'cpdAddTitle',
+        'cpdAddDescription'
       ],
-      titleField: 'skillAddSkill',
-      addStep: 'add-skill',
-      addAnotherLinkText: 'skill',
+      titleField: 'cpdAddTitle',
+      addStep: 'add-cpd',
+      addAnotherLinkText: 'CPD evidence',
       template: 'add-another',
       next: '/confirm',
       continueOnEdit: true

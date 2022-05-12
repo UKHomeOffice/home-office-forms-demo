@@ -85,12 +85,12 @@ module.exports = {
     'rraEvidence2',
     'rraSupportingDocuments2'
   ],
-  'skill-details': [
+  'cpd-details': [
     {
-      step: '/skill-details',
-      field: 'skills',
+      step: '/cpd-details',
+      field: 'cpds',
       addElementSeparators: true,
-      dependsOn: 'hasAdditionalSkills'
+      dependsOn: 'hasAdditionalCpd'
     }
   ],
   totalScore: [

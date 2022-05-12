@@ -241,7 +241,7 @@ module.exports = {
   rraSupportingDocuments2: {
     mixin: 'input-file'
   },
-  hasAdditionalSkills: {
+  hasAdditionalCpd: {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required',
@@ -249,27 +249,11 @@ module.exports = {
       className: 'visuallyhidden'
     }
   },
-  addSkill: {
+  cpdAddTitle: {
     validate: ['required'],
-    autocomplete: 'additional-skills'
+    autocomplete: 'additional-cpd'
   },
-  skillAddSkill: {
-    mixin: 'select',
-    validate: 'required',
-    options: [{
-      value: ' ',
-      label: 'fields.skillAddSkill.options.null'
-    }].concat(staticSfiaSkills.getstaticSfiaSkills())
-  },
-  skillAddScore: {
-    mixin: 'select',
-    validate: ['required'],
-    options: [{
-      value: '',
-      label: 'fields.rraScores2.options.null'
-    }].concat(staticRraScores.getstaticRraScores())
-  },
-  skillAddEvidence: {
+  cpdAddDescription: {
     mixin: 'textarea',
     // we want to ignore default formatters as we want
     // to preserve white space
@@ -282,8 +266,5 @@ module.exports = {
       attribute: 'rows',
       value: 8
     }]
-  },
-  skillAddSupportingDocument: {
-    mixin: 'input-file'
-  },
+  }
 }

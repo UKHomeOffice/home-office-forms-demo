@@ -73,11 +73,14 @@
   "skill2": {
     "header": "Skill 2"
   },
-  "has-additionalSkills": {
-    "header": "Do you want to add another skill?"
+  "hasAdditionalCpd": {
+    "header": "Do you want to add information on CPD?"
   },
-  "skill-details": {
-    "header": "Skills"
+  "add-cpd" :{
+    "header": "Add CPD Evidence"
+  },
+  "cpd-details": {
+    "header": "CPD"
   },
   "totalScore": {
     "header": "Total Score"
@@ -124,8 +127,8 @@
       "skill2": {
         "header": "Skill 2"
       },
-      "skill-details": {
-        "header": "Skills"
+      "cpd-details": {
+        "header": "CPD"
       }
     }
   },

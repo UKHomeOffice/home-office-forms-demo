@@ -205,8 +205,8 @@
     "label": "Supporting Document",
     "changeLinkDescription": "Skill Supporting Document"
   },
-  "hasAdditionalSkills": {
-    "legend": "Do you want to add another skill?",
+  "hasAdditionalCpd": {
+    "legend": "Do you want to add information on CPD?",
     "options":{
       "yes": {
         "label": "Yes"
@@ -216,27 +216,15 @@
       }
     }
   },
-  "skills": {
-    "label": "Skill",
-    "changeLinkDescription": "Skill"
+  "cpds": {
+    "label": "CPD",
+    "changeLinkDescription": "CPD"
   },
-  "skillAddSkill": {
-    "label": "Skill",
-    "options": {
-      "null": "Select..."
-    }
+  "cpdAddTitle": {
+    "label": "Title"
   },
-  "skillAddScore": {
-    "label": "Score",
-    "options": {
-      "null": "Select..."
-    }
-  },
-  "skillAddEvidence": {
-    "label": "Evidence Statement"
-  },
-  "skillAddSupportingDocument": {
-    "label": "Supporting Document"
+  "cpdAddDescription": {
+    "label": "Description"
   },
   "totalScore": {
     "label": "Total Score"
