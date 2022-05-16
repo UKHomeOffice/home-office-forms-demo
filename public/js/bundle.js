@@ -247,8 +247,8 @@ helpers.documentReady(validation);
 var helpers = require('./helpers');
 
 CharacterCount.prototype.updateCount = function () {
-  var currentLength = this.$textarea.value.length;
-  var characterNoun = ' characters';
+  var currentLength = wordCount(this.$textarea.value);
+  var characterNoun = ' words';
   var remainderSuffix = ' remaining';
 
   if (this.maxLength - currentLength === 1 || currentLength - this.maxLength === 1) {
@@ -259,6 +259,22 @@ CharacterCount.prototype.updateCount = function () {
     remainderSuffix = ' too many';
   }
 
+  function wordCount(sentence){
+    const countWords = sentence => sentence
+    .replace(/[.,?!;()"'-]/g, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase()
+    .split(" ")
+    .reduce((index, word) => {
+      if (!(index.hasOwnProperty(word))) index[word] = 0;
+      index[word]++;
+      return index;
+    }, {});
+    console.log('Words' + countWords.toString());
+
+    return countWords;
+  }
+
   function addCommas(numString) {
     var rgx = /(\d+)(\d{3})/;
     while (rgx.test(numString)) {
@@ -267,8 +283,9 @@ CharacterCount.prototype.updateCount = function () {
     return numString;
   }
 
+  console.log('Current Length' + currentLength.toString());
   // format the number with commas separating thousands, so screen readers do not read them as a year
-  var number = addCommas(Math.abs(this.maxLength - currentLength).toString());
+  var number =  '300'; //(Math.abs(300 - currentLength).toString());
 
   this.$maxlengthHint.innerHTML = 'You have ' + number + characterNoun + remainderSuffix;
 
