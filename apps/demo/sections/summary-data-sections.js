@@ -96,5 +96,5 @@ module.exports = {
         combiner: sumValues
       }
     }
-  ],
+  ]
 };
