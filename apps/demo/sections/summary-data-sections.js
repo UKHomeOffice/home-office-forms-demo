@@ -68,7 +68,7 @@ module.exports = {
     }
   ],
   skill1: [
-    'sfiaSkill1',
+    'rraSkill',
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
@@ -77,7 +77,7 @@ module.exports = {
     'rraSupportingDocuments'
   ],
   skill2: [
-    'sfiaSkill2',
+    'rraSkill2',
     {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
