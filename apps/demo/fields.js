@@ -9,7 +9,7 @@ const staticRraGrades = require('./lib/staticRraGrades');
 const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
-const staticSfiaSkills = require('./lib/staticSfiaSkills');
+const staticSfiaSkills = [...new Map(require('./lib/staticSfiaSkills').getstaticSfiaSkills().map(obj => [JSON.stringify(obj), obj])).values()];
 
 function notBothOptions(vals) {
   const values = _.castArray(vals);
@@ -187,7 +187,7 @@ module.exports = {
     options: [{
       value: ' ',
       label: 'fields.rraSkill.options.null'
-    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+    }].concat(staticSfiaSkills)
   },
   rraScores: {
     mixin: 'select',
@@ -217,7 +217,7 @@ module.exports = {
     options: [{
       value: ' ',
       label: 'fields.rraSkill2.options.null'
-    }].concat(staticSfiaSkills.getstaticSfiaSkills())
+    }].concat(staticSfiaSkills)
   },
   rraScores2: {
     mixin: 'select',
