@@ -198,10 +198,33 @@
     }
   },
   "rraEvidence2": {
-    "label": "Evidence Statement"
+    "label": "Evidence Statement",
+    "changeLinkDescription": "Skill Evidence Statement"
   },
   "rraSupportingDocuments2": {
-    "label": "Supporting Document"
+    "label": "Supporting Document",
+    "changeLinkDescription": "Skill Supporting Document"
+  },
+  "hasAdditionalCpd": {
+    "legend": "Do you want to add information on Continuous Professional Development?",
+    "options":{
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "cpds": {
+    "label": "Continuous Professional Development",
+    "changeLinkDescription": "Continuous Professional Development"
+  },
+  "cpdAddTitle": {
+    "label": "Title"
+  },
+  "cpdAddDescription": {
+    "label": "Description"
   },
   "totalScore": {
     "label": "Total Score"

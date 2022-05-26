@@ -73,6 +73,15 @@
   "skill2": {
     "header": "Skill 2"
   },
+  "hasAdditionalCpd": {
+    "header": "Do you want to add information on Continuous Professional Development?"
+  },
+  "add-cpd" :{
+    "header": "Add Continuous Professional Development (CPD) Evidence"
+  },
+  "cpd-details": {
+    "header": "Continuous Professional Development"
+  },
   "totalScore": {
     "header": "Total Score"
   },
@@ -117,6 +126,9 @@
       },
       "skill2": {
         "header": "Skill 2"
+      },
+      "cpd-details": {
+        "header": "Continuous Professional Development"
       }
     }
   },

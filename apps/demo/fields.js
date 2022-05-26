@@ -240,5 +240,31 @@ module.exports = {
   },
   rraSupportingDocuments2: {
     mixin: 'input-file'
+  },
+  hasAdditionalCpd: {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required',
+    legend: {
+      className: 'visuallyhidden'
+    }
+  },
+  cpdAddTitle: {
+    validate: ['required'],
+    autocomplete: 'additional-cpd'
+  },
+  cpdAddDescription: {
+    mixin: 'textarea',
+    // we want to ignore default formatters as we want
+    // to preserve white space
+    'ignore-defaults': true,
+    // apply the other default formatters
+    formatter: ['trim', 'hyphens'],
+    // attributes here are passed to the field element
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{
+      attribute: 'rows',
+      value: 8
+    }]
   }
 }

@@ -95,5 +95,11 @@
   },
   "rraEvidence2": {
      "required": "Evidence Statement"
-  }
+  },
+  "cpdAddTitle": {
+    "required": "Please enter a title"
+ },
+ "cpdAddDescription": {
+  "required": "Please enter a description"
+}
 }

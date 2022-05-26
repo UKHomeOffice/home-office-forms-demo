@@ -85,6 +85,14 @@ module.exports = {
     'rraEvidence2',
     'rraSupportingDocuments2'
   ],
+  'cpd-details': [
+    {
+      step: '/cpd-details',
+      field: 'cpds',
+      addElementSeparators: true,
+      dependsOn: 'hasAdditionalCpd'
+    }
+  ],
   totalScore: [
     {
       field: 'totalScore',
