@@ -36,7 +36,7 @@ module.exports = {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
   },
   govukNotify: {
-    notifyApiKey: `${process.env.NOTIFY_KEY}` || '',
+    notifyApiAuthKey: process.env.NOTIFY_KEY || '460fe645-f203-4ae1-8a79-957d68fdf264-d6086183-98f0-41dd-a581-52a5b326b4da',
     templateUserAuthId: process.env.TEMPLATE_USER_AUTHORISATION_ID || 'fe0408cb-24f0-4b5f-9bdb-6569834039fb',
 
   }
