@@ -5,6 +5,8 @@
     "./apps/demo/behaviours/set-form-type"
   ],
   "routes": [
+    "./apps/common",
+    "./apps/verify",
     "./apps/demo"
   ],
   "session": {
@@ -12,3 +14,4 @@
   },
   "getAccessibility": true
 }
+
