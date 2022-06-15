@@ -58,6 +58,9 @@
   "rraLogin": {
     "header": "Login in to your RRA account"
   },
+  "token-invalid": {
+    "header": "That link has expired"
+  },
   "personalDetails": {
     "header": "Personal Details"
   },

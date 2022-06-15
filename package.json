@@ -23,11 +23,14 @@
   "dependencies": {
     "hof": "^19.12.2",
     "homeoffice-countries": "^0.1.0",
+    "ioredis": "^5.0.6",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
+    "ms-email-domains": "^2.11.0",
     "notifications-node-client": "^5.1.1",
-    "typeahead-aria": "^1.0.4"
+    "typeahead-aria": "^1.0.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.2.1",

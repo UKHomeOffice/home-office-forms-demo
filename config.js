@@ -6,12 +6,20 @@ const localhost = () => `${process.env.LISTEN_HOST || '0.0.0.0'}:${process.env.P
 
 module.exports = {
   env: env,
+  hostUrl: process.env.HOST_URL || 'http://localhost:8080',
   upload: {
     maxfilesize: '100mb',
     hostname: (!env || env === 'ci') ?
       `http://${localhost()}/api/file-upload` :
       process.env.FILE_VAULT_URL
   },
+  redis: {
+    port: process.env.REDIS_PORT || '6379',
+    host: process.env.REDIS_HOST || '127.0.0.1'
+  },
+  skipEmail: process.env.SKIP_EMAIL,
+  allowSkip: String(process.env.ALLOW_SKIP) === 'true',
+  tokenExpiry: 1800,
   email: {
     caseworker: process.env.CASEWORKER_EMAIL || 'sas-hof-test@digital.homeoffice.gov.uk',
     notifyApiKey: process.env.NOTIFY_KEY ||
@@ -26,5 +34,10 @@ module.exports = {
   },
   hosts: {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
+  },
+  govukNotify: {
+    notifyApiKey: `${process.env.NOTIFY_KEY}` || '',
+    templateUserAuthId: process.env.TEMPLATE_USER_AUTHORISATION_ID || 'fe0408cb-24f0-4b5f-9bdb-6569834039fb',
+
   }
 };

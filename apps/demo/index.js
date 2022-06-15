@@ -1,6 +1,6 @@
 /* eslint-disable */
 'use strict';
-
+const checkEmailToken = require('./behaviours/check-email-token');
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
@@ -10,9 +10,12 @@ const Skill2Behaviour = require('./behaviours/skills2');
 
 module.exports = {
   name: 'demo',
+  pages: {
+    '/demo/token-invalid': 'token-invalid'
+  },
   steps: {
     '/': {
-      template: 'start'
+      template: 'start',
     },
     '/build-your-own-form': {
       template: 'form-guidance-link'
@@ -87,7 +90,7 @@ module.exports = {
     },
     '/rra-prototype': {
       template: 'rra-prototype',
-      next: '/rraLogin',
+      next: '/verify/who-do-you-work-for',
     },
     '/rraLogin': {
       template: 'rra-login',
