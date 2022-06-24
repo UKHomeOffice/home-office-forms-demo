@@ -73,6 +73,12 @@
   "skill2": {
     "header": "Skill 2"
   },
+  "has-additionalSkills": {
+    "header": "Do you want to add another skill?"
+  },
+  "skill-details": {
+    "header": "Skills"
+  },
   "totalScore": {
     "header": "Total Score"
   },
@@ -117,6 +123,9 @@
       },
       "skill2": {
         "header": "Skill 2"
+      },
+      "skill-details": {
+        "header": "Skills"
       }
     }
   },

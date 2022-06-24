@@ -85,6 +85,14 @@ module.exports = {
     'rraEvidence2',
     'rraSupportingDocuments2'
   ],
+  'skill-details': [
+    {
+      step: '/skill-details',
+      field: 'skills',
+      addElementSeparators: true,
+      dependsOn: 'hasAdditionalSkills'
+    }
+  ],
   totalScore: [
     {
       field: 'totalScore',
