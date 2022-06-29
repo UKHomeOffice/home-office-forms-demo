@@ -5,15 +5,17 @@ const notifyApiKey = config.govukNotify.notifyApiAuthKey;
 const NotifyClient = require('notifications-node-client').NotifyClient;
 const notifyClient = new NotifyClient(notifyApiKey);
 const templateId = config.govukNotify.templateUserAuthId;
-const appPath = require('../../demo/index').baseUrl;
-const firstStep = '/start';
+const appPath = require('../../demo/index').baseUrl || '/rra-prototype';
+const firstStep = '/begin';
 const tokenGenerator = require('../models/save-token');
 
 const getPersonalisation = (host, token) => {
   return {
     // pass in `&` at the end in case there is another
     // query e.g. ?hof-cookie-check
+    'subject': 'RRA User Log On',
     'link': `http://${host + appPath + firstStep}?token=${token}&`,
+    'time_limit': '30',
     'host': `http://${host}`,
   };
 };
@@ -25,7 +27,7 @@ const sendEmail = (email, host, token) => {
     })
     // we will need to log out the response to a proper logger
     // eslint-disable-next-line no-console
-    .then(console.log(`email sent to ${email}`))
+    .then(console.log(process.env))
     .catch(error => {
       // eslint-disable-next-line no-console
       console.error(error);
@@ -73,7 +75,7 @@ module.exports = superclass => class extends superclass {
     const email = req.form.values['user-email'];
 
     if (this.skipEmailVerification(email)) {
-      return res.redirect('/demo/verify/who-do-you-work-for?token=skip');
+      return res.redirect(`${appPath + firstStep}?token=skip`);
     }
 
     return super.getNextStep(req, res);

@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint no-process-env: 0 */
+/* eslint no-process-.env: 0 */
 const env = process.env.NODE_ENV || 'production';
 const localhost = () => `${process.env.LISTEN_HOST || '0.0.0.0'}:${process.env.PORT || 8080}`;
 
@@ -36,8 +36,13 @@ module.exports = {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
   },
   govukNotify: {
-    notifyApiAuthKey: process.env.NOTIFY_KEY || '460fe645-f203-4ae1-8a79-957d68fdf264-d6086183-98f0-41dd-a581-52a5b326b4da',
-    templateUserAuthId: process.env.TEMPLATE_USER_AUTHORISATION_ID || 'fe0408cb-24f0-4b5f-9bdb-6569834039fb',
+    notifyApiAuthKey: process.env.NOTIFYAPIAUTHKEY || 'hof_test-89548f6c-39cd-4acb-851c-1f4ffa2e479b-28426e56-443a-4ba4-98ed-fb576e717ed9',
+    templateUserAuthId: process.env.TEMPLATE_USER_AUTHORISATION_ID || 'b9176c11-6047-4f55-a190-5f08c32d6ad5',
 
-  }
+  },
+  saveService: {
+    port: process.env.DATASERVICE_SERVICE_PORT_HTTPS || '3000',
+    host: process.env.DATASERVICE_SERVICE_HOST &&
+        `https://${process.env.DATASERVICE_SERVICE_HOST}` || 'http://127.0.0.1'
+  },
 };

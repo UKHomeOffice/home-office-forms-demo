@@ -1,13 +1,16 @@
 'use strict';
 const checkToken = require('../models/check-token');
 const config = require('../../../config');
-console.log("sd")
-
-/* eslint no-process-env: 0*/
+/* eslint no-process-.env: 0*/
 module.exports = superclass => class extends superclass {
   saveValues(req, res, next) {
     const token = req.query.token;
     const email = req.query.email || config.skipEmail;
+    console.log("CHECK EMAIL TOKEN: " )
+
+    console.log( token )
+
+    console.log("END " )
 
     const skipEmailAuth = token === 'skip' && config.allowSkip && email;
     const validEmailToken = req.sessionModel.get('valid-token') === true;
@@ -30,7 +33,7 @@ module.exports = superclass => class extends superclass {
           req.sessionModel.set('user-email', user.email);
           return super.saveValues(req, res, next);
         }
-        return res.redirect('/demo/token-invalid');
+        return res.redirect('/rra-prototype/token-invalid');
       })
     // eslint-disable-next-line no-console
       .catch(err => console.log(err));

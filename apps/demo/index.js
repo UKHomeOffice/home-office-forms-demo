@@ -7,6 +7,7 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
+const resumeSession = require('./behaviours/resume-form-session');
 
 module.exports = {
   name: 'demo',
@@ -19,6 +20,12 @@ module.exports = {
     },
     '/build-your-own-form': {
       template: 'form-guidance-link'
+    },
+    '/begin':{
+      behaviours: [
+        checkEmailToken
+      ],
+      next: '/applied-before',
     },
     '/name': {
       fields: ['name'],
@@ -99,6 +106,7 @@ module.exports = {
     },
     '/applied-before': {
       fields: ['appliedBefore'],
+      behaviours: [resumeSession],
       next: '/personalDetails',
     },
     '/personalDetails': {
