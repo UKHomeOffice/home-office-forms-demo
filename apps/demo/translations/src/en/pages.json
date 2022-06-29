@@ -73,6 +73,9 @@
   "skill2": {
     "header": "Skill 2"
   },
+  "skill-details": {
+    "header": "Skills"
+  },
   "hasAdditionalCpd": {
     "header": "Do you want to add information on Continuous Professional Development?"
   },
@@ -126,6 +129,9 @@
       },
       "skill2": {
         "header": "Skill 2"
+      },
+      "skill-details": {
+        "header": "Skills"
       },
       "cpd-details": {
         "header": "Continuous Professional Development"

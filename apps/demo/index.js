@@ -7,7 +7,9 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
+const AddSkillBehaviour = require('./behaviours/addSkills');
 const Aggregate = require('./behaviours/aggregator');
+const AddScore = require('./behaviours/addScore');
 module.exports = {
   name: 'demo',
   params: '/:action?/:id?/:edit?',
@@ -72,7 +74,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, EmailBehaviour, 'complete'],
+      behaviours: [SummaryPageBehaviour, EmailBehaviour, AddScore, 'complete'],
       sections: require('./sections/summary-data-sections'),
       next: '/confirmation'
     },
@@ -115,7 +117,43 @@ module.exports = {
     '/skill2': {
       behaviours: [Skill2Behaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
-      next: '/has-additionalCpd'
+      next: '/has-additionalSkills'
+    },
+    '/has-additionalSkills': {
+      fields: ['hasAdditionalSkills'],
+      next: '/confirm',
+      forks: [{
+        target: '/skill-details',
+        condition: {
+          field: 'hasAdditionalSkills',
+          value: 'yes'
+        }
+      }],
+      continueOnEdit: true
+    },
+    '/add-skill': {
+      backLink: 'has-additionalSkills',
+      behaviours: [AddSkillBehaviour],
+      fields: ['skillAddSkill', 'skillAddScore', 'skillAddEvidence', 'skillAddSupportingDocument'],
+      continueOnEdit: true,
+      next: '/skill-details'
+    },
+    '/skill-details': {
+      backLink: 'has-additionalSkills',
+      behaviours: [Aggregate, AddScore],
+      aggregateTo: 'skills',
+      aggregateFrom: [
+        'skillAddSkill',
+        'skillAddScore',
+        'skillAddEvidence',
+        'skillAddSupportingDocument'
+      ],
+      titleField: 'skillAddSkill',
+      addStep: 'add-skill',
+      addAnotherLinkText: 'skill',
+      template: 'add-another',
+      next: '/has-additionalCpd',
+      continueOnEdit: true
     },
     '/has-additionalCpd': {
       fields: ['hasAdditionalCpd'],

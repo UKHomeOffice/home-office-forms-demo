@@ -8,7 +8,6 @@ const RRA_LEVELS = require('../lib/staticRraLevels').getstaticRraLevels();
 const RRA_SCORES = require('../lib/staticRraScores').getstaticRraScores();
 const _ = require('lodash');
 const sumValues = values => values.map(it => Number(it)).reduce((a, b) => a + b, 0);
-
 module.exports = {
   applicantsDetails: [
     'name',
@@ -68,7 +67,7 @@ module.exports = {
     }
   ],
   skill1: [
-    'sfiaSkill1',
+    'rraSkill',
     {
       field: 'rraScores',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
@@ -77,13 +76,21 @@ module.exports = {
     'rraSupportingDocuments'
   ],
   skill2: [
-    'sfiaSkill2',
+    'rraSkill2',
     {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
     'rraEvidence2',
     'rraSupportingDocuments2'
+  ],
+  'skill-details': [
+    {
+      step: '/skill-details',
+      field: 'skills',
+      addElementSeparators: true,
+      dependsOn: 'hasAdditionalSkills'
+    }
   ],
   'cpd-details': [
     {
@@ -99,10 +106,15 @@ module.exports = {
       derivation: {
         fromFields: [
           'rraScores',
-          'rraScores2'
+          'rraScores2',
+          'skills'[1]
         ],
+        //  addSkillScores: req.sessionModel.attributes.skills.aggregatedValues.map(item => {
+        //   console.log(req.sessionModel);
+        //   return item.fields[1].value
+        //  }),
         combiner: sumValues
-      }
-    }
+      },
+    },
   ]
 };

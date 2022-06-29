@@ -205,6 +205,39 @@
     "label": "Supporting Document",
     "changeLinkDescription": "Skill Supporting Document"
   },
+  "hasAdditionalSkills": {
+    "legend": "Do you want to add another skill?",
+    "options":{
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "skills": {
+    "label": "Skill",
+    "changeLinkDescription": "Skill"
+  },
+  "skillAddSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "skillAddScore": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "skillAddEvidence": {
+    "label": "Evidence Statement"
+  },
+  "skillAddSupportingDocument": {
+    "label": "Supporting Document"
+  },
   "hasAdditionalCpd": {
     "legend": "Do you want to add information on Continuous Professional Development?",
     "options":{
