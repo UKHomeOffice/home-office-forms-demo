@@ -70,6 +70,12 @@
   "skill1": {
     "header": "Skill 1"
   },
+  "rraSupportingDocumentsUpload": {
+    "header": "Do you want to upload a supporting document?"
+  },
+  "rraSupportingDocumentsUpload-confirm": {
+    "header": "Do you want to add a supporting document?"
+  },
   "skill2": {
     "header": "Skill 2"
   },

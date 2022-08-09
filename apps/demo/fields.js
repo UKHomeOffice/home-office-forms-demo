@@ -208,9 +208,10 @@ module.exports = {
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
     attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
-  rraSupportingDocuments: {
-    mixin: 'input-file'
-  },
+  // rraSupportingDocuments: {
+  //   mixin: 'input-file',
+  //   className: 'govuk-file-upload'
+  // },
   rraSkill2: {
     mixin: 'select',
     validate: 'required',
@@ -239,6 +240,60 @@ module.exports = {
     attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
   rraSupportingDocuments2: {
-    mixin: 'input-file'
-  }
+    mixin: 'input-file',
+    className: 'govuk-file-upload'
+  },
+  rraSupportingDocumentsUpload: {
+    mixin: 'radio-group',
+    validate: 'required',
+    legend: {
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: 'yes',
+      toggle: 'rraSupportingDocuments',
+      child: 'input-file'
+    }, {
+      value: 'no'
+    }]
+  },
+  rraSupportingDocuments: {
+    mixin: 'input-file',
+    className: 'govuk-file-upload',
+    disableRender: true,
+    dependent: {
+      field: 'rraSupportingDocumentsUpload',
+      value: 'yes'
+    },
+    validate: [
+      'required',
+    ]
+  },
+  'rraSupportingDocuments-confirm': {
+    mixin: 'radio-group',
+    validate: 'required',
+    legend: {
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: 'yes',
+      toggle: 'rraSupportingDocumentsUpload',
+      child: 'input-file',
+      className: 'govuk-file-upload'
+    }, {
+      value: 'no'
+    }]
+  },
+  'another-file': {
+    mixin: 'input-file',
+    disableRender: true,
+    className: 'govuk-file-upload',
+    dependent: {
+      field: 'evidence-upload-more',
+      value: 'yes'
+    },
+    validate: [
+      'required'
+    ]
+  },
 }

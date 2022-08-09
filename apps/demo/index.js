@@ -8,6 +8,10 @@ const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
 
+const saveImage = require('./behaviours/save-image');
+const removeImage = require('./behaviours/remove-image');
+const unsetValue = require('./behaviours/unset-value');
+const checkDeviceType = require('./behaviours/check-device-type');
 module.exports = {
   name: 'demo',
   steps: {
@@ -108,8 +112,54 @@ module.exports = {
     },
     '/skill1': {
       behaviours: [SkillBehaviour],
-      fields: ['rraSkill', 'rraScores', 'rraEvidence', 'rraSupportingDocuments'],
-      next: '/skill2'
+      fields: ['rraSkill', 'rraScores', 'rraEvidence'],
+      next: '/rraSupportingDocumentsUpload'
+    },
+    '/rraSupportingDocumentsUpload': {
+      fields: [
+        'rraSupportingDocumentsUpload',
+      ],
+      forks: [
+        {
+          target: '/rraSupportingDocumentsUpload-confirm',
+          condition: {
+            field: 'rraSupportingDocumentsUpload',
+            value: 'yes'
+          }
+        },
+        {
+          target: '/skill2',
+          condition: {
+            field: 'rraSupportingDocumentsUpload',
+            value: 'no'
+          }
+        }
+      ],
+      behaviours: [saveImage('rraSupportingDocuments'), checkDeviceType],
+      continueOnEdit: true
+    },
+
+    '/rraSupportingDocumentsUpload-confirm': {
+      fields: [
+        'rraSupportingDocumentsUpload'
+      ],
+      forks: [
+        {
+          target: '/rraSupportingDocumentsUpload-confirm',
+          condition: {
+            field: 'rraSupportingDocumentsUpload',
+            value: 'yes'
+          }
+        },
+        {
+          target: '/skill2',
+          condition: {
+            field: 'rraSupportingDocumentsUpload',
+            value: 'no'
+          }
+        }
+      ],
+      behaviours: [saveImage('rraSupportingDocuments'), removeImage, unsetValue('rraSupportingDocumentsUpload')]
     },
     '/skill2': {
       behaviours: [Skill2Behaviour],

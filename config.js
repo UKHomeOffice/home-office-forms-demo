@@ -2,15 +2,21 @@
 
 /* eslint no-process-env: 0 */
 const env = process.env.NODE_ENV || 'production';
+const useMocks = process.env.USE_MOCKS === 'true' || !env;
 const localhost = () => `${process.env.LISTEN_HOST || '0.0.0.0'}:${process.env.PORT || 8080}`;
 
 module.exports = {
   env: env,
+  csp: {
+    imgSrc: ['data:']
+  },
+  useMocks: useMocks,
   upload: {
-    maxfilesize: '100mb',
-    hostname: (!env || env === 'ci') ?
-      `http://${localhost()}/api/file-upload` :
-      process.env.FILE_VAULT_URL
+    maxFileSize: '100mb',
+    // if mocks set use file service served up by app otherwise use filevault's port 3000
+    hostname: !useMocks && process.env.FILE_VAULT_URL ?
+      process.env.FILE_VAULT_URL :
+      `http://localhost:${useMocks ? (process.env.PORT || 8080) : 3000}/file`
   },
   email: {
     caseworker: process.env.CASEWORKER_EMAIL || 'sas-hof-test@digital.homeoffice.gov.uk',
@@ -26,5 +32,12 @@ module.exports = {
   },
   hosts: {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
+  },
+  keycloak: {
+    token: process.env.KEYCLOAK_TOKEN_URL,
+    username: process.env.KEYCLOAK_USERNAME,
+    password: process.env.KEYCLOAK_PASSWORD,
+    clientId: process.env.KEYCLOAK_CLIENT_ID,
+    secret: process.env.KEYCLOAK_SECRET
   }
 };

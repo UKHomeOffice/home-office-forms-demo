@@ -1,0 +1,11 @@
+{{<partials-page}}
+  {{$encoding}}enctype="multipart/form-data"{{/encoding}}
+  {{$page-content}}
+    <p>This could be an image, wireframe, etc for example. Evidence is helpful should the material be deleted before we can find it. </p>
+
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

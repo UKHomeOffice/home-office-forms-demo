@@ -169,6 +169,19 @@
       "null": "Select..."
     }
   },
+  "rraSupportingDocumentsUpload": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you have some evidence you want to upload"
+    }
+  },
   "rraSupportingDocuments": {
     "label": "Supporting Documents"
   },
@@ -205,5 +218,21 @@
   },
   "totalScore": {
     "label": "Total Score"
+  },
+  "rraSupportingDocuments-confirm": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you want to change your supporting documents"
+    }
+  },
+  "images": {
+    "label": "Image"
   }
 }

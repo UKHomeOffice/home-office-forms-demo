@@ -247,8 +247,8 @@ helpers.documentReady(validation);
 var helpers = require('./helpers');
 
 CharacterCount.prototype.updateCount = function () {
-  var currentLength = wordCount(this.$textarea.value);
-  var characterNoun = ' words';
+  var currentLength = this.$textarea.value.length;
+  var characterNoun = ' characters';
   var remainderSuffix = ' remaining';
 
   if (this.maxLength - currentLength === 1 || currentLength - this.maxLength === 1) {
@@ -259,22 +259,6 @@ CharacterCount.prototype.updateCount = function () {
     remainderSuffix = ' too many';
   }
 
-  function wordCount(sentence){
-    const countWords = sentence => sentence
-    .replace(/[.,?!;()"'-]/g, " ")
-    .replace(/\s+/g, " ")
-    .toLowerCase()
-    .split(" ")
-    .reduce((index, word) => {
-      if (!(index.hasOwnProperty(word))) index[word] = 0;
-      index[word]++;
-      return index;
-    }, {});
-    console.log('Words' + countWords.toString());
-
-    return countWords;
-  }
-
   function addCommas(numString) {
     var rgx = /(\d+)(\d{3})/;
     while (rgx.test(numString)) {
@@ -283,9 +267,8 @@ CharacterCount.prototype.updateCount = function () {
     return numString;
   }
 
-  console.log('Current Length' + currentLength.toString());
   // format the number with commas separating thousands, so screen readers do not read them as a year
-  var number =  '300'; //(Math.abs(300 - currentLength).toString());
+  var number = addCommas(Math.abs(this.maxLength - currentLength).toString());
 
   this.$maxlengthHint.innerHTML = 'You have ' + number + characterNoun + remainderSuffix;
 
@@ -427,8 +410,24 @@ function setupLabels(labels) {
 
 function formFocus() {
   var forms = document.getElementsByTagName('form');
+  var getElementFromSummaryLink = window.location.hash.replace(/^#/, '');
+  var getEditPath = window.location.pathname.split('/').pop();
   var labels;
   var summaries;
+
+  var editMode = getElementFromSummaryLink && getEditPath === 'edit';
+
+  if (getElementFromSummaryLink && document.getElementById(getElementFromSummaryLink) && editMode) {
+    document.getElementById(getElementFromSummaryLink).focus();
+  }
+
+  if (getElementFromSummaryLink && document.getElementById(getElementFromSummaryLink + '-group') && editMode) {
+    document.getElementById(getElementFromSummaryLink + '-group').scrollIntoView();
+  }
+
+  if (document.getElementById(getElementFromSummaryLink + '-day') && forms.length === 1 && editMode) {
+    document.getElementById(getElementFromSummaryLink + '-day').focus();
+  }
 
   if (forms.length > 0) {
     labels = document.getElementsByTagName('label');
@@ -710,7 +709,7 @@ function clicked(e) {
   var elem = helpers.target(e);
 
   var groupId = elem.getAttribute('href').replace(/^#/, '');
-  var group = document.getElementById(groupId);
+  var group = document.getElementById(groupId + '-group') || document.getElementById(groupId);
   var inputs;
 
   if (group) {
@@ -723,7 +722,12 @@ function clicked(e) {
     }
 
     if (inputs) {
-      inputs[0].focus();
+      if (inputs[0].getAttribute('type') === 'hidden') {
+        var getVisibleElements = group.querySelectorAll('input[type=text]');
+        getVisibleElements[0].focus();
+      } else {
+        inputs[0].focus();
+      }
     }
   }
 }
