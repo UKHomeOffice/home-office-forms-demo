@@ -4,6 +4,7 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
+const VerifyEmail = require('./behaviours/verify-email');
 
 module.exports = {
   name: 'demo',
