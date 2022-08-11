@@ -21,10 +21,13 @@
   "postcode": {
     "label": "Postcode"
   },
-  "emailSubject" :{
+  "emailSubject" : {
     "label": "Email Subject",
     "options": {
       "null": "Select..."
     }
+  },
+  "email-verify": {
+    "label": "Confirm email address"
   }
 }

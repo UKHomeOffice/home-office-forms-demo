@@ -28,6 +28,9 @@ module.exports = {
   email: {
     validate: ['required', 'email']
   },
+  'email-verify': {
+    validate: ['required', 'email']
+  },
   emailSubject : {
     mixin: 'select',
     labelclassName: 'visuallyhidden',
@@ -51,5 +54,5 @@ module.exports = {
       attribute: 'rows',
       value: 8
     }]
-  }
+  },
 }
