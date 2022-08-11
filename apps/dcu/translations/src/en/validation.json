@@ -1,0 +1,18 @@
+{
+  "name":{
+    "default": "Enter your full name"
+  },
+  "email": {
+    "default": "Enter your email address in the correct format"
+  },
+  "building": {
+    "default": "Enter details of your building and street"
+  },
+  "townOrCity": {
+    "default": "Enter a town or city",
+    "regex": "Enter a town or city without including digits"
+  },
+  "postcode": {
+    "default": "Enter your postcode"
+  }
+}
