@@ -52,10 +52,5 @@
   },
   "appealStages": {
     "required": "Select an appeal stage from the list"
-  },
-  "email-verify": {
-    "required": "Please enter your email address again",
-    "default": "Enter your email address in the correct format",
-    "notSame": "Your email addresses do not match"
   }
 }

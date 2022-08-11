@@ -2,6 +2,7 @@
 'use strict';
 
 const SummaryPageBehaviour = require('hof').components.summary;
+const VerifyEmail = require('./behaviours/verify-email');
 
 module.exports = {
   name: 'dcu',
@@ -20,6 +21,7 @@ module.exports = {
       next: '/email'
     },
     '/email': {
+      behaviours: [VerifyEmail],
       fields: ['email', 'email-verify'],
       next: '/email-subject'
     },
