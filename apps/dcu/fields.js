@@ -2,7 +2,6 @@
 'use strict';
 
 const emailSubjectOptions = require('./lib/emailSubjectOptions')
-console.log(emailSubjectOptions.getEmailSubjectOptions())
 
 module.exports = {
   name: {

@@ -3,6 +3,7 @@
 
 const SummaryPageBehaviour = require('hof').components.summary;
 const VerifyEmail = require('./behaviours/verify-email');
+const SendEmail = require('./behaviours/send-email');
 
 module.exports = {
   name: 'dcu',
@@ -14,7 +15,7 @@ module.exports = {
     },
     '/name': {
       fields: ['name'],
-      next: ['/address']
+      next: '/address'
     },
     '/address': {
       fields: ['building', 'street', 'townOrCity', 'postcode'],
@@ -30,7 +31,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
+      behaviours: [SummaryPageBehaviour, 'complete', SendEmail],
       next: '/confirmation'
     },
     '/confirmation': {
