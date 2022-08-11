@@ -2,7 +2,7 @@
 
 module.exports = SuperClass => class extends SuperClass {
   validate(req, res, next) {
-    if (req.form.values['email'] !== req.form.values['email-verify']) {
+    if (req.form.values.email !== req.form.values['email-verify']) {
       return next({
         'email-verify': new this.ValidationError(
           'email-verify',
@@ -10,7 +10,7 @@ module.exports = SuperClass => class extends SuperClass {
             type: 'notSame'
           }
         ),
-        'email': new this.ValidationError(
+        email: new this.ValidationError(
           'email',
           {
             type: 'notSame'
@@ -20,4 +20,4 @@ module.exports = SuperClass => class extends SuperClass {
     } super.validate(req, res, next);
     return next;
   }
-}; 
+};

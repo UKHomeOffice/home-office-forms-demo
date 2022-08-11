@@ -10,8 +10,9 @@ module.exports = {
     secretAccessKey: process.env.AWS_PASSWORD || '',
     transportType: 'ses',
     region: process.env.EMAIL_REGION || '',
+    // eslint-disable-next-line max-len
     notifyApiKey: process.env.NOTIFY_KEY || 'dcu_test-89548f6c-39cd-4acb-851c-1f4ffa2e479b-e50d8e0b-bef5-49e0-85ce-68b9caff473c',
-    notifyTemplate: process.env.NOTIFY_TEMPLATE || 'ae41ea46-76b1-4306-af1c-fe73bfe35187',
+    notifyTemplate: process.env.NOTIFY_TEMPLATE || 'ae41ea46-76b1-4306-af1c-fe73bfe35187'
   },
   hosts: {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
