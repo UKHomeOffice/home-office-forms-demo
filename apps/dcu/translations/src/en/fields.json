@@ -29,5 +29,8 @@
   },
   "email-verify": {
     "label": "Confirm email address"
+  },
+  "description": {
+    "label": "Description"
   }
 }

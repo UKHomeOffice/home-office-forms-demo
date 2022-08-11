@@ -41,7 +41,6 @@ module.exports = {
   },
   description: {
     mixin: 'textarea',
-    labelClassName: 'visuallyhidden',
     // we want to ignore default formatters as we want
     // to preserve white space
     'ignore-defaults': true,

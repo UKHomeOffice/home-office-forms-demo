@@ -9,7 +9,8 @@ const sendEmail = (data, reference) => {
   const subject = 'DCU - ' + data.emailSubject;
   return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
     personalisation: {
-      subject: data.emailSubject,
+      subject: subject,
+      emailSubject: data.emailSubject,
       name: data.name,
       email: data.email,
       description: data.description
