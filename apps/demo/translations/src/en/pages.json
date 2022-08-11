@@ -85,17 +85,5 @@
     "alert": "Application complete",
     "subheader": "Thank you",
     "content": "You have completed an example of a form built using HOF."
-  },
-  "dcu": {
-    "header": "Direct Communications Unit"
-  },
-  "dcu-name": {
-    "header": "What is your full name?"
-  },
-  "dcu-address": {
-    "header": "What is your address?"
-  },
-  "dcu-email": {
-    "header": "Enter your email address"
   }
 }
