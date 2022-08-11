@@ -139,5 +139,8 @@ module.exports = {
       value: '',
       label: 'fields.appealStages.options.null'
     }].concat(staticAppealStages.getstaticAppealStages())
+  },
+  'email-verify': {
+    validate: ['required', 'email']
   }
 }
