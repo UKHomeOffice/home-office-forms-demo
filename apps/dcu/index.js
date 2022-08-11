@@ -32,6 +32,7 @@ module.exports = {
     },
     '/confirm': {
       behaviours: [SummaryPageBehaviour, 'complete', SendEmail],
+      sections: require('./sections/summary-data-sections'),
       next: '/confirmation'
     },
     '/confirmation': {

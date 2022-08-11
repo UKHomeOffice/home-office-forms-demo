@@ -5,15 +5,23 @@ module.exports = {
     return [
       {
         value: 'O1',
-        label: 'Option 1 - How are you?'
+        label: 'Problems with your visa application'
       },
       {
         value: '02',
-        label: 'Option 2 - Why'
+        label: 'Making a complaint about a member of staff'
       },
       {
         value: '03',
-        label: 'Option 3 - Hello'
+        label: 'Reporting a crime in an overseas territory'
+      },
+      {
+        value: '04',
+        label: 'Reporting counterfeit money'
+      },
+      {
+        value: '05',
+        label: 'Other'
       }
     ];
   }

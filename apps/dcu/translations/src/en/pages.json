@@ -24,6 +24,9 @@
       },
       "address": {
         "header": "Address"
+      },
+      "emailQuery": {
+        "header": "Email query"
       }
     }
   }
