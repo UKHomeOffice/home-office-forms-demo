@@ -1,0 +1,30 @@
+{
+  "landing-page": {
+    "header": "Direct Communications Unit"
+  },
+  "name": {
+    "header": "What is your full name?"
+  },
+  "address": {
+    "header": "What is your address in the UK?",
+    "intro": "If you have no fixed address, enter an address where we can contact you."
+  },
+  "email": {
+    "header": "Enter your email address"
+  },
+  "email-subject": {
+    "header": "Email subject page header",
+    "intro": "Choose an option from the drop down menu"
+  },
+  "confirm": {
+    "header": "Check your answers before submitting your application.",
+    "sections": {
+      "applicantsDetails": {
+        "header": "Applicant's details"
+      },
+      "address": {
+        "header": "Address"
+      }
+    }
+  }
+}

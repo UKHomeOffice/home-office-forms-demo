@@ -82,31 +82,6 @@ module.exports = {
         'int-phone-number'
       ],
       next: '/confirm'
-    },
-
-    '/dcu': {
-      template: 'dcu',
-      next: '/dcu-name'
-    },
-    '/dcu-name': {
-      fields: ['name'],
-      next: '/dcu-address'
-    },
-    '/dcu-address': {
-      next: '/dcu-email'
-    },
-    '/dcu-email': {
-      behaviours: [VerifyEmail],
-      fields: ['email', 'email-verify'],
-      next: '/dcu-email-subject'
-    },
-    '/dcu-email-subject': {
-      fields: ['email-subject'],
-      next: '/dcu-email-description'
-    },
-    '/dcu-email-description': {
-      fields: ['description'],
-      next: '/confirm'
     }
   }
 };
