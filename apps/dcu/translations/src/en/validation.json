@@ -3,7 +3,13 @@
     "default": "Enter your full name"
   },
   "email": {
-    "default": "Enter your email address in the correct format"
+    "default": "Enter your email address in the correct format",
+    "notSame": "Your email addresses do not match"
+  },
+  "email-verify": {
+    "required": "Please enter your email address again",
+    "default": "Enter your email address in the correct format",
+    "notSame": "Your email addresses do not match"
   },
   "building": {
     "default": "Enter details of your building and street"
