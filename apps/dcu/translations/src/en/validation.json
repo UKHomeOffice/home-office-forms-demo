@@ -6,19 +6,15 @@
     "default": "Enter your email address in the correct format",
     "notSame": "Your email addresses do not match"
   },
-  "email-verify": {
+  "emailVerify": {
     "required": "Please enter your email address again",
     "default": "Enter your email address in the correct format",
     "notSame": "Your email addresses do not match"
   },
-  "building": {
-    "default": "Enter details of your building and street"
+  "emailSubject" : {
+    "required": "Select an option below"
   },
-  "townOrCity": {
-    "default": "Enter a town or city",
-    "regex": "Enter a town or city without including digits"
-  },
-  "postcode": {
-    "default": "Enter your postcode"
+  "description": {
+    "required": "Describe your query below"
   }
 }

@@ -2,10 +2,10 @@
 
 module.exports = SuperClass => class extends SuperClass {
   validate(req, res, next) {
-    if (req.form.values.email !== req.form.values['email-verify']) {
+    if (req.form.values.email !== req.form.values.emailVerify) {
       return next({
-        'email-verify': new this.ValidationError(
-          'email-verify',
+        emailVerify: new this.ValidationError(
+          'emailVerify',
           {
             type: 'notSame'
           }

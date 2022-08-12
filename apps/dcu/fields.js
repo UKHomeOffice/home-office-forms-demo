@@ -27,7 +27,7 @@ module.exports = {
   email: {
     validate: ['required', 'email']
   },
-  'email-verify': {
+  emailVerify: {
     validate: ['required', 'email']
   },
   emailSubject : {
