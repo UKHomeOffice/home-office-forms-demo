@@ -31,3 +31,10 @@
     margin-top: 1.25em;
     margin-bottom: 0.5em;
   }
+
+  ul {
+    @extend .text;
+    @extend .list;
+    @extend .list-bullet;
+  }
+  
