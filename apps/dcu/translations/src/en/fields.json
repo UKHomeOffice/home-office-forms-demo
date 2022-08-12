@@ -5,10 +5,6 @@
   "email" : {
     "label": "Email address"
   },
-  "dateOfBirth": {
-    "legend": "Date of birth",
-    "hint": "For example, 31 10 1990"
-  },
   "building": {
     "label": "Building and street"
   },
@@ -27,7 +23,7 @@
       "null": "Select..."
     }
   },
-  "email-verify": {
+  "emailVerify": {
     "label": "Confirm email address"
   },
   "description": {

@@ -1,5 +1,5 @@
 'use strict';
-const emailSubjectOptions = require('../fields.js')['emailSubject'].options;
+const emailSubjectOptions = require('../fields.js').emailSubject.options;
 const utils = require('../lib/utils');
 const uuid = require('uuid');
 const _ = require('lodash');
@@ -8,7 +8,7 @@ const _ = require('lodash');
 module.exports = superclass => class Submit extends superclass {
   saveValues(req, res, next) {
     const reference = uuid.v1();
-    const emailSubjectValue = req.form.historicalValues['emailSubject'];
+    const emailSubjectValue = req.form.historicalValues.emailSubject;
     const emailSubject = _.get( _.find(emailSubjectOptions, e => e.value === emailSubjectValue), 'label', '');
 
 
