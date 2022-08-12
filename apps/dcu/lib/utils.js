@@ -7,7 +7,7 @@ const notifyClient = new NotifyClient(apiKey);
 
 
 const sendEmail = (data, reference, emailSubject) => {
-  const subject = 'DCU - ' + data.emailSubject;
+  const subject = 'DCU - ' + emailSubject;
   return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
     personalisation: {
       subject: subject,
