@@ -6,7 +6,7 @@ const _ = require('lodash');
 const SUBJECT_OPTIONS = require('../lib/emailSubjectOptions').getEmailSubjectOptions();
 
 module.exports = {
-  applicantsDetails: [
+  personalDetails: [
     'name', 'email',
     {
       field: 'dateOfBirth',
