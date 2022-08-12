@@ -23,7 +23,7 @@ module.exports = {
     },
     '/email': {
       behaviours: [VerifyEmail],
-      fields: ['email', 'email-verify'],
+      fields: ['email', 'emailVerify'],
       next: '/email-subject'
     },
     '/email-subject': {
