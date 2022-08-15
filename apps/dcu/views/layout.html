@@ -15,17 +15,15 @@
           <span>This is a new service – your <a href="{{feedbackUrl}}{{^feedbackUrl}}https://eforms.homeoffice.gov.uk/outreach/feedback.ofml{{/feedbackUrl}}">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-      <div id="post-nav-content">
         <div>
           <span id="step">
             {{> partials-back}} <span>{{$step}}{{/step}}</span>
           </span>
         </div>
-        <div class="grid-row" id="content">
+        <div class="govuk-grid-row" id="content">
           {{> partials-maincontent-left}}
         </div>
         {{> partials-continue}}
-      </div>
       <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
     </main>
   {{/main}}
