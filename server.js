@@ -16,4 +16,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  // Set HTML Language
+  res.locals.htmlLang = 'en';
+  // Set feedback link and phase banner
+  res.locals.feedbackUrl = '/feedback';
+  next();
+});
+
 module.exports = app;

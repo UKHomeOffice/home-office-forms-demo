@@ -2,6 +2,7 @@
 @import "hof/frontend/themes/gov-uk/styles/govuk";
 @import "landing-page";
 
+
 //autocomplete styling
 .tt-menu {
     background-color: #fff;
@@ -26,3 +27,28 @@
   .twitter-typeahead {
     width: 100%;
   }
+
+  header {
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    @extend .text;
+    @extend .list;
+    @extend .list-bullet;
+  }
+
+  a {
+    @extend .govuk-link;
+  }
+  
+  header {
+    margin-top: 0;
+  }
+
+  .govuk-header__logotype{
+    display: inline;
+  }
+    
+  

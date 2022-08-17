@@ -1,6 +1,6 @@
 Please see below links that may help resolve your query: 
 
-## ​Police / policing / crime / violent crime
+## ​Police / Policing / Crime / Violent Crime
 
 * [Contact the police - GOV.UK (www.gov.uk)](https://www.gov.uk/contact-police)
 
@@ -23,7 +23,7 @@ Please see below links that may help resolve your query:
 * [Protecting children from radicalisation: the prevent duty - GOV.UK (www.gov.uk)](https://www.gov.uk/government/publications/protecting-children-from-radicalisation-the-prevent-duty)
 * [Security Industry Authority - GOV.UK (www.gov.uk)](https://www.gov.uk/government/organisations/security-industry-authority)
 
-## Immigration / UKVI / visa / passport 
+## Immigration / UKVI / Visa / Passport 
 
 * [Contact UK Visas and Immigration for help - GOV.UK (www.gov.uk)](https://www.gov.uk/contact-ukvi-inside-outside-uk)
 
@@ -37,6 +37,6 @@ Please see below links that may help resolve your query:
 
 * [Report an immigration or border crime - GOV.UK (www.gov.uk)](​https://www.gov.uk/report-immigration-crime)
 
-If none of these links relate to your query please click 'Continue' below to complete the query form:
+If none of these links relate to your query please click 'Continue' to complete the query form:
 
 

@@ -1,33 +1,5 @@
 $navigation-height: 50px;
 
-#post-nav-content {
-  padding-top: 3em;
-}
-
-@media (max-width: 688px) {
-  #post-nav-content {
-    padding-top: 6em;
-  }
-}
-
-@media (max-width: 640px) {
-  #post-nav-content {
-    padding-top: 8em;
-  }
-}
-
-@media (max-width: 400px) {
-  #post-nav-content {
-    padding-top: 10em;
-  }
-}
-
-@media (max-width: 240px) {
-  #post-nav-content {
-    padding-top: 15em;
-  }
-}
-
 .landing-page-list {
   list-style-type: disc;
   margin-left: 1em;
@@ -55,6 +27,7 @@ $navigation-height: 50px;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline;
 }
 
 .app-navigation__list-item {
@@ -68,7 +41,7 @@ $navigation-height: 50px;
   color: #1d70b8;
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
-  font-size: 1.8875rem;
+  font-size: inherit;
   list-style: none;
   padding: 0 15px;
   float: left;
@@ -102,3 +75,5 @@ $navigation-height: 50px;
 .app-navigation__list-item--current .app-navigation__link:hover {
   text-decoration: none;
 }
+
+

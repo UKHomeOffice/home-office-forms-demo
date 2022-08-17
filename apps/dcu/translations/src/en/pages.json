@@ -29,5 +29,9 @@
         "header": "Email query"
       }
     }
+  },
+  "confirmation": {
+    "alert": "Application complete",
+    "content": "You should receive an email confirmation shortly"
   }
 }
