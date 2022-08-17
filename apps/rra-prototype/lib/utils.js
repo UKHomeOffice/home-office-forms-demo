@@ -26,7 +26,8 @@ const sendEmail = (data, reference) => {
       skill2: data.rraSkill2,
       skill2Score: data.rraScores2,
       skill2Evidence: data.rraEvidence2,
-      skill2SupportingDocument: data.rraSupportingDocuments2
+      skill2SupportingDocument: data.rraSupportingDocuments2,
+      supportingDocuments: data.images.name
     },
     reference
   });

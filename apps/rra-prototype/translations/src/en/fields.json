@@ -1,0 +1,130 @@
+{
+  "sfiaSkill1":{
+    "label": "Please enter a skill"
+  },
+  "sfiaSkill2":{
+    "label": "Please enter a skill"
+  },
+  "rraEvidence": {
+    "label": "Evidence Statement:"
+  },
+  "rraName": {
+    "label": "Full Name"
+  },
+  "rraAdelphiNumber": {
+    "label":"Adelphi Number"
+  },
+  "rraFunction": {
+    "label": "Function or Portfolio"
+  },
+  "rraEmail": {
+    "label": "Email Address",
+    "hint": "Please enter your home office email address"
+  },
+  "rraPassword": {
+    "label": "Password"
+  },
+
+  "appliedBefore": {
+    "legend": "Have you applied for RRA whilst in this role before?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rraRole": {
+    "label": "Role",
+    "hint": "For example, Associate Developer"
+  },
+  "rraGrouping": {
+    "label": "RRA Grouping",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraSupportingDocumentsUpload": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you have some evidence you want to upload"
+    }
+  },
+  "rraSupportingDocuments": {
+    "label": "Supporting Document"
+  },
+  "rraScores": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraGrade": {
+    "label": "Substantive Grade",
+    "hint": "For example, SEO",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraLevels": {
+    "label": "Applying for Proficiency Level",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraSkill2":{
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraScores2": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraEvidence2": {
+    "label": "Evidence Statement"
+  },
+  "rraSupportingDocuments2": {
+    "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
+  },
+  "rraSupportingDocumentsUploadMore": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you want add another supporting document"
+    }
+  },
+  "images": {
+    "label": "Supporting Documents"
+  },
+  "anotherRraSupportingDocuments": {
+    "label": "Supporting Document"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "rraName": {
+    "required": "Please enter your full name"
+  },
+  "rraAdelphiNumber": {
+    "required": "Please enter your Adelphi Number",
+    "numeric": "Your Adelphi Number should contain numbers only"
+  },
+  "rraEmail": {
+    "required": "Please enter a contact email address",
+    "email": "Please enter a valid email address"
+  },
+  "rraPassword": {
+    "required": "Please enter a password"
+  },
+  "appliedBefore": {
+    "required": "Please indicate whether you have applied before"
+  },
+  "rraFunction": {
+    "required": "Please enter your function or portfolio"
+  },
+  "rraRole": {
+    "required": "Please enter your role"
+  },
+  "rraGrouping": {
+    "required": "Please select an RRA group"
+  },
+  "rraGrade": {
+    "required": "Please select a grade"
+  },
+  "rraLevels": {
+    "required": "Please select a proficiency level"
+  },
+  "rraSkill": {
+    "required": "Please select a skill"
+  },
+  "rraScores": {
+    "required": "Please select a score"
+  },
+  "rraEvidence": {
+    "required": "Evidence Statement"
+  },
+  "rraSkill2": {
+    "required": "Please select a skill"
+  },
+  "rraScores2": {
+    "required": "Please select a score"
+  },
+  "rraEvidence2": {
+     "required": "Evidence Statement"
+  },
+
+  "rraSupportingDocuments":{
+    "required": "Please upload a supporting document"
+  },
+  "anotherRraSupportingDocuments":{
+    "required": "Please upload a supporting document"
+  }
+}

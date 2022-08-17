@@ -1,0 +1,109 @@
+{
+  "landing-page": {
+    "header": "Landing page",
+    "title": "The Home Office Forms Framework Demo",
+    "intro": "Choose one of the options below and press continue.",
+    "p1": "This is a demo application to give an idea to all audiences the capabilities of the Home Office Forms (HOF) Framework. This is used for a variety of live services which the majority are open sourced on <a href=\"https://github.com/UKHomeOffice\">Github</a>.",
+    "p2": "Currently, there are options in the navigation bar above to try out and test components supported by HOF:",
+    "li1": "The 'Basic form' covers your standard HTML elements used in most forms.",
+    "li2": "The 'Complex Form' extends off this and shows more complex components, i.e. addresses.",
+    "li3": "Lastly, there is 'Build your own form'. This is just a placeholder for the moment, but we would like to create a more interactive experience for potential stakeholders so they might be able to setup a test build through the UI to see if the framework might suit their needs. For now this section redirects to our technical documentation for more in-depth information."
+  },
+  "rra-prototype": {
+    "header": "Recruitment and Retention Allowance (RRA) Application ",
+    "subheader": "Guidance on completing the self-assessment"
+  },
+  "rraLogin": {
+    "header": "Login in to your RRA account"
+  },
+  "personalDetails": {
+    "header": "Personal Details"
+  },
+  "professionDetails": {
+    "header": "Profession Details"
+  },
+  "skill": {
+    "header": "Skill 1"
+  },
+  "skill1": {
+    "header": "Skill 1"
+  },
+  "rraSupportingDocumentsUpload": {
+    "header": "Do you want to upload a supporting document?"
+  },
+  "rraSupportingDocumentsUploadConfirm": {
+    "header": "Do you want to add another supporting document?"
+  },
+  "skill2": {
+    "header": "Skill 2"
+  },
+  "totalScore": {
+    "header": "Total Score"
+  },
+  "checkAnswers": {
+    "header": "Check your answers before submitting your application.",
+    "undefined": "None given",
+    "fields": {
+      "applicantsDetails": {
+        "header": "Applicant's details"
+      },
+      "contactDetails": {
+        "header": "Contact details"
+      },
+      "personalDetails": {
+        "header": "Personal Details"
+      },
+      "appliedBefore": {
+        "header": "Application Details"
+      },
+      "professionDetails": {
+        "header": "Profession Details"
+      },
+      "skill1": {
+        "header": "Skill 1"
+      },
+      "skill2": {
+        "header": "Skill 2"
+      },
+      "supportingDocuments": {
+        "header": "Supporting Documents"
+      }
+    }
+  },
+  "confirm": {
+    "header": "Check your answers before submitting your application.",
+    "undefined": "None given",
+    "sections": {
+      "applicantsDetails": {
+        "header": "Applicant's details"
+      },
+      "contactDetails": {
+        "header": "Contact details"
+      },
+      "personalDetails": {
+        "header": "Personal Details"
+      },
+      "appliedBefore": {
+        "header": "Application Details"
+      },
+      "professionDetails": {
+        "header": "Profession Details"
+      },
+      "skill1": {
+        "header": "Skill 1"
+      },
+      "skill2": {
+        "header": "Skill 2"
+      },
+      "supportingDocuments": {
+        "header": "Supporting Documents"
+      }
+    }
+  },
+  "confirmation": {
+    "title": "Application complete",
+    "alert": "Application complete",
+    "subheader": "Thank you",
+    "content": "You have completed an example of a form built using HOF."
+  }
+}

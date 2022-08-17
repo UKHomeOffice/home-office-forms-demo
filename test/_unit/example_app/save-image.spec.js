@@ -1,9 +1,9 @@
 'use strict';
 
 const expect = chai.expect;
-const Behaviour = require('../../../apps/demo/behaviours/save-image');
+const Behaviour = require('../../../apps/rra-prototype/behaviours/save-image');
 
-describe.only("apps/demo/rra 'save-image' behaviour should ", () => {
+describe.only("apps/rra-prototype 'save-image' behaviour should ", () => {
   it('export a function', () => {
     expect(Behaviour).to.be.a('function');
   });
@@ -83,7 +83,7 @@ describe.only("apps/demo/rra 'save-image' behaviour should ", () => {
       expect(req.form.values['skill1']).to.eql();
     });
 
-    it("should return null to 'evidence-upload' on request form values if there are no errors", () => {
+    it("should return null to 'rraSuppotingDocumentsupload' on request form values if there are no errors", () => {
       req.form.errors = {};
       instance.locals(req, res, next);
       expect(req.form.values['skill1']).to.eql(null);

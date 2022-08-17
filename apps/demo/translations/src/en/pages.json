@@ -51,37 +51,6 @@
     "header": "What is the appeal stage?",
     "intro": "Choose an appeal stage from the drop down menu"
   },
-  "rra-prototype": {
-    "header": "Recruitment and Retention Allowance (RRA) Application ",
-    "subheader": "Guidance on completing the self-assessment"
-  },
-  "rraLogin": {
-    "header": "Login in to your RRA account"
-  },
-  "personalDetails": {
-    "header": "Personal Details"
-  },
-  "professionDetails": {
-    "header": "Profession Details"
-  },
-  "skill": {
-    "header": "Skill 1"
-  },
-  "skill1": {
-    "header": "Skill 1"
-  },
-  "rraSupportingDocumentsUpload": {
-    "header": "Do you want to upload a supporting document?"
-  },
-  "rraSupportingDocumentsUpload-confirm": {
-    "header": "Do you want to add a supporting document?"
-  },
-  "skill2": {
-    "header": "Skill 2"
-  },
-  "totalScore": {
-    "header": "Total Score"
-  },
   "confirm": {
     "header": "Check your answers before submitting your application.",
     "sections": {
@@ -108,21 +77,6 @@
       },
       "weaponsTypes": {
         "header": "Weapons details"
-      },
-      "personalDetails": {
-        "header": "Personal Details"
-      },
-      "appliedBefore": {
-        "header": "Application Details"
-      },
-      "professionDetails": {
-        "header": "Profession Details"
-      },
-      "skill1": {
-        "header": "Skill 1"
-      },
-      "skill2": {
-        "header": "Skill 2"
       }
     }
   },

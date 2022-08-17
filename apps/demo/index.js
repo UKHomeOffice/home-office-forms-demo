@@ -4,14 +4,7 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
-const EmailBehaviour = require('./behaviours/send-email');
-const SkillBehaviour = require('./behaviours/skills');
-const Skill2Behaviour = require('./behaviours/skills2');
 
-const saveImage = require('./behaviours/save-image');
-const removeImage = require('./behaviours/remove-image');
-const unsetValue = require('./behaviours/unset-value');
-const checkDeviceType = require('./behaviours/check-device-type');
 module.exports = {
   name: 'demo',
   steps: {
@@ -74,96 +67,19 @@ module.exports = {
       fields: ['appealStages'],
       next: '/confirm'
     },
-    '/confirm': {
-      behaviours: [SummaryPageBehaviour, EmailBehaviour, 'complete'],
-      sections: require('./sections/summary-data-sections'),
-      next: '/confirmation'
-    },
-    '/confirmation': {
-      backLink: false
-    },
+    // '/confirm': {
+    //   behaviours: [SummaryPageBehaviour,'complete'],
+    //   sections: require('./sections/summary-data-sections'),
+    //   next: '/confirmation'
+    // },
+    // '/confirmation': {
+    //   backLink: false
+    // },
     '/international-phone-number': {
       behaviours: InternationalPhoneNumber,
       fields: [
         'int-phone-number'
       ],
-      next: '/confirm'
-    },
-    '/rra-prototype': {
-      template: 'rra-prototype',
-      next: '/rraLogin',
-    },
-    '/rraLogin': {
-      template: 'rra-login',
-      fields: ['rraEmail', 'rraPassword'],
-      next: '/applied-before',
-    },
-    '/applied-before': {
-      fields: ['appliedBefore'],
-      next: '/personalDetails',
-    },
-    '/personalDetails': {
-      fields: ['rraName', 'rraAdelphiNumber','rraFunction', 'rraEmail'],
-      next: '/professionDetails'
-    },
-    '/professionDetails': {
-      fields: ['rraRole', 'rraGrouping', 'rraGrade', 'rraLevels'],
-      next: '/skill1',
-    },
-    '/skill1': {
-      behaviours: [SkillBehaviour],
-      fields: ['rraSkill', 'rraScores', 'rraEvidence'],
-      next: '/rraSupportingDocumentsUpload'
-    },
-    '/rraSupportingDocumentsUpload': {
-      fields: [
-        'rraSupportingDocumentsUpload',
-      ],
-      forks: [
-        {
-          target: '/rraSupportingDocumentsUpload-confirm',
-          condition: {
-            field: 'rraSupportingDocumentsUpload',
-            value: 'yes'
-          }
-        },
-        {
-          target: '/skill2',
-          condition: {
-            field: 'rraSupportingDocumentsUpload',
-            value: 'no'
-          }
-        }
-      ],
-      behaviours: [saveImage('rraSupportingDocuments'), checkDeviceType],
-      continueOnEdit: true
-    },
-
-    '/rraSupportingDocumentsUpload-confirm': {
-      fields: [
-        'rraSupportingDocumentsUpload'
-      ],
-      forks: [
-        {
-          target: '/rraSupportingDocumentsUpload-confirm',
-          condition: {
-            field: 'rraSupportingDocumentsUpload',
-            value: 'yes'
-          }
-        },
-        {
-          target: '/skill2',
-          condition: {
-            field: 'rraSupportingDocumentsUpload',
-            value: 'no'
-          }
-        }
-      ],
-      behaviours: [saveImage('rraSupportingDocuments'), removeImage, unsetValue('rraSupportingDocumentsUpload')]
-    },
-    '/skill2': {
-      behaviours: [Skill2Behaviour],
-      fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
       next: '/confirm'
     }
   }
