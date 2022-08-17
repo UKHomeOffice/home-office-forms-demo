@@ -25,6 +25,7 @@
     "required": "Select an option below"
   },
   "description": {
-    "required": "Describe your query below"
+    "required": "Describe your query below",
+    "maxlength": "Keep to the 1000 character limit"
   }
 }
