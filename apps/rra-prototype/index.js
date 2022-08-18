@@ -6,6 +6,7 @@ const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
 const Skill2Behaviour = require('./behaviours/skills2');
 const saveImage = require('./behaviours/save-image');
+const limitDocs = require('./behaviours/limit-documents');
 const removeImage = require('./behaviours/remove-image');
 const unsetValue = require('./behaviours/unset-value');
 const checkDeviceType = require('./behaviours/check-device-type');
@@ -45,7 +46,7 @@ module.exports = {
 
     '/skill2': {
       behaviours: [Skill2Behaviour],
-      fields: ['rraSkill2', 'rraScores2', 'rraEvidence2', 'rraSupportingDocuments2'],
+      fields: ['rraSkill2', 'rraScores2', 'rraEvidence2'],
       next: '/rraSupportingDocumentsUpload'
     },
 
@@ -95,7 +96,7 @@ module.exports = {
           }
         }
       ],
-      behaviours: [saveImage('anotherRraSupportingDocuments'), removeImage, unsetValue('rraSupportingDocumentsUploadMore')]
+      behaviours: [saveImage('anotherRraSupportingDocuments'), removeImage, unsetValue('rraSupportingDocumentsUploadMore'), limitDocs]
     },
     '/confirm': {
       behaviours: [checkAnswers, SummaryPageBehaviour, EmailBehaviour, 'complete'],

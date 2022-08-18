@@ -22,12 +22,10 @@ const sendEmail = (data, reference) => {
       skill1: data.rraSkill,
       skill1Score: data.rraScores,
       skill1Evidence: data.rraEvidence,
-      skill1SupportingDocument: data.rraSupportingDocuments,
       skill2: data.rraSkill2,
       skill2Score: data.rraScores2,
       skill2Evidence: data.rraEvidence2,
-      skill2SupportingDocument: data.rraSupportingDocuments2,
-      supportingDocuments: data.images.name
+      supportingDocuments: data.images.map(docs => {return docs.name})
     },
     reference
   });

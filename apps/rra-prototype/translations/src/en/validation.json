@@ -55,5 +55,8 @@
   },
   "anotherRraSupportingDocuments":{
     "required": "Please upload a supporting document"
+  },
+  "images": {
+    "tooMany": "You can only submit up to 6 supporting documents"
   }
 }

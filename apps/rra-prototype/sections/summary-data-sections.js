@@ -35,7 +35,6 @@ module.exports = {
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
     'rraEvidence',
-    // 'rraSupportingDocuments'
   ],
   skill2: [
     'rraSkill2',
@@ -43,14 +42,8 @@ module.exports = {
       field: 'rraScores2',
       parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
     },
-    'rraEvidence2',
-    'rraSupportingDocuments2'
+    'rraEvidence2'
   ],
-  // supportingDocuments: [
-  //   'images',
-  //   'rraSupportingDocuments',
-  //   'anotherRraSupportingDocuments'
-  // ],
   totalScore: [
     {
       field: 'totalScore',

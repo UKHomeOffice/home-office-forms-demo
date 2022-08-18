@@ -118,7 +118,8 @@
       }
     },
     "validation": {
-      "required": "Select whether you want add another supporting document"
+      "required": "Select whether you want add another supporting document",
+      "tooMany": "You can only submit up to 6 supporting documents. Please delete any excess documents"
     }
   },
   "images": {
