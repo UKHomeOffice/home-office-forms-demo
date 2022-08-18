@@ -1,13 +1,4 @@
 {
-  "sfiaSkill1":{
-    "label": "Please enter a skill"
-  },
-  "sfiaSkill2":{
-    "label": "Please enter a skill"
-  },
-  "rraEvidence": {
-    "label": "Evidence Statement:"
-  },
   "rraName": {
     "label": "Full Name"
   },
@@ -24,7 +15,6 @@
   "rraPassword": {
     "label": "Password"
   },
-
   "appliedBefore": {
     "legend": "Have you applied for RRA whilst in this role before?",
     "options": {
@@ -46,34 +36,6 @@
       "null": "Select..."
     }
   },
-  "rraSkill": {
-    "label": "Skill",
-    "options": {
-      "null": "Select..."
-    }
-  },
-  "rraSupportingDocumentsUpload": {
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    },
-    "validation": {
-      "required": "Select whether you have some evidence you want to upload"
-    }
-  },
-  "rraSupportingDocuments": {
-    "label": "Supporting Document"
-  },
-  "rraScores": {
-    "label": "Score",
-    "options": {
-      "null": "Select..."
-    }
-  },
   "rraGrade": {
     "label": "Substantive Grade",
     "hint": "For example, SEO",
@@ -86,6 +48,33 @@
     "options": {
       "null": "Select..."
     }
+  },
+  "currentRraLevel": {
+    "label": "Current Proficiency Level",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "lastAssessmentDate": {
+    "legend": "Date of Last Assessment"
+  },
+  "previousScore": {
+    "label": "Previous Score Acheived in the Last Assessment"
+  },
+  "rraSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraScores": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraEvidence": {
+    "label": "Evidence Statement:"
   },
   "rraSkill2":{
     "label": "Skill",
@@ -102,11 +91,55 @@
   "rraEvidence2": {
     "label": "Evidence Statement"
   },
-  "rraSupportingDocuments2": {
-    "label": "Supporting Document"
+  "higherRraSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
   },
-  "totalScore": {
-    "label": "Total Score"
+  "higherRraScores": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraEvidence": {
+    "label": "Statement of Professional Proficiency Development"
+  },
+  "higherRraSkill2":{
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraScores2": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraEvidence2": {
+    "label": "Statement of Professional Proficiency Development"
+  },
+  "cpdDescription": {
+    "label": "Professional Development in last 12 months",
+    "hint":"Please include any qualifications"
+  },
+  "rraSupportingDocumentsUpload": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you have some evidence you want to upload"
+    }
+  },
+  "rraSupportingDocuments": {
+    "label": "Supporting Document"
   },
   "rraSupportingDocumentsUploadMore": {
     "options": {
@@ -127,5 +160,8 @@
   },
   "anotherRraSupportingDocuments": {
     "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
   }
 }

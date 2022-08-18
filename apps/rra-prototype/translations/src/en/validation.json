@@ -29,7 +29,8 @@
     "required": "Please select a grade"
   },
   "rraLevels": {
-    "required": "Please select a proficiency level"
+    "required": "Please select a proficiency level",
+    "notSameOrLower": "The proficiency level must not be the same or lower than you're current proficiency level"
   },
   "rraSkill": {
     "required": "Please select a skill"
@@ -50,6 +51,39 @@
      "required": "Evidence Statement"
   },
 
+  "currentRraLevel": {
+    "required": "Please select your current proficiency level",
+    "notSameOrLower": "The proficiency level must not be the same or lower than you're current proficiency level"
+
+  },
+  "lastAssessmentDate": {
+    "required": "Please enter the date of your last assessment"
+  },
+  "previousScore": {
+    "required": "Please enter the score achieved in your last assessment",
+    "numeric": "Please enter your score in digits"
+  },
+  "higherRraSkill": {
+    "required": "Please select a skill"
+  },
+  "higherRraScores": {
+    "required": "Please select a score"
+  },
+  "higherRraEvidence": {
+    "required": "Please enter a statement of professional proficiency development "
+  },
+  "higherRraSkill2": {
+    "required": "Please select a skill"
+  },
+  "higherRraScores2": {
+    "required": "Please select a score"
+  },
+  "higherRraEvidence2": {
+     "required": "Please enter a statement of professional proficiency development "
+  },
+  "cpdDescription": {
+    "required": "Please enter professional development in last 12 months"
+ },
   "rraSupportingDocuments":{
     "required": "Please upload a supporting document"
   },

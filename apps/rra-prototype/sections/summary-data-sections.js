@@ -23,10 +23,13 @@ module.exports = {
       parse: v => _.get(_.find(RRA_GROUPING, group => group.value === v), 'label', '')
     },
     'rraGrade',
+    'currentRraLevel',
+    'lastAssessmentDate', 
+    'previousScore',
     {
       field: 'rraLevels',
       parse: v => _.get(_.find(RRA_LEVELS, group => group.value === v), 'label', '')
-    }
+    },
   ],
   skill1: [
     'rraSkill',
@@ -44,13 +47,34 @@ module.exports = {
     },
     'rraEvidence2'
   ],
+  higherSkill1: [
+    'higherRraSkill',
+    {
+      field: 'higherRraScores',
+      parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
+    },
+    'higherRraEvidence',
+  ],
+  higherSkill2: [
+    'higherRraSkill2',
+    {
+      field: 'higherRraScores2',
+      parse: v => _.get(_.find(RRA_SCORES, group => group.value === v), 'label', '')
+    },
+    'higherRraEvidence2'
+  ],
+  cpd: [
+    'cpdDescription'
+  ],
   totalScore: [
     {
       field: 'totalScore',
       derivation: {
         fromFields: [
           'rraScores',
-          'rraScores2'
+          'rraScores2',
+          'higherRraScores',
+          'higherRraScores2'
         ],
         combiner: sumValues
       }

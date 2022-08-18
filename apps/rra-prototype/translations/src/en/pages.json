@@ -11,6 +11,7 @@
   },
   "rra-prototype": {
     "header": "Recruitment and Retention Allowance (RRA) Application ",
+    "title": "Recruitment and Retention Allowance",
     "subheader": "Guidance on completing the self-assessment"
   },
   "rraLogin": {
@@ -22,11 +23,26 @@
   "professionDetails": {
     "header": "Profession Details"
   },
+  "higherProfessionDetails": {
+    "header": "Higher Rate Profession Details"
+  },
   "skill": {
     "header": "Skill 1"
   },
   "skill1": {
     "header": "Skill 1"
+  },
+  "skill2": {
+    "header": "Skill 2"
+  },
+  "higherSkill1": {
+    "header": "Skill 1"
+  },
+  "higherSkill2": {
+    "header": "Skill 2"
+  },
+  "cpd":{
+    "header": "Professional Development"
   },
   "rraSupportingDocumentsUpload": {
     "header": "Do you want to upload a supporting document?"
@@ -34,41 +50,8 @@
   "rraSupportingDocumentsUploadConfirm": {
     "header": "Do you want to add another supporting document?"
   },
-  "skill2": {
-    "header": "Skill 2"
-  },
   "totalScore": {
     "header": "Total Score"
-  },
-  "checkAnswers": {
-    "header": "Check your answers before submitting your application.",
-    "undefined": "None given",
-    "fields": {
-      "applicantsDetails": {
-        "header": "Applicant's details"
-      },
-      "contactDetails": {
-        "header": "Contact details"
-      },
-      "personalDetails": {
-        "header": "Personal Details"
-      },
-      "appliedBefore": {
-        "header": "Application Details"
-      },
-      "professionDetails": {
-        "header": "Profession Details"
-      },
-      "skill1": {
-        "header": "Skill 1"
-      },
-      "skill2": {
-        "header": "Skill 2"
-      },
-      "supportingDocuments": {
-        "header": "Supporting Documents"
-      }
-    }
   },
   "confirm": {
     "header": "Check your answers before submitting your application.",
@@ -89,10 +72,19 @@
       "professionDetails": {
         "header": "Profession Details"
       },
+      "higherProfessionDetails": {
+        "header": "Higher Rate Profession Details"
+      },
       "skill1": {
         "header": "Skill 1"
       },
       "skill2": {
+        "header": "Skill 2"
+      },
+      "higherSkill1": {
+        "header": "Skill 1"
+      },
+      "higherSkill2": {
         "header": "Skill 2"
       },
       "supportingDocuments": {

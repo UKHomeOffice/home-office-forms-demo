@@ -8,6 +8,7 @@ const staticRraGrouping = require('./lib/staticRraGrouping');
 const staticRraLevels = require('./lib/staticRraLevels');
 const staticRraScores = require('./lib/staticRraScores');
 const staticSfiaSkills = [...new Map(require('./lib/staticSfiaSkills').getstaticSfiaSkills().map(obj => [JSON.stringify(obj), obj])).values()];
+const dateComponent = require('hof').components.date;
 
 module.exports = {
   rraName: {
@@ -56,11 +57,25 @@ module.exports = {
   },
   rraLevels: {
     mixin: 'select',
-    validate: ['required'],
+    validate: ['required',],
     options: [{
       value: '',
       label: 'fields.rraLevels.options.null'
     }].concat(staticRraLevels.getstaticRraLevels())
+  },
+  currentRraLevel: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.currentRraLevel.options.null'
+    }].concat(staticRraLevels.getstaticRraLevels())
+  },
+  lastAssessmentDate: dateComponent('lastAssessmentDate', {
+    validate: ['required']
+  }),
+  previousScore: {
+    validate: ['required', 'numeric']
   },
   rraSkill: {
     mixin: 'select',
@@ -85,10 +100,6 @@ module.exports = {
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
     attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
-  // rraSupportingDocuments: {
-  //   mixin: 'input-file',
-  //   className: 'govuk-file-upload'
-  // },
   rraSkill2: {
     mixin: 'select',
     validate: 'required',
@@ -112,9 +123,58 @@ module.exports = {
     validate: ['required', { type: 'maxlength', arguments: 5000 }],
     attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
-  rraSupportingDocuments2: {
-    mixin: 'input-file',
-    className: 'govuk-file-upload'
+  higherRraSkill: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{
+      value: ' ',
+      label: 'fields.higherRraSkill.options.null'
+    }].concat(staticSfiaSkills)
+  },
+  higherRraScores: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.higherRraScores.options.null'
+    }].concat(staticRraScores.getstaticRraScores())
+  },
+  higherRraEvidence: {
+    mixin: 'textarea',
+    'ignore-defaults': true,
+    formatter: ['trim', 'hyphens'],
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
+  },
+  higherRraSkill2: {
+    mixin: 'select',
+    validate: 'required',
+    options: [{
+      value: ' ',
+      label: 'fields.higherRraSkill2.options.null'
+    }].concat(staticSfiaSkills)
+  },
+  higherRraScores2: {
+    mixin: 'select',
+    validate: ['required'],
+    options: [{
+      value: '',
+      label: 'fields.higherRraScores2.options.null'
+    }].concat(staticRraScores.getstaticRraScores())
+  },
+  higherRraEvidence2: {
+    mixin: 'textarea',
+    'ignore-defaults': true,
+    formatter: ['trim', 'hyphens'],
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
+  },
+  cpdDescription: {
+    mixin: 'textarea',
+    'ignore-defaults': true,
+    formatter: ['trim', 'hyphens'],
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
   },
   rraSupportingDocumentsUpload: {
     mixin: 'radio-group',

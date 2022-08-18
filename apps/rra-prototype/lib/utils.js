@@ -6,7 +6,23 @@ const NotifyClient = require('notifications-node-client').NotifyClient;
 const notifyClient = new NotifyClient(apiKey);
 
 const sendEmail = (data, reference) => {
-  const subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - 1st App';
+  let subject;
+  let document;
+  if(data.appliedBefore === 'no'){
+     subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - 1st App';
+  }
+  else {
+    subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - Higher Rate App'
+  }
+  if (!data.images.length){
+    document = 'None given'
+  }
+  else {
+    document = data.images.map(docs => {return docs.name})
+  }
+  if(data.appliedBefore === 'no'){
+    subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - 1st App';
+
   return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
     personalisation: {
       subject: subject,
@@ -25,10 +41,40 @@ const sendEmail = (data, reference) => {
       skill2: data.rraSkill2,
       skill2Score: data.rraScores2,
       skill2Evidence: data.rraEvidence2,
-      supportingDocuments: data.images.map(docs => {return docs.name})
+      supportingDocuments: document
     },
     reference
   });
+}
+else {
+  subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - Higher Rate App'
+
+  return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
+    personalisation: {
+      subject: subject,
+      name: data.rraName,
+      number: data.rraAdelphiNumber,
+      portfolio: data.rraFunction,
+      email: data.rraEmail,
+      appliedBefore: data.appliedBefore,
+      role: data.rraRole,
+      grouping: data.rraGrouping,
+      grade: data.rraGrade, 
+      currentLevel: data.currentRraLevel,
+      lastAssessmentDate: data.lastAssessmentDate,
+      previousScore: data.previousScore,
+      level: data.rraLevels,
+      higherSkill1: data.higherRraSkill,
+      higherSkill1Score: data.higheRraScores,
+      higherSkill1Evidence: data.higherRraEvidence,
+      higherSkill2: data.higherRraSkill2,
+      higherSkill2Score: data.higheRraScores2,
+      higherSkill2Evidence: data.higherRraEvidence2,
+      supportingDocuments: document
+    },
+    reference
+  });
+}
 };
 
 module.exports = {
