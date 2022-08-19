@@ -8,22 +8,41 @@ const notifyClient = new NotifyClient(apiKey);
 const sendEmail = (data, reference) => {
   let subject;
   let document;
-  if(data.appliedBefore === 'no'){
-     subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - 1st App';
+  if (!data.images.length) {
+    document = 'None given';
+  } else {
+    document = data.images.map(docs => { return docs.name; });
   }
-  else {
-    subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - Higher Rate App'
-  }
-  if (!data.images.length){
-    document = 'None given'
-  }
-  else {
-    document = data.images.map(docs => {return docs.name})
-  }
-  if(data.appliedBefore === 'no'){
-    subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - 1st App';
 
-  return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
+  if (data.appliedBefore === 'no') {
+    subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - ' + data.rraLevels + ' - 1st App';
+
+    return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
+      personalisation: {
+        subject: subject,
+        name: data.rraName,
+        number: data.rraAdelphiNumber,
+        portfolio: data.rraFunction,
+        email: data.rraEmail,
+        appliedBefore: data.appliedBefore,
+        role: data.rraRole,
+        grouping: data.rraGrouping,
+        grade: data.rraGrade,
+        level: data.rraLevels,
+        skill1: data.rraSkill,
+        skill1Score: data.rraScores,
+        skill1Evidence: data.rraEvidence,
+        skill2: data.rraSkill2,
+        skill2Score: data.rraScores2,
+        skill2Evidence: data.rraEvidence2,
+        supportingDocuments: document
+      },
+      reference
+    });
+  }
+  subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - ' + data.rraLevels + ' - Higher Rate App';
+
+  return notifyClient.sendEmail(config.email.notifyHigherTemplate, config.email.caseworker, {
     personalisation: {
       subject: subject,
       name: data.rraName,
@@ -34,47 +53,21 @@ const sendEmail = (data, reference) => {
       role: data.rraRole,
       grouping: data.rraGrouping,
       grade: data.rraGrade,
-      level: data.rraLevels,
-      skill1: data.rraSkill,
-      skill1Score: data.rraScores,
-      skill1Evidence: data.rraEvidence,
-      skill2: data.rraSkill2,
-      skill2Score: data.rraScores2,
-      skill2Evidence: data.rraEvidence2,
-      supportingDocuments: document
-    },
-    reference
-  });
-}
-else {
-  subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - '  + data.rraLevels + ' - Higher Rate App'
-
-  return notifyClient.sendEmail(config.email.notifyTemplate, config.email.caseworker, {
-    personalisation: {
-      subject: subject,
-      name: data.rraName,
-      number: data.rraAdelphiNumber,
-      portfolio: data.rraFunction,
-      email: data.rraEmail,
-      appliedBefore: data.appliedBefore,
-      role: data.rraRole,
-      grouping: data.rraGrouping,
-      grade: data.rraGrade, 
       currentLevel: data.currentRraLevel,
       lastAssessmentDate: data.lastAssessmentDate,
       previousScore: data.previousScore,
       level: data.rraLevels,
       higherSkill1: data.higherRraSkill,
-      higherSkill1Score: data.higheRraScores,
+      higherSkill1Score: data.higherRraScores,
       higherSkill1Evidence: data.higherRraEvidence,
       higherSkill2: data.higherRraSkill2,
-      higherSkill2Score: data.higheRraScores2,
+      higherSkill2Score: data.higherRraScores2,
       higherSkill2Evidence: data.higherRraEvidence2,
+      professionalDev: data.cpdDescription,
       supportingDocuments: document
     },
     reference
   });
-}
 };
 
 module.exports = {

@@ -15,7 +15,7 @@ settings = Object.assign({}, settings, {
   routes: settings.routes.map(require),
   behaviours: settings.behaviours.map(require),
   redis: config.redis,
-  csp: config.csp,
+  csp: config.csp
 });
 
 const app = hof(settings);

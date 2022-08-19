@@ -3,7 +3,6 @@
 /* eslint no-process-env: 0 */
 const env = process.env.NODE_ENV || 'production';
 const useMocks = process.env.USE_MOCKS === 'true' || !env;
-const localhost = () => `${process.env.LISTEN_HOST || '0.0.0.0'}:${process.env.PORT || 8080}`;
 
 module.exports = {
   env: env,
@@ -23,6 +22,7 @@ module.exports = {
     notifyApiKey: process.env.NOTIFY_KEY ||
     'hof_test-89548f6c-39cd-4acb-851c-1f4ffa2e479b-28426e56-443a-4ba4-98ed-fb576e717ed9',
     notifyTemplate: process.env.NOTIFY_TEMPLATE || 'e3f83bba-3491-45ef-a9ba-984fbe0e27da',
+    notifyHigherTemplate: process.env.NOTIFY_HIGHER_TEMPLATE || '1fa1fe19-9d26-4e37-bbb5-358d9493f2a3',
     from: process.env.FROM_ADDRESS || '',
     replyTo: process.env.REPLY_TO || '',
     accessKeyId: process.env.AWS_USER || '',

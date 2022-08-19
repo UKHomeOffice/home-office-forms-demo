@@ -56,7 +56,7 @@ describe.only("apps/rra-prototype 'save-image' behaviour should ", () => {
     it('should add files to form.values', () => {
       req.files.images = imageFiles;
       instance.process(req);
-      expect(req.form.values.image).to.eql('test1.png');
+      expect(req.form.values.rraSupportingDocuments).to.eql('test1.png');
     });
 
     after(() => {
@@ -76,17 +76,17 @@ describe.only("apps/rra-prototype 'save-image' behaviour should ", () => {
       expect(Base.prototype.locals).to.have.been.called;
     });
 
-    it("should not return null to 'skill1' on request form values if errors", () => {
+    it("should not return null to 'rraSupportingDocumentsUpload' on request form values if errors", () => {
       req.form.errors = { error: 'err' };
       instance.locals(req, res, next);
-      expect(req.form.values['skill1']).to.not.eql(null);
-      expect(req.form.values['skill1']).to.eql();
+      expect(req.form.values.rraSuppotingDocumentsUpload).to.not.eql(null);
+      expect(req.form.values.rraSuppotingDocumentsUpload).to.eql();
     });
 
-    it("should return null to 'rraSuppotingDocumentsupload' on request form values if there are no errors", () => {
+    it("should return null to 'rraSuppotingDocumentsUpload' on request form values if there are no errors", () => {
       req.form.errors = {};
       instance.locals(req, res, next);
-      expect(req.form.values['skill1']).to.eql(null);
+      expect(req.form.values.rraSupportingDocumentsUpload).to.eql(null);
     });
 
     after(() => {
@@ -109,7 +109,7 @@ describe.only("apps/rra-prototype 'save-image' behaviour should ", () => {
       req.sessionModel.set('images', imageFiles);
       instance.saveValues(req, res, next);
       const sessionModel = req.sessionModel.get('images');
-      expect(sessionModel.image.name).to.eql('test1.png');
+      expect(sessionModel.rraSupportingDocuments.name).to.eql('test1.png');
     });
 
     after(() => {

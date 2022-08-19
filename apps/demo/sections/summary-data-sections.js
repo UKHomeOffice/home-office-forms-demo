@@ -3,6 +3,7 @@
 const moment = require('moment');
 const PRETTY_DATE_FORMAT = 'Do MMMM YYYY';
 const APPEAL_STAGES = require('../lib/staticAppealStages').getstaticAppealStages();
+const _ = require('lodash');
 
 module.exports = {
   applicantsDetails: [
@@ -40,5 +41,5 @@ module.exports = {
   ],
   weaponsTypes: [
     'weaponsTypes'
-  ],
+  ]
 };

@@ -2,7 +2,7 @@
 
 module.exports = superclass => class extends superclass {
   saveValues(req, res, next) {
-    const higherRateApp = req.form.values['appliedBefore'] !== 'no';
+    const higherRateApp = req.form.values.appliedBefore !== 'no';
     const currentSteps = req.sessionModel.get('steps');
     const previouslyAnsweredAppliedBefore = currentSteps.includes(['/professionDetails', '/skill1', '/skill2']);
 

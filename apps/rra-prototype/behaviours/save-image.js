@@ -20,7 +20,7 @@ module.exports = name => superclass => class extends superclass {
 
   locals(req, res, next) {
     if (!Object.keys(req.form.errors).length) {
-      req.form.values['rraSupportingDocumentsUpload'] = null;
+      req.form.values.rraSupportingDocumentsUpload = null;
     }
     return super.locals(req, res, next);
   }
