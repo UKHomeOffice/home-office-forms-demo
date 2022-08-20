@@ -29,7 +29,7 @@
     "required": "Please select a grade"
   },
   "rraLevels": {
-    "required": "Please select a proficiency level",
+    "required": "Please select the proficiency level you are applying for",
     "notSameOrLower": "The proficiency level must not be the same or lower than you're current proficiency level"
   },
   "rraSkill": {
@@ -57,7 +57,10 @@
 
   },
   "lastAssessmentDate": {
-    "required": "Please enter the date of your last assessment"
+    "default": "Enter the date of your last assessment in the correct format; for example, 31 10 1990",
+    "required": "Please enter the date of your last assessment",
+    "after": "Enter a date after 1 1 2000",
+    "before": "Enter a date that is in the past"
   },
   "previousScore": {
     "required": "Please enter the score achieved in your last assessment",

@@ -72,7 +72,7 @@ module.exports = {
     }].concat(staticRraLevels.getstaticRraLevels())
   },
   lastAssessmentDate: dateComponent('lastAssessmentDate', {
-    validate: ['required']
+    validate: ['required', 'before', { type: 'after', arguments: ['2000'] }]
   }),
   previousScore: {
     validate: ['required', 'numeric']
@@ -117,6 +117,13 @@ module.exports = {
     }].concat(staticRraScores.getstaticRraScores())
   },
   rraEvidence2: {
+    mixin: 'textarea',
+    'ignore-defaults': true,
+    formatter: ['trim', 'hyphens'],
+    validate: ['required', { type: 'maxlength', arguments: 5000 }],
+    attributes: [{ attribute: 'spellcheck', value: 'true' },{attribute: 'rows', value: 8}]
+  },
+  qualifications: {
     mixin: 'textarea',
     'ignore-defaults': true,
     formatter: ['trim', 'hyphens'],

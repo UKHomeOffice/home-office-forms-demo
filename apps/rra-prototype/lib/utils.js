@@ -40,7 +40,7 @@ const sendEmail = (data, reference) => {
       reference
     });
   }
-  subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - ' + data.rraLevels + ' - Higher Rate App';
+  subject = 'RRA - ' + data.rraName + ' - ' + data.rraGrouping + ' - ' + data.rraLevels + ' - Higher Rate';
 
   return notifyClient.sendEmail(config.email.notifyHigherTemplate, config.email.caseworker, {
     personalisation: {

@@ -91,6 +91,9 @@
   "rraEvidence2": {
     "label": "Evidence Statement"
   },
+  "qualifications": {
+    "label": "Please include any qualifications"
+  },
   "higherRraSkill": {
     "label": "Skill",
     "options": {
@@ -126,6 +129,7 @@
     "hint":"Please include any qualifications"
   },
   "rraSupportingDocumentsUpload": {
+    "hint": "You can provide no more than 6 products / documents (e.g. a business case, a MS Project Plan) that you have completed.",
     "options": {
       "yes": {
         "label": "Yes"
@@ -142,6 +146,7 @@
     "label": "Supporting Document"
   },
   "rraSupportingDocumentsUploadMore": {
+    "hint": "You can provide no more than 6 products / documents (e.g. a business case, a MS Project Plan) that you have completed.",
     "options": {
       "yes": {
         "label": "Yes"

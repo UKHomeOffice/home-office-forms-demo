@@ -4,7 +4,8 @@ module.exports = superclass => class extends superclass {
   saveValues(req, res, next) {
     const higherRateApp = req.form.values.appliedBefore !== 'no';
     const currentSteps = req.sessionModel.get('steps');
-    const previouslyAnsweredAppliedBefore = currentSteps.includes(['/professionDetails', '/skill1', '/skill2']);
+    // eslint-disable-next-line max-len
+    const previouslyAnsweredAppliedBefore = currentSteps.includes(['/professionDetails', '/skill1', '/skill2', '/qualifications']);
 
     req.sessionModel.set('higher-app', higherRateApp);
 

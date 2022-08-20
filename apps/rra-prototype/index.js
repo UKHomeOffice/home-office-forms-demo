@@ -68,11 +68,23 @@ module.exports = {
     '/skill2': {
       behaviours: [Skill2Behaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2'],
+      next: '/qualifications'
+    },
+    '/qualifications': {
+      fields: ['qualifications'],
       next: '/rraSupportingDocumentsUpload'
     },
     '/higherProfessionDetails': {
       behaviours: [validateHigherLevel],
-      fields: ['rraRole', 'rraGrouping', 'rraGrade','currentRraLevel','lastAssessmentDate', 'previousScore', 'rraLevels'],
+      fields: ['rraRole', 'rraGrouping', 'rraGrade','currentRraLevel', 'rraLevels'],
+      next: '/lastAssessmentDate',
+    },
+    '/lastAssessmentDate':{
+      fields: ['lastAssessmentDate'],
+      next: '/previousScore',
+    },
+    '/previousScore': {
+      fields: [ 'previousScore'],
       next: '/higherSkill1',
     },
     '/higherSkill1': {

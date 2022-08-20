@@ -47,6 +47,9 @@ module.exports = {
     },
     'rraEvidence2'
   ],
+  qualifications: [
+    'qualifications'
+  ],
   higherSkill1: [
     'higherRraSkill',
     {
