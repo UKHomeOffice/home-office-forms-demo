@@ -11,6 +11,10 @@ module.exports = {
   steps: {
     '/landing-page': {
       template: 'dcu',
+      next: '/ukvi'
+    },
+    '/ukvi': {
+      template: 'ukvi',
       next: '/name'
     },
     '/name': {
