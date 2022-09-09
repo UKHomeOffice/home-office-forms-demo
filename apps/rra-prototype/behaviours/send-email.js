@@ -6,9 +6,12 @@ const uuid = require('uuid');
 module.exports = superclass => class Submit extends superclass {
   saveValues(req, res, next) {
     const reference = uuid.v1();
-    return utils.sendEmail(req.sessionModel.toJSON(), reference)
-      .then(() => Submit.handleSuccess(req, next, reference, true))
-      .catch(err => Submit.handleError(req, next, reference, err, true));
+    const app = 'rra-prototype';
+    const component =  req.sessionModel.get('appliedBefore') === 'no' ? ' - 1st App' : ' - Higher Rate';
+    const sortSections = false;
+    return utils.sendEmail(req.sessionModel.toJSON(), reference, app, component, sortSections)
+      .then(() => Submit.handleSuccess(req, next, reference, app, component, sortSections, true))
+      .catch(err => Submit.handleError(req, next, reference, app, component, sortSections, err, true));
   }
   static handleSuccess(req, next, reference, shouldLog) {
     if (shouldLog) {
