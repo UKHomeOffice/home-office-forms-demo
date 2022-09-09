@@ -5,7 +5,7 @@ module.exports = superclass => class extends superclass {
     const higherRateApp = req.form.values.appliedBefore !== 'no';
     const currentSteps = req.sessionModel.get('steps');
     // eslint-disable-next-line max-len
-    const previouslyAnsweredAppliedBefore = currentSteps.includes(['/professionDetails', '/skill1', '/skill2', '/qualifications']);
+    const previouslyAnsweredAppliedBefore = currentSteps.includes(['/professionDetails', '/skill1', '/skill2', '/qualifications', '/qualifications']);
 
     req.sessionModel.set('higher-app', higherRateApp);
 
@@ -20,6 +20,7 @@ module.exports = superclass => class extends superclass {
       req.sessionModel.unset('rraSkill2');
       req.sessionModel.unset('rraScores2');
       req.sessionModel.unset('rraEvidence2');
+      req.sessionModel.unset('images');
     } else if (!previouslyAnsweredAppliedBefore) {
       req.sessionModel.unset('currentRraLevel');
       req.sessionModel.unset('lastAssessmentDate');
@@ -31,6 +32,7 @@ module.exports = superclass => class extends superclass {
       req.sessionModel.unset('higherRraScores2');
       req.sessionModel.unset('higherRraEvidence2');
       req.sessionModel.unset('cpdDescription');
+      req.sessionModel.unset('images');
       req.sessionModel.unset('is-higher');
     }
 
