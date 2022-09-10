@@ -33,10 +33,8 @@ const UserResearcherSkills = staticSfiaSkills.getstaticUserResearcherSfiaSkills(
 const AccessibilityandDigitalInclusionSkills = staticSfiaSkills.getstaticAccessibilityandDigitalInclusionSfiaSkills();
 
 module.exports = superclass => class Skill extends superclass {
-
   higherSkill1(req, options1) {
     if (req.form.options.route === '/higherSkill1') {
-      console.log('helloooo', req.form.options.route);
       req.form.options.fields.higherRraSkill.options = [{
         value: '',
         label: 'fields.higherRraSkill.options.null'
@@ -58,9 +56,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(BusinessAnalystSkills, obj.value));
         this.higherSkill1(req, options1);
-        console.log(this.higherSkill1(req, options1));
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(BusinessAnalystSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -70,8 +66,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(EngineeringLeadershipSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(EngineeringLeadershipSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -81,8 +76,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(HeadOfRoleForEngineeringSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(HeadOfRoleForEngineeringSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -92,8 +86,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(InfrastructureEngineeringSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(InfrastructureEngineeringSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -103,8 +96,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(NetworkingEngineeringSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(NetworkingEngineeringSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -114,8 +106,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(SecurityEngineeringSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(SecurityEngineeringSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -125,8 +116,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(SoftwareAndDevOpsSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(SoftwareAndDevOpsSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -136,8 +126,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(BusinessArchitectureSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(BusinessArchitectureSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -147,8 +136,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DataArchitectureSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DataArchitectureSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -158,8 +146,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(SecurityArchitectureSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(SecurityArchitectureSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -169,8 +156,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(TechnicalArchitectureSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(TechnicalArchitectureSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -180,8 +166,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DataAnalystSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DataAnalystSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -191,8 +176,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DataEngineeringSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DataEngineeringSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -202,8 +186,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DataScienceSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DataScienceSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -213,8 +196,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(HeadOfRoleForDataSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(HeadOfRoleForDataSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -224,8 +206,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(ContentDesignerSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(ContentDesignerSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -235,8 +216,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(InteractionDesignerSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(InteractionDesignerSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -246,8 +226,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill2(req, options2);
@@ -257,8 +236,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill2(req, options2);
@@ -268,8 +246,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill2(req, options2);
@@ -279,8 +256,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill2(req, options2);
@@ -290,8 +266,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverySkills, obj.value));
         this.higherSkill2(req, options2);
@@ -301,8 +276,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(PlanEngageAndImproveSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(PlanEngageAndImproveSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -312,8 +286,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DesignAndTransitionSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DesignAndTransitionSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -323,8 +296,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(DeliverAndSupportSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(DeliverAndSupportSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -334,8 +306,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(ItOperationsLeadershipSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(ItOperationsLeadershipSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -345,8 +316,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(ProductManagerSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(ProductManagerSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -356,8 +326,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(AccessibilityandDigitalInclusionSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(AccessibilityandDigitalInclusionSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -367,8 +336,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(PerformanceAnalysisSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(PerformanceAnalysisSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -378,8 +346,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(PerformanceAnalysisSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(PerformanceAnalysisSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -389,8 +356,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -400,8 +366,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -411,26 +376,27 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(QualityAssuranceAndTestingSkills, obj.value));
         this.higherSkill2(req, options2);
       }
     } else if (req.sessionModel.get('rraGrouping') === 'Service Architect') {
-      let options = req.form.options.fields.higherRraSkill.options;
-      options = options.filter(obj => _.includes(ServiceSkills, obj.value));
-      req.form.options.fields.higherRraSkill.options = [{
-        value: '',
-        label: 'fields.higherRraSkill.options.null'
-      }].concat(options);
+      if (req.form.options.route === '/higherSkill1') {
+        let options1 = req.form.options.fields.higherRraSkill.options;
+        options1 = options1.filter(obj => _.includes(ServiceSkills, obj.value));
+        this.higherSkill1(req, options1);
+      } else if (req.form.options.route === '/higherSkill2') {
+        let options2 = req.form.options.fields.higherRraSkill2.options;
+        options2 = options2.filter(obj => _.includes(ServiceSkills, obj.value));
+        this.higherSkill2(req, options2);
+      }
     } else if (req.sessionModel.get('rraGrouping') === 'Service Designer') {
       if (req.form.options.route === '/higherSkill1') {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(ServiceSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(ServiceSkills, obj.value));
         this.higherSkill2(req, options2);
@@ -440,8 +406,7 @@ module.exports = superclass => class Skill extends superclass {
         let options1 = req.form.options.fields.higherRraSkill.options;
         options1 = options1.filter(obj => _.includes(UserResearcherSkills, obj.value));
         this.higherSkill1(req, options1);
-      }
-      else if (req.form.options.route === '/higherSkill2') {
+      } else if (req.form.options.route === '/higherSkill2') {
         let options2 = req.form.options.fields.higherRraSkill2.options;
         options2 = options2.filter(obj => _.includes(UserResearcherSkills, obj.value));
         this.higherSkill2(req, options2);

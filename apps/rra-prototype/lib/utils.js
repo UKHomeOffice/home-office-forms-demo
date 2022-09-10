@@ -8,7 +8,7 @@ const notifyClient = new NotifyClient(apiKey);
 const sendEmail = (data, reference) => {
   let subject;
   let document;
-  if (!data.images.length) {
+  if (!data.images) {
     document = 'None given';
   } else {
     document = data.images.map(docs => { return docs.name; });
