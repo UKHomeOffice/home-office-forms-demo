@@ -68,6 +68,12 @@ spec:
                   name: session-secret
                   key: session-secret
             {{ end }}
+             - name: PDF_CONVERTER_URL
+              {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
+              value: https://html-pdf-converter-{{ .DRONE_SOURCE_BRANCH }}:10443/convert
+              {{ else }}
+              value: https://html-pdf-converter:10443/convert
+              {{ end }}
           {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
           livenessProbe:
             httpGet:

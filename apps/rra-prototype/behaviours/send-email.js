@@ -1,30 +1,26 @@
 'use strict';
 
-const utils = require('../lib/utils');
+const SendEmail = require('../lib/utils');
 const uuid = require('uuid');
 
 module.exports = superclass => class Submit extends superclass {
-  saveValues(req, res, next) {
-    const reference = uuid.v1();
-    const app = 'rra-prototype';
-    const component =  req.sessionModel.get('appliedBefore') === 'no' ? ' - 1st App' : ' - Higher Rate';
-    const sortSections = false;
-    return utils.sendEmail(req.sessionModel.toJSON(), reference, app, component, sortSections)
-      .then(() => Submit.handleSuccess(req, next, reference, app, component, sortSections, true))
-      .catch(err => Submit.handleError(req, next, reference, app, component, sortSections, err, true));
-  }
-  static handleSuccess(req, next, reference, shouldLog) {
-    if (shouldLog) {
-      req.log('info', 'Email sent to RRA address', `reference=${reference}`);
-    }
-    return next();
-  }
+  async successHandler(req, res, next) {
+    try {
+      const utils = new SendEmail({
+        reference: uuid.v1(),
+        app: 'rra-prototype',
+        component: req.sessionModel.get('appliedBefore') === 'no' ? ' - 1st App' : ' - Higher Rate',
+        sendReceipt: true,
+        sortSections: false,
+      });
 
-  static handleError(req, next, reference, err, shouldLog) {
-    if (shouldLog) {
-      req.log('error', 'Error sending email to RRA address', `reference=${reference}`, err);
+      await utils.sendEmail(req, res, super.locals(req, res));
+
+      req.log('info', 'rra.form.submit_form.successful');
+      return super.successHandler(req, res, next);
+    } catch (err) {
+      req.log('error', 'rra.form.submit_form.error', err.message || err);
+      return next(err);
     }
-    err.formNotSubmitted = true;
-    return next(err);
   }
 };

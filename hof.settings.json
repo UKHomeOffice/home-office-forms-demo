@@ -8,6 +8,9 @@
     "./apps/demo",
     "./apps/rra-prototype"
   ],
+  "views": [
+    "./apps/rra-prototype/views"
+  ],
   "session": {
     "name": "home-office-forms-demo.hof.sid"
   },

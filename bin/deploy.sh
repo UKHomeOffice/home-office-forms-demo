@@ -11,7 +11,7 @@ if [[ $1 == 'tear_down' ]]; then
 
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd --delete -f kube/configmaps/configmap.yml
-  $kd --delete -f kube/redis -f kube/app
+  $kd --delete -f kube/redis -f kube/html-pdf -f kube/app
   echo "Torn Down UAT Branch - $APP_NAME-$DRONE_SOURCE_BRANCH.$BRANCH_ENV.homeoffice.gov.uk"
   exit 0
 fi
@@ -23,7 +23,7 @@ if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} ]]; then
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd -f kube/jobs/ms-schema-job.yml
   $kd -f kube/configmaps -f kube/certs
-  $kd -f kube/redis -f kube/app
+  $kd -f kube/redis -f kube/html-pdf -f kube/app
 elif [[ ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd -f kube/jobs/ms-schema-job.yml
