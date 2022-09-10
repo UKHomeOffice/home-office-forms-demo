@@ -4,9 +4,7 @@
 const SummaryPageBehaviour = require('hof').components.summary;
 const EmailBehaviour = require('./behaviours/send-email');
 const SkillBehaviour = require('./behaviours/skills');
-const Skill2Behaviour = require('./behaviours/skills2');
 const higherSkillBehaviour = require('./behaviours/higherSkills');
-const higherSkill2Behaviour = require('./behaviours/higherSkills2');
 const saveImage = require('./behaviours/save-image');
 const limitDocs = require('./behaviours/limit-documents');
 const removeImage = require('./behaviours/remove-image');
@@ -66,7 +64,7 @@ module.exports = {
       next: '/skill2'
     },
     '/skill2': {
-      behaviours: [Skill2Behaviour],
+      behaviours: [SkillBehaviour],
       fields: ['rraSkill2', 'rraScores2', 'rraEvidence2'],
       next: '/qualifications'
     },
@@ -93,7 +91,7 @@ module.exports = {
       next: '/higherSkill2'
     },
     '/higherSkill2': {
-      behaviours: [higherSkill2Behaviour],
+      behaviours: [higherSkillBehaviour],
       fields: ['higherRraSkill2', 'higherRraScores2', 'higherRraEvidence2'],
       next: '/cpd'
     },
