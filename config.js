@@ -42,5 +42,5 @@ module.exports = {
   },
   pdf: {
     url: process.env.PDF_CONVERTER_URL
-  },
+  }
 };

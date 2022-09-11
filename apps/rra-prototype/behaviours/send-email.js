@@ -11,7 +11,7 @@ module.exports = superclass => class Submit extends superclass {
         app: 'rra-prototype',
         component: req.sessionModel.get('appliedBefore') === 'no' ? ' - 1st App' : ' - Higher Rate',
         sendReceipt: true,
-        sortSections: false,
+        sortSections: false
       });
 
       await utils.sendEmail(req, res, super.locals(req, res));

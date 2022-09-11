@@ -52,8 +52,8 @@ module.exports = class SendEmail {
     });
   }
 
-  async sendEmail(req, res, locals, data, reference) {
-    data = req.sessionModel.toJSON();
+  async sendEmail(req, res, locals, reference) {
+    const data = req.sessionModel.toJSON();
     const html = this.renderHTML(req, res, locals);
     const pdfModel = new PDFModel();
     pdfModel.set({ template: html });
@@ -122,7 +122,7 @@ module.exports = class SendEmail {
       reference,
       'form id': notifyClient.prepareUpload(pdfData)
     });
-  };
+  }
 
   sortSections(locals) {
     const appName = this.behaviourConfig.app;
