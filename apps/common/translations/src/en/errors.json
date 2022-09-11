@@ -1,0 +1,12 @@
+{
+  "default": {
+    "title": "Error",
+    "message": "Something went wrong. Any text entered must only include letters a to z, hyphens, spaces and apostrophes. Please delete any special characters and try again."
+  },
+  "session": {
+    "title": "Your application has been closed",
+    "message-1": "Your application doesn’t appear to have been worked on for 1 hour so we closed it for security.",
+    "message-2": "You can return to your application via the RRA application",
+    "link-1": "start page on RRA-start"
+  }
+}

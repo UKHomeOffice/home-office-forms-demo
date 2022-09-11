@@ -1,14 +1,7 @@
-<title>{{#t}}pages.landing-page.header{{/t}} – GOV.UK</title>
-
 {{<partials-page}}
+  {{$back}}{{/back}}
   {{$page-content}}
-  <h2>{{#t}}pages.landing-page.title{{/t}}</h2>
-  <p>{{#t}}pages.landing-page.p1{{/t}}</p>
-  <p>{{#t}}pages.landing-page.p2{{/t}}</p>
-  <ul>
-    <li class="landing-page-list">{{#t}}pages.landing-page.li1{{/t}}</li>
-    <li class="landing-page-list">{{#t}}pages.landing-page.li2{{/t}}</li>
-    <li class="landing-page-list">{{#t}}pages.landing-page.li3{{/t}}</li>
-  </ul>
+    {{#markdown}}begin{{/markdown}}
+    {{#input-submit}}start{{/input-submit}}
   {{/page-content}}
 {{/partials-page}}

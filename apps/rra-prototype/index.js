@@ -16,17 +16,19 @@ const resetJourneyToSubmitRRA = require('./behaviours/reset-journey-to-submit-rr
 const higherApp = require('./behaviours/higher-app');
 const setAppType = require('./behaviours/set-app-type');
 const validateHigherLevel = require('./behaviours/validate-higher');
+const checkEmailToken = require('./behaviours/check-email-token');
 
 module.exports = {
   name: 'rra-prototype',
+  baseUrl: '/rra-prototype',
+  pages: {
+    '/token-invalid': 'token-invalid'
+  },
   steps: {
-    '/rra-prototype': {
-      template: 'rra-prototype',
-      next: '/rraLogin',
-    },
-    '/rraLogin': {
-      template: 'rra-login',
-      fields: ['rraEmail', 'rraPassword'],
+    '/start': {
+      behaviours: [
+        checkEmailToken
+      ],
       next: '/applied-before',
     },
     '/applied-before': {

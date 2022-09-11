@@ -23,6 +23,7 @@ module.exports = {
     'hof_test-89548f6c-39cd-4acb-851c-1f4ffa2e479b-28426e56-443a-4ba4-98ed-fb576e717ed9',
     notifyTemplate: process.env.NOTIFY_TEMPLATE || 'e3f83bba-3491-45ef-a9ba-984fbe0e27da',
     notifyHigherTemplate: process.env.NOTIFY_HIGHER_TEMPLATE || '1fa1fe19-9d26-4e37-bbb5-358d9493f2a3',
+    templateUserAuthId: process.env.TEMPLATE_USER_AUTHORISATION_ID || 'b9176c11-6047-4f55-a190-5f08c32d6ad5',
     from: process.env.FROM_ADDRESS || '',
     replyTo: process.env.REPLY_TO || '',
     accessKeyId: process.env.AWS_USER || '',
@@ -33,6 +34,12 @@ module.exports = {
   hosts: {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
   },
+  tokenExpiry: 1800,
+  redis: {
+    port: process.env.REDIS_PORT || '6379',
+    host: process.env.REDIS_HOST || '127.0.0.1'
+  },
+  skipEmail: process.env.SKIP_EMAIL,
   keycloak: {
     token: process.env.KEYCLOAK_TOKEN_URL,
     username: process.env.KEYCLOAK_USERNAME,

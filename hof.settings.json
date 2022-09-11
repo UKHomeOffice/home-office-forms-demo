@@ -5,8 +5,10 @@
     "./apps/demo/behaviours/set-form-type"
   ],
   "routes": [
+    "./apps/common",
     "./apps/demo",
-    "./apps/rra-prototype"
+    "./apps/rra-prototype",
+    "./apps/verify"
   ],
   "session": {
     "name": "home-office-forms-demo.hof.sid"
