@@ -23,12 +23,12 @@ if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} ]]; then
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd -f kube/jobs/ms-schema-job.yml
   $kd -f kube/configmaps -f kube/certs
-  $kd -f kube/redis -f kube/html-pdf -f kube/app
+  $kd -f kube/redis -f kube/html-pdf -f kube/file-vault -f kube/app
 elif [[ ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd -f kube/jobs/ms-schema-job.yml
   $kd -f kube/configmaps
-  $kd -f kube/redis -f kube/html-pdf -f kube/app
+  $kd -f kube/redis -f kube/html-pdf -f kube/file-vault -f kube/app
 fi
 
 sleep $READY_FOR_TEST_DELAY

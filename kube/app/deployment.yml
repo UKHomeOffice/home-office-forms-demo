@@ -68,7 +68,13 @@ spec:
                   name: session-secret
                   key: session-secret
             {{ end }}
-             - name: PDF_CONVERTER_URL
+            - name: FILE_VAULT_URL
+              {{ if eq .KUBE_NAMESPACE .PROD_ENV }}
+              value: https://supp-docs.prod.{{ .APP_NAME }}.homeoffice.gov.uk/file
+              {{ else if eq .KUBE_NAMESPACE .BRANCH_ENV }}
+              value: https://fv-branch.{{ .BRANCH_ENV }}.homeoffice.gov.uk/file
+              {{ end }}
+            - name: PDF_CONVERTER_URL
               {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
               value: https://html-pdf-converter-{{ .DRONE_SOURCE_BRANCH }}:10443/convert
               {{ else }}
