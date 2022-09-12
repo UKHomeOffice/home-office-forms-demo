@@ -28,7 +28,7 @@ elif [[ ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
   $kd --delete -f kube/jobs/ms-schema-job.yml
   $kd -f kube/jobs/ms-schema-job.yml
   $kd -f kube/configmaps
-  $kd -f kube/redis -f kube/html-pdf -f -f kube/app
+  $kd -f kube/redis -f kube/html-pdf -f kube/app
 fi
 
 sleep $READY_FOR_TEST_DELAY
