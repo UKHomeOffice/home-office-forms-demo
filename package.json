@@ -25,6 +25,7 @@
     "device": "^0.3.12",
     "hof": "^19.12.2",
     "homeoffice-countries": "^0.1.0",
+    "is-pdf": "^1.0.0",
     "jimp": "^0.16.1",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
