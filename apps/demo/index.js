@@ -67,20 +67,20 @@ module.exports = {
       fields: ['appealStages'],
       next: '/confirm'
     },
-    '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
-      sections: require('./sections/summary-data-sections'),
-      next: '/confirmation'
-    },
-    '/confirmation': {
-      backLink: false
-    },
+    // '/confirm': {
+    //   behaviours: [SummaryPageBehaviour,'complete'],
+    //   sections: require('./sections/summary-data-sections'),
+    //   next: '/confirmation'
+    // },
+    // '/confirmation': {
+    //   backLink: false
+    // },
     '/international-phone-number': {
       behaviours: InternationalPhoneNumber,
       fields: [
         'int-phone-number'
       ],
       next: '/confirm'
-    },
+    }
   }
 };

@@ -410,8 +410,24 @@ function setupLabels(labels) {
 
 function formFocus() {
   var forms = document.getElementsByTagName('form');
+  var getElementFromSummaryLink = window.location.hash.replace(/^#/, '');
+  var getEditPath = window.location.pathname.split('/').pop();
   var labels;
   var summaries;
+
+  var editMode = getElementFromSummaryLink && getEditPath === 'edit';
+
+  if (getElementFromSummaryLink && document.getElementById(getElementFromSummaryLink) && editMode) {
+    document.getElementById(getElementFromSummaryLink).focus();
+  }
+
+  if (getElementFromSummaryLink && document.getElementById(getElementFromSummaryLink + '-group') && editMode) {
+    document.getElementById(getElementFromSummaryLink + '-group').scrollIntoView();
+  }
+
+  if (document.getElementById(getElementFromSummaryLink + '-day') && forms.length === 1 && editMode) {
+    document.getElementById(getElementFromSummaryLink + '-day').focus();
+  }
 
   if (forms.length > 0) {
     labels = document.getElementsByTagName('label');
@@ -693,7 +709,7 @@ function clicked(e) {
   var elem = helpers.target(e);
 
   var groupId = elem.getAttribute('href').replace(/^#/, '');
-  var group = document.getElementById(groupId);
+  var group = document.getElementById(groupId + '-group') || document.getElementById(groupId);
   var inputs;
 
   if (group) {
@@ -706,7 +722,12 @@ function clicked(e) {
     }
 
     if (inputs) {
-      inputs[0].focus();
+      if (inputs[0].getAttribute('type') === 'hidden') {
+        var getVisibleElements = group.querySelectorAll('input[type=text]');
+        getVisibleElements[0].focus();
+      } else {
+        inputs[0].focus();
+      }
     }
   }
 }

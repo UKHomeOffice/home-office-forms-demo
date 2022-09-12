@@ -72,7 +72,7 @@ module.exports = {
   countrySelect: {
     mixin: 'select',
     className: ['typeahead'],
-    options:[''].concat(require('homeoffice-countries').allCountries),
+    options: [''].concat(require('homeoffice-countries').allCountries),
     legend: {
       className: 'visuallyhidden'
     },
@@ -93,7 +93,7 @@ module.exports = {
       value: 8
     }]
   },
-  weaponsTypes:{
+  weaponsTypes: {
     mixin: 'checkbox-group',
     labelClassName: 'visuallyhidden',
     validate: ['required', notBothOptions],
@@ -101,7 +101,7 @@ module.exports = {
       {
         value: 'unspecified',
         child: 'partials/or'
-      },        
+      },
       'fully_automatic',
       'self_loading',
       'short_pistols',

@@ -1,0 +1,33 @@
+{{<partials-page}}
+  {{$page-content}}
+    {{#rows}}
+      {{#hasMultipleFields}}
+        {{> partials-multiple-fields-summary-table}}
+      {{/hasMultipleFields}}
+      {{^hasMultipleFields}}
+        {{> partials-summary-table}}
+      {{/hasMultipleFields}}
+    {{/rows}}
+    <div>
+      <h2>{{#t}}pages.confirm.sections.supportingDocuments.header{{/t}}</h2>
+    </div>
+    <table class="table-details">
+      <tbody>
+        <tr>
+          <td>Documents</td>
+          <td data-field="rraSupportingDocuments" class="no-white-space">
+            {{#images}}
+              <p>{{name}}</p>
+              <!-- <p><img src="{{thumbnail}}" alt="supportingDocuments" /></p> -->
+            {{/images}}
+            {{^images.length}}
+              {{#t}}pages.confirm.undefined{{/t}}
+            {{/images.length}}
+          </td>
+          <td><span><a href="{{baseUrl}}/rraSupportingDocumentsUploadConfirm/edit" id="rraSupportingDocuments-change">{{#t}}buttons.change{{/t}}</a></span></td>
+        </tr>
+      </tbody>
+    </table>
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}
