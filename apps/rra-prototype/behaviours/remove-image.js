@@ -7,7 +7,8 @@ module.exports = superclass => class extends superclass {
       const remaining = images.filter(i => i.id !== req.query.delete);
       req.log('info', `Reference: ${req.sessionModel.get('reference')}, Removing image: ${req.query.delete}`);
       req.sessionModel.set('images', remaining);
-      return res.redirect(req.path);
+      const path = req.baseUrl + req.path;
+      return res.redirect(path);
     }
     return super.configure(req, res, next);
   }
