@@ -90,7 +90,7 @@ Then('I should see {string} on the page', async function (content) {
 
 Then('I should see the {string} error', async function (content) {
   await this.page.waitForSelector('body', { timeout: 15000 });
-  expect(await this.page.innerText('.validation-summary.error-summary')).to.include(content);
+  expect(await this.page.innerText('.govuk-error-summary')).to.include(content);
 }.bind(World));
 
 Then('I select {string} and {string}', async function (field, value) {

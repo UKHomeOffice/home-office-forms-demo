@@ -23,12 +23,6 @@
     "header": "What is your address in the UK?",
     "intro": "If you have no fixed address, enter an address where we can contact you."
   },
-  "checkboxes": {
-    "header": "Where does your money come from each month?"
-  },
-  "radio": {
-    "header": "What country was the appeal lodged?"
-  },
   "country": {
     "header": "What country is your address located?"
   },
@@ -43,8 +37,7 @@
     "intro": "Briefly summarise your complaint. Include anything that can help our investigation."
   },
   "checkbox-not-both-options":{
-    "header": "Which sections do the weapons or components fall under?",
-    "intro": "Select all that apply",
+    "header": "Weapons or Components Section",
     "important": "Only in certain circumstances, such as transporting prohibited items under seal, should you select the unspecified option."
   },
   "select":{

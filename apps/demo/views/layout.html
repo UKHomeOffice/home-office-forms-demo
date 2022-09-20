@@ -5,49 +5,52 @@
   {{$pageTitle}}
     {{#errorlist.length}}{{#t}}errorlist.prefix{{/t}}{{/errorlist.length}}{{$header}}{{/header}} &ndash; GOV.UK
   {{/pageTitle}}
-  {{$headerClass}}with-proposition{{/headerClass}}
+  {{$bodyStart}}
+    <a href="#{{#skipToMain}}{{skipToMain}}{{/skipToMain}}{{^skipToMain}}main-content{{/skipToMain}}" class="govuk-skip-link" id="skip-to-main">Skip to main content</a>
+  {{/bodyStart}}
+  {{$headerClass}}govuk-header{{/headerClass}}
   {{$insideHeader}}{{/insideHeader}}
   {{$main}}
-    <main class="main" role="main">
-      <div class="phase-banner">
-        <p>
-          <strong class="phase-tag">{{#t}}journey.phase{{/t}}</strong>
-          <span>This is a new service – your <a href="{{feedbackUrl}}{{^feedbackUrl}}https://eforms.homeoffice.gov.uk/outreach/feedback.ofml{{/feedbackUrl}}">feedback</a> will help us to improve it.</span>
+    <div class="govuk-width-container ">
+    {{#feedbackUrl}}
+      <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">{{#t}}journey.phase{{/t}}</strong>
+        <span  class="govuk-phase-banner__text">This is a new service – your <a href="{{feedbackUrl}}{{^feedbackUrl}}https://eforms.homeoffice.gov.uk/outreach/feedback.ofml{{/feedbackUrl}}" class="govuk-link" id="feedback-link" target="_blank">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-      <nav class="app-navigation govuk-clearfix">
-        <ul class="app-navigation__list app-width-container">
+    {{/feedbackUrl}}    
+    <nav class="app-navigation govuk-clearfix">
+      <ul class="app-navigation__list app-width-container">
 
-          <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/" data-topnav="Get started">Get started</a>
-          </li>
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/" data-topnav="Get started">Get started</a>
+        </li>
 
-          <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/name?type=basic" data-topnav="Basic form">Basic form</a>
-          </li>
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/name?type=basic" data-topnav="Basic form">Basic form</a>
+        </li>
 
-          <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/name?type=complex" data-topnav="Complex form">Complex form</a>
-          </li>
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/name?type=complex" data-topnav="Complex form">Complex form</a>
+        </li>
 
-          <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/build-your-own-form/" data-topnav="Build your own form">Build your own form</a>
-          </li>
-        </ul>
-      </nav>
-      <div id="post-nav-content">
-        <div>
-          <span id="step">
-            {{> partials-back}} <span>{{$step}}{{/step}}</span>
-          </span>
-        </div>
-        <div class="grid-row" id="content">
-          {{> partials-maincontent-left}}
-        </div>
-        {{> partials-continue}}
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="/build-your-own-form/" data-topnav="Build your own form">Build your own form</a>
+        </li>
+      </ul>
+    </nav>  
+      <span id="step">
+        {{> partials-back}} <span>{{$step}}{{/step}}</span>
+      </span>
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+      <div class="govuk-grid-row" id="gov-grid-row-content">
+      {{> partials-maincontent-left}}
       </div>
-      <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
     </main>
+      {{> partials-continue}}
+      <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
+    </div>
   {{/main}}
   {{$cookieMessage}}
     {{#gaTagId}}
@@ -63,12 +66,12 @@
   {{$footerSupportLinks}}
     <ul>
       {{#footerSupportLinks}}
-        <li><a href="{{path}}">{{#t}}{{property}}{{/t}}</a></li>
+        <li class="govuk-footer__inline-list-item"><a href="{{path}}">{{#t}}{{property}}{{/t}}</a></li>
       {{/footerSupportLinks}}
       {{^footerSupportLinks}}
-        <li><a href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
-        <li><a href="/terms-and-conditions">{{#t}}base.terms{{/t}}</a></li>
-        <li><a href="/accessibility">{{#t}}base.accessibility{{/t}}</a></li>
+        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
+        <li class="govuk-footer__inline-list-item"><a  class="govuk-footer__link" href="/accessibility">{{#t}}base.accessibility{{/t}}</a></li>
+        <li class="govuk-footer__inline-list-item"><a  class="govuk-footer__link" href="/terms-and-conditions">{{#t}}base.terms{{/t}}</a></li>
       {{/footerSupportLinks}}
     </ul>
   {{/footerSupportLinks}}

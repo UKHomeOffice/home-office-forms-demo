@@ -16,6 +16,7 @@ module.exports = {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
   dateOfBirth: dateComponent('dateOfBirth', {
+    mixin: 'input-date',
     validate: ['required', 'before', { type: 'after', arguments: ['1900'] }]
   }),
   building: {
@@ -37,6 +38,7 @@ module.exports = {
   },
   incomeTypes: {
     mixin: 'checkbox-group',
+    isPageHeading: true,
     labelClassName: 'visuallyhidden',
     validate: ['required'],
     options: [
@@ -49,10 +51,8 @@ module.exports = {
   },
   countryOfHearing: {
     mixin: 'radio-group',
+    isPageHeading: true,
     validate: ['required'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [
       'englandAndWales',
       'scotland',
@@ -95,7 +95,6 @@ module.exports = {
   },
   weaponsTypes:{
     mixin: 'checkbox-group',
-    labelClassName: 'visuallyhidden',
     validate: ['required', notBothOptions],
     options: [
       {
@@ -113,7 +112,10 @@ module.exports = {
       'disguised_firearms',
       'military_use_rockets',
       'projecting_launchers'
-    ]
+    ],
+    legend: {
+      className: 'govuk-fieldset__legend--m'
+    }
   },
   appealStages: {
     mixin: 'select',
