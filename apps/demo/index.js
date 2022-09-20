@@ -8,8 +8,35 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 module.exports = {
   name: 'demo',
   steps: {
-    '/': {
-      template: 'start'
+    '/start': {
+      template: 'start',
+      next: '/choose'
+    },
+    '/choose': {
+      fields: ['chooseAForm'],
+      forks: [
+        {
+          target: '/name',
+          condition: {
+            field: 'chooseAForm',
+            value: 'basic'
+          }
+        },
+        {
+          target: '/name',
+          condition: {
+            field: 'chooseAForm',
+            value: 'complex'
+          }
+        },
+        {
+          target: '/build-your-own-form',
+          condition: {
+            field: 'chooseAForm',
+            value: 'build-your-own-form'
+          }
+        }
+      ]
     },
     '/build-your-own-form': {
       template: 'form-guidance-link'
@@ -35,7 +62,7 @@ module.exports = {
       forks: [{
         target: '/country',
         condition: {
-          field: 'form-type',
+          field: 'chooseAForm',
           value: 'complex'
         }
       }],

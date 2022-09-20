@@ -1,33 +1,5 @@
 $navigation-height: 50px;
 
-#post-nav-content {
-  padding-top: 3em;
-}
-
-@media (max-width: 688px) {
-  #post-nav-content {
-    padding-top: 6em;
-  }
-}
-
-@media (max-width: 640px) {
-  #post-nav-content {
-    padding-top: 8em;
-  }
-}
-
-@media (max-width: 400px) {
-  #post-nav-content {
-    padding-top: 10em;
-  }
-}
-
-@media (max-width: 240px) {
-  #post-nav-content {
-    padding-top: 15em;
-  }
-}
-
 .landing-page-list {
   list-style-type: disc;
   margin-left: 1em;

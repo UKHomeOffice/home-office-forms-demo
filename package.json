@@ -5,11 +5,12 @@
   "license": "MIT",
   "main": "index.js",
   "engines": {
-    "node": "^14.15.0"
+    "node": ">=14.15.0"
   },
   "scripts": {
     "start": "node server.js",
     "start:dev": "hof-build watch",
+    "dev": "hof-build watch --env",
     "test": "yarn run test:unit && yarn run test:lint",
     "test:lint": "eslint . --config ./node_modules/eslint-config-hof/default.js",
     "test:unit": "LOG_LEVEL=error nyc _mocha \"test/**/*.spec.js\"",
@@ -21,7 +22,7 @@
   },
   "author": "",
   "dependencies": {
-    "hof": "^19.12.2",
+    "hof": "^20.0.0",
     "homeoffice-countries": "^0.1.0",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",

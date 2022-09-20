@@ -4,8 +4,10 @@ Feature: Basic Form
 
   Scenario: Full Basic Form Submission
     Given I start the 'base' application journey
-    Then I go to the 'name' page on the 'basic' form journey
-    Then I continue to the next step
+    Then I click the 'Start' button
+    Then I should be on the 'choose' page showing 'Select a Form'
+    Then I select 'Basic Form'
+    Then I click the 'Continue' button
     Then I should be on the 'name' page showing 'What is your full name?'
     Then I fill 'name' with 'Jane Doe'
     Then I click the 'Continue' button
@@ -34,4 +36,4 @@ Feature: Basic Form
     Then I continue to the next step
     Then I should see 'Application complete' on the page
     Then I click the 'Start again' button
-    Then I should be on the '' page showing 'The Home Office Forms Framework Demo'
+    Then I should be on the 'start' page showing 'The Home Office Forms Framework Demo'
