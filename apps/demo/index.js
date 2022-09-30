@@ -8,9 +8,9 @@ const InternationalPhoneNumber = require('./behaviours/international-number');
 module.exports = {
   name: 'demo',
   steps: {
-    '/': {
-      template: 'start'
-    },
+    // '/': {
+    //   template: 'start'
+    // },
     '/build-your-own-form': {
       template: 'form-guidance-link'
     },
@@ -67,20 +67,20 @@ module.exports = {
       fields: ['appealStages'],
       next: '/confirm'
     },
-    '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete'],
-      sections: require('./sections/summary-data-sections'),
-      next: '/confirmation'
-    },
-    '/confirmation': {
-      backLink: false
-    },
+    // '/confirm': {
+    //   behaviours: [SummaryPageBehaviour,'complete'],
+    //   sections: require('./sections/summary-data-sections'),
+    //   next: '/confirmation'
+    // },
+    // '/confirmation': {
+    //   backLink: false
+    // },
     '/international-phone-number': {
       behaviours: InternationalPhoneNumber,
       fields: [
         'int-phone-number'
       ],
       next: '/confirm'
-    },
+    }
   }
 };

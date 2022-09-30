@@ -97,3 +97,9 @@ Then('I select {string} and {string}', async function (field, value) {
   await this.page.selectOption(`select#${field}`, { label: `${value}`});
   expect(await this.page.innerText('body')).to.include(value);
 }.bind(World));
+
+Then('I upload the {string} file', async function (file) {
+  mock({'testPath/test.png': Buffer.from([8, 6, 7, 5, 3, 0, 9]) });
+  await this.page.setInputFiles('input#image', `${file}`);
+  mock.restore();
+}.bind(World));

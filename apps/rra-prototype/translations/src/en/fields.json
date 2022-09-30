@@ -1,0 +1,172 @@
+{
+  "rraName": {
+    "label": "Full Name"
+  },
+  "rraAdelphiNumber": {
+    "label":"Adelphi Number"
+  },
+  "rraFunction": {
+    "label": "Function or Portfolio"
+  },
+  "rraEmail": {
+    "label": "Email Address",
+    "hint": "Please enter your home office email address"
+  },
+  "rraPassword": {
+    "label": "Password"
+  },
+  "appliedBefore": {
+    "legend": "Have you applied for RRA whilst in this role before?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rraRole": {
+    "label": "Role",
+    "hint": "For example, Associate Developer"
+  },
+  "rraGrouping": {
+    "label": "RRA Grouping",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraGrade": {
+    "label": "Substantive Grade",
+    "hint": "For example, SEO",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraLevels": {
+    "label": "Applying for Proficiency Level",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "currentRraLevel": {
+    "label": "Current Proficiency Level",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "lastAssessmentDate": {
+    "legend": "Date of Last Assessment"
+  },
+  "previousScore": {
+    "label": "Previous Score Acheived in the Last Assessment"
+  },
+  "rraSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraScores": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraEvidence": {
+    "label": "Evidence Statement"
+  },
+  "rraSkill2":{
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraScores2": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "rraEvidence2": {
+    "label": "Evidence Statement"
+  },
+  "qualifications": {
+    "label": "Please include any qualifications"
+  },
+  "higherRraSkill": {
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraScores": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraEvidence": {
+    "label": "Statement of Professional Proficiency Development"
+  },
+  "higherRraSkill2":{
+    "label": "Skill",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraScores2": {
+    "label": "Score",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "higherRraEvidence2": {
+    "label": "Statement of Professional Proficiency Development"
+  },
+  "cpdDescription": {
+    "label": "Professional Development in last 12 months",
+    "hint":"Please include any qualifications"
+  },
+  "rraSupportingDocumentsUpload": {
+    "hint": "You can provide no more than 6 products / documents (e.g. a business case, a MS Project Plan) that you have completed.",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you have some evidence you want to upload"
+    }
+  },
+  "rraSupportingDocuments": {
+    "label": "Supporting Document"
+  },
+  "rraSupportingDocumentsUploadMore": {
+    "hint": "You can provide no more than 6 products / documents (e.g. a business case, a MS Project Plan) that you have completed.",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    },
+    "validation": {
+      "required": "Select whether you want add another supporting document",
+      "tooMany": "You can only submit up to 6 supporting documents. Please delete any excess documents"
+    }
+  },
+  "images": {
+    "label": "Supporting Documents"
+  },
+  "anotherRraSupportingDocuments": {
+    "label": "Supporting Document"
+  },
+  "totalScore": {
+    "label": "Total Score"
+  }
+}
