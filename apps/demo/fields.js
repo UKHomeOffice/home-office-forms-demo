@@ -15,6 +15,7 @@ module.exports = {
   name: {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
+  
   dateOfBirth: dateComponent('dateOfBirth', {
     validate: ['required', 'before', { type: 'after', arguments: ['1900'] }]
   }),
