@@ -13,7 +13,7 @@ metadata:
   {{ end }}
   annotations:
     ingress.kubernetes.io/backend-protocol: "HTTPS"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    ingress.kubernetes.io/force-ssl-redirect: "true"
     kubernetes.io/ingress.class: "nginx-external"
     {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
     cert-manager.io/enabled: "true"
