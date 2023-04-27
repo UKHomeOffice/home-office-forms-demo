@@ -7,7 +7,6 @@ const SendEmail = require('./behaviours/send-email');
 
 module.exports = {
   name: 'dcu',
-  baseUrl: '/dcu',
   steps: {
     '/landing-page': {
       template: 'dcu',
