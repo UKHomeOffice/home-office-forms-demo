@@ -151,8 +151,8 @@ steps:
     image: node:18
     commands:
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.$${BRANCH_ENV}.homeoffice.gov.uk
-      - npx playwright install
-      - yarn run test:acceptance
+      - npx playwright install-deps
+      - npm run test:acceptance
     when:
       branch: master
       event: pull_request
