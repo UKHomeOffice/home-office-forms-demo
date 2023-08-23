@@ -79,7 +79,8 @@
     "legend": "International phone number"
   },
   "complaintDetails": {
-    "label": "Complaint details"
+    "label": "What are the details of your complaint?",
+    "hint": "Briefly summarise your complaint. Include anything that can help our investigation."
   },
   "countrySelect": {
     "label": "Select a country",

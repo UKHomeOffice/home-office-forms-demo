@@ -94,7 +94,7 @@ module.exports = {
   },
   complaintDetails: {
     mixin: 'textarea',
-    labelClassName: 'visuallyhidden',
+    isPageHeading: true,
     // we want to ignore default formatters as we want
     // to preserve white space
     'ignore-defaults': true,

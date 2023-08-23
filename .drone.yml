@@ -21,7 +21,7 @@ trigger:
 
 linting: &linting
   pull: if-not-exists
-  image: node:14
+  image: node:18
   environment:
     NOTIFY_KEY: USE_MOCK
   commands:
@@ -29,7 +29,7 @@ linting: &linting
 
 unit_tests: &unit_tests
   pull: if-not-exists
-  image: node:14
+  image: node:18
   environment:
     NOTIFY_KEY: USE_MOCK
   commands:
@@ -42,7 +42,7 @@ acceptance_tests: &acceptance_tests
 steps:
   - name: setup_deploy
     pull: if-not-exists
-    image: node:14
+    image: node:18
     environment:
       NOTIFY_KEY: USE_MOCK
     commands:
@@ -114,7 +114,7 @@ steps:
 
   - name: setup_branch
     pull: if-not-exists
-    image: node:14
+    image: node:18
     environment:
       NOTIFY_KEY: USE_MOCK
     commands:
