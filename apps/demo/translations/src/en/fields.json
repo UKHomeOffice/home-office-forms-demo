@@ -1,122 +1,60 @@
 {
   "name": {
-    "label": "Full name"
+    "label": "Full name of the person who applied"
   },
-  "dateOfBirth": {
-    "legend": "Date of birth",
-    "hint": "For example, 31 10 1990"
+  "email": {
+    "label": "Email address",
+    "hint": "This is where we will send our reply"
   },
-  "building": {
-    "label": "Building and street"
-  },
-  "street": {
-    "label": "Address line 2"
-  },
-  "townOrCity": {
-    "label": "Town or city"
-   },
-  "postcode": {
-    "label": "Postcode"
-  },
-  "incomeTypes" : {
-    "label": "Sources of income",
-    "legend": "Select the options where you receive income from",
-    "hint": "Select all options that apply to you.",
+  "application-submitted": {
+    "label": "Is your question about an ETA application that has been submitted?",
     "options": {
-      "salary": {
-        "label": "Salary"
+      "Yes": {
+        "label": "Yes"
       },
-      "universal_credit": {
-        "label": "Universal Credit"
-      },
-      "child_benefit": {
-        "label": "Child Benefit"
-      },
-      "housing_benefit": {
-        "label": "Housing Benefit"
-      },
-      "other": {
-        "label": "Other"
+      "No": {
+        "label": "No"
       }
     }
   },
-  "countryOfHearing": {
-    "label": "Country of hearing",
+  "whatIsYourQuestionAbout": {
+    "label": "What is your question about?",
     "options": {
-      "englandAndWales": {
-        "label": "England and Wales"
+      "I have not received a confirmation email": {
+        "label": "I have not received a confirmation email",
+        "hint": "Use this option if you did not get a confirmation email within 2 hours of applying"
       },
-      "scotland": {
-        "label": "Scotland"
+      "I have not received a decision": {
+        "label": "I have not received a decision",
+        "hint": "Use this option if you have not received a decision email within 3 working days of applying"
       },
-      "northernIreland": {
-        "label": "Northern Ireland"
+      "Question about the decision on my ETA": {
+        "label": "Question about the decision on my ETA"
+      },
+      "Something else": {
+        "label": "Something else"
       }
     }
   },
-  "email" : {
-    "label": "Email address"
-  },
-  "phone": {
-    "label": "Phone number",
-    "hint": "International phone numbers require the international dialling code, for example +44 808 157 0192"
-  },
-  "int-phone-number": {
-    "legend": "International phone number"
-  },
-  "complaintDetails": {
-    "label": "Complaint details"
-  },
-  "countrySelect": {
-    "label": "Select a country",
-    "hint": "Start to type the country name and options will appear"
-  },
-  "weaponsTypes":{
-    "label": "Selected weapon types(s)",
-    "legend": "Select all that apply",
+  "applicationMethod": {
+    "label": "How did you apply for your ETA?",
     "options": {
-      "unspecified": {
-        "label": "Unspecified sections"
+      "UK ETA app on Android": {
+        "label": "UK ETA app on Android"
       },
-      "fully_automatic": {
-        "label": "Fully automatic or burst-fire weapons - Section 5(1)(a)"
+      "UK ETA app on iPhone": {
+        "label": "UK ETA app on iPhone"
       },
-      "self_loading": {
-        "label": "Self-loading or pump-action rifles and carbines but not pistols - Section 5(1)(ab)"
-      },
-      "short_pistols": {
-        "label": "Short firearms pistols and revolvers - Section 5(1)(aba)"
-      },
-      "short_self_loading": {
-        "label": "Short self-loading or pump-action shotguns - Section 5(1)(ac)"
-      },
-      "large_revolvers": {
-        "label": "Large smooth-bore revolvers - Section 5(1)(ad)"
-      },
-      "rocket_launchers": {
-        "label": "Rocket launchers and mortars - Section 5(1)(ae)"
-      },
-      "air_rifles": {
-        "label": "Air rifle, air gun or air pistol for use with self-contained gas cartridge - Section 5(1)(af)"
-      },
-      "fire_noxious_substance": {
-        "label": "Weapons which fire noxious substances - Section 5(1)(b)"
-      },
-      "disguised_firearms": {
-        "label": "Firearms disguised as other objects - Section 5(1A)(a)"
-      },
-      "military_use_rockets": {
-        "label": "Rockets/ammunition with exploding missiles for military use - Section 5(1A)(b)"
-      },
-      "projecting_launchers": {
-        "label": "Launchers or projecting apparatus for use with the rockets or ammunition detailed above - Section 5(1A)(c)"
+      "Online": {
+        "label": "Online"
       }
     }
   },
-  "appealStages": {
-    "label": "Appeal stage",
-    "options": {
-      "null": "Select..."
-    }
+  "yourQuestion": {
+    "label": "Your question"
+  },
+  "etaReferenceNumber": {
+    "label": "ETA reference number (optional)",
+    "hint": "For example, 2021-1111-1111-1111. We need your ETA reference number to give specific information about your ETA."
   }
 }

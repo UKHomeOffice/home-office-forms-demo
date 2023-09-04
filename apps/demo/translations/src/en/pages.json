@@ -1,89 +1,25 @@
 {
-  "landing-page": {
-    "header": "Landing page",
-    "title": "The Home Office Forms Framework Demo",
-    "intro": "Choose one of the options below and press continue.",
-    "p1": "This is a demo application to give an idea to all audiences the capabilities of the Home Office Forms (HOF) Framework. This is used for a variety of live services which the majority are open sourced on <a href=\"https://github.com/UKHomeOffice\">Github</a>.",
-    "p2": "Currently, there are options in the navigation bar above to try out and test components supported by HOF:",
-    "li1": "The 'Basic form' covers your standard HTML elements used in most forms.",
-    "li2": "The 'Complex Form' extends off this and shows more complex components, i.e. addresses.",
-    "li3": "Lastly, there is 'Build your own form'. This is just a placeholder for the moment, but we would like to create a more interactive experience for potential stakeholders so they might be able to setup a test build through the UI to see if the framework might suit their needs. For now this section redirects to our technical documentation for more in-depth information."
-  },
-  "build-your-own-form": {
-    "title": "Build your own form",
-    "subheader": "Access the build your own form guidance link"
-  },
   "name": {
     "header": "What is your full name?"
   },
-  "dob": {
-    "header": "What is your date of birth?"
-  },
-  "address": {
-    "header": "What is your address in the UK?",
-    "intro": "If you have no fixed address, enter an address where we can contact you."
-  },
-  "checkboxes": {
-    "header": "Where does your money come from each month?"
-  },
-  "radio": {
-    "header": "What country was the appeal lodged?"
-  },
-  "country": {
-    "header": "What country is your address located?"
+  "application-submitted": {
+    "header": "Is your question about an ETA application that has been submitted?"
   },
   "email": {
     "header": "Enter your email address"
   },
-  "phone-number": {
-    "header": "Enter your phone number"
-  },
-  "text-input-area": {
-    "header": "What are the details of your complaint?",
-    "intro": "Briefly summarise your complaint. Include anything that can help our investigation."
-  },
-  "checkbox-not-both-options":{
-    "header": "Which sections do the weapons or components fall under?",
-    "intro": "Select all that apply",
-    "important": "Only in certain circumstances, such as transporting prohibited items under seal, should you select the unspecified option."
-  },
-  "select":{
-    "header": "What is the appeal stage?",
-    "intro": "Choose an appeal stage from the drop down menu"
-  },
-  "confirm": {
-    "header": "Check your answers before submitting your application.",
-    "sections": {
-      "applicantsDetails": {
-        "header": "Applicant's details"
-      },
-      "address": {
-        "header": "Address"
-      },
-      "income": {
-        "header": "Income"
-      },
-      "appealDetails": {
-        "header": "Appeal details"
-      },
-      "countrySelect": {
-        "header": "Country of residence"
-      },
-      "contactDetails": {
-        "header": "Contact details"
-      },
-      "complaintDetails": {
-        "header": "Complaint details"
-      }, 
-      "weaponsTypes": {
-        "header": "Weapons details"
+  "check-answers": {
+    "sections":{
+      "section1":{
+        "header": " "
+      }
+    },
+    "header": "Check your answers",
+    "footer": "Check the information you have entered is correct and send your form.",
+    "fields" : {
+      "application-submitted": {
+        "label": "Is your question about an ETA application that has been submitted?"
       }
     }
-  },
-  "confirmation": {
-    "title": "Application complete",
-    "alert": "Application complete",
-    "subheader": "Thank you",
-    "content": "You have completed an example of a form built using HOF."
   }
 }

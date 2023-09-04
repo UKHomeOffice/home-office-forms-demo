@@ -1,52 +1,24 @@
 {
   "name":{
-    "default": "Enter your full name"
+    "default": "Enter the full name of the person who applied",
+    "maxCharactersExceeded": "Full name must be 255 characters or less"
   },
-  "dateOfBirth": {
-    "default": "Enter your date of birth in the correct format; for example, 31 10 1990",
-    "after": "Enter a date after 1 1 1900",
-    "before": "Enter a date that is in the past"
+  "application-submitted": {
+    "default": "Select yes if your question is about an ETA that has been submitted"
   },
-  "building": {
-    "default": "Enter details of your building and street"
+  "whatIsYourQuestionAbout": {
+    "default": "Select what your question is about"
   },
-  "townOrCity": {
-    "default": "Enter a town or city",
-    "regex": "Enter a town or city without including digits"
+  "applicationMethod": {
+    "default": "Select how you applied for your ETA"
   },
-  "postcode": {
-    "default": "Enter your postcode"
-  },
-  "incomeTypes": {
-    "default": "Select all options that apply to you."
-  },
-  "countryOfHearing": {
-    "default": "Select where the appeal hearing is to be held"
-  },
-  "countrySelect": {
-    "default": "Enter a valid country of residence",
-    "required": "Enter your country of residence"
+  "yourQuestion": {
+    "default": "Enter your question"
   },
   "email": {
     "default": "Enter your email address in the correct format"
   },
-  "phone": {
-    "default": "Enter your phone number",
-    "internationalPhoneNumber": "Enter a valid phone number"
-  },
-  "int-phone-number": {
-    "required": "Enter an international phone number",
-    "internationalPhoneNumber": "Enter a valid international phone number"
-  },
-  "complaintDetails": {
-    "default": "Enter details about why you are making a complaint",
-    "maxlength": "Keep to the 5000 character limit"
-  },
-  "weaponsTypes":{
-    "required": "Select at least one option",
-    "notBothOptions": "You can't choose unspecified categories and choose a category. You must deselect the unspecified category option, or the selected categories to continue"
-  },
-  "appealStages": {
-    "required": "Select an appeal stage from the list"
+  "etaReferenceNumber": {
+    "incorrectFormat": "Enter an ETA reference number in the correct format, for example 2021-1111-1111-1111"
   }
 }
