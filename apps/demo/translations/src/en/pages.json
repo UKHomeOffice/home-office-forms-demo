@@ -1,25 +1,6 @@
 {
-  "name": {
-    "header": "What is your full name?"
-  },
-  "application-submitted": {
-    "header": "Is your question about an ETA application that has been submitted?"
-  },
-  "email": {
-    "header": "Enter your email address"
-  },
-  "check-answers": {
-    "sections":{
-      "section1":{
-        "header": " "
-      }
-    },
+  "confirm": {
     "header": "Check your answers",
-    "footer": "Check the information you have entered is correct and send your form.",
-    "fields" : {
-      "application-submitted": {
-        "label": "Is your question about an ETA application that has been submitted?"
-      }
-    }
+    "warning" :"Check the information you have entered is correct."
   }
 }

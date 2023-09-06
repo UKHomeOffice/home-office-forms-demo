@@ -102,16 +102,14 @@ module.exports = {
     },
     '/details-submitted': {
       fields: ['yourQuestion', 'email', 'name', 'etaReferenceNumber'],
-      next: '/check-answers'
+      next: '/confirm'
     },
-    '/check-answers': {
+    '/confirm': {
       behaviours: [summary],
-      sections: {
-        section1: [
-          'application-submitted'
-        ]
-      },
-      next: '/check-answers'
-    }
+      next: '/confirmation'
+    },
+    '/confirmation': {
+        backLink: false
+      }
   }
 };
