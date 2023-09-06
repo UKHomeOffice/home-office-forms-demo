@@ -12,10 +12,21 @@ function notBothOptions(vals) {
 }
 
 module.exports = {
+  chooseAForm: {
+    mixin: 'radio-group',
+    isPageHeading: true,
+    validate: ['required'],
+    options: [
+      'basic',
+      'complex',
+      'build-your-own-form'
+    ]
+  },
   name: {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
   dateOfBirth: dateComponent('dateOfBirth', {
+    mixin: 'input-date',
     validate: ['required', 'before', { type: 'after', arguments: ['1900'] }]
   }),
   building: {
@@ -29,14 +40,17 @@ module.exports = {
     validate: ['required', 'notUrl',
       { type: 'regex', arguments: /^([^0-9]*)$/ },
       { type: 'maxlength', arguments: 100 }
-    ]
+    ],
+    className: ['govuk-input', 'govuk-!-width-two-thirds']
   },
   postcode: {
     validate: ['required', 'postcode'],
-    formatter: ['removespaces', 'uppercase']
+    formatter: ['removespaces', 'uppercase'],
+    className: ['govuk-input', 'govuk-input--width-10']
   },
   incomeTypes: {
     mixin: 'checkbox-group',
+    isPageHeading: true,
     labelClassName: 'visuallyhidden',
     validate: ['required'],
     options: [
@@ -49,10 +63,8 @@ module.exports = {
   },
   countryOfHearing: {
     mixin: 'radio-group',
+    isPageHeading: true,
     validate: ['required'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [
       'englandAndWales',
       'scotland',
@@ -63,11 +75,13 @@ module.exports = {
     validate: ['required', 'email']
   },
   phone: {
-    validate: ['required', 'internationalPhoneNumber']
+    validate: ['required', 'internationalPhoneNumber'],
+    className: ['govuk-input', 'govuk-input--width-20']
   },
   'int-phone-number': {
     validate: ['required'],
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'visuallyhidden',
+    className: ['govuk-input', 'govuk-input--width-20']
   },
   countrySelect: {
     mixin: 'select',
@@ -80,7 +94,7 @@ module.exports = {
   },
   complaintDetails: {
     mixin: 'textarea',
-    labelClassName: 'visuallyhidden',
+    isPageHeading: true,
     // we want to ignore default formatters as we want
     // to preserve white space
     'ignore-defaults': true,
@@ -95,7 +109,6 @@ module.exports = {
   },
   weaponsTypes:{
     mixin: 'checkbox-group',
-    labelClassName: 'visuallyhidden',
     validate: ['required', notBothOptions],
     options: [
       {
@@ -113,7 +126,10 @@ module.exports = {
       'disguised_firearms',
       'military_use_rockets',
       'projecting_launchers'
-    ]
+    ],
+    legend: {
+      className: 'govuk-fieldset__legend--m'
+    }
   },
   appealStages: {
     mixin: 'select',

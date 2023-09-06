@@ -4,7 +4,7 @@
     "title": "The Home Office Forms Framework Demo",
     "intro": "Choose one of the options below and press continue.",
     "p1": "This is a demo application to give an idea to all audiences the capabilities of the Home Office Forms (HOF) Framework. This is used for a variety of live services which the majority are open sourced on <a href=\"https://github.com/UKHomeOffice\">Github</a>.",
-    "p2": "Currently, there are options in the navigation bar above to try out and test components supported by HOF:",
+    "p2": "Currently, there are options to try out and test components supported by HOF:",
     "li1": "The 'Basic form' covers your standard HTML elements used in most forms.",
     "li2": "The 'Complex Form' extends off this and shows more complex components, i.e. addresses.",
     "li3": "Lastly, there is 'Build your own form'. This is just a placeholder for the moment, but we would like to create a more interactive experience for potential stakeholders so they might be able to setup a test build through the UI to see if the framework might suit their needs. For now this section redirects to our technical documentation for more in-depth information."
@@ -23,12 +23,6 @@
     "header": "What is your address in the UK?",
     "intro": "If you have no fixed address, enter an address where we can contact you."
   },
-  "checkboxes": {
-    "header": "Where does your money come from each month?"
-  },
-  "radio": {
-    "header": "What country was the appeal lodged?"
-  },
   "country": {
     "header": "What country is your address located?"
   },
@@ -38,13 +32,8 @@
   "phone-number": {
     "header": "Enter your phone number"
   },
-  "text-input-area": {
-    "header": "What are the details of your complaint?",
-    "intro": "Briefly summarise your complaint. Include anything that can help our investigation."
-  },
   "checkbox-not-both-options":{
-    "header": "Which sections do the weapons or components fall under?",
-    "intro": "Select all that apply",
+    "header": "Weapons or Components Section",
     "important": "Only in certain circumstances, such as transporting prohibited items under seal, should you select the unspecified option."
   },
   "select":{
@@ -77,6 +66,17 @@
       }, 
       "weaponsTypes": {
         "header": "Weapons details"
+      }
+    },
+    "fields": {
+      "countryOfHearing": {
+        "label": "Country of hearing"
+      },
+      "countrySelect": {
+        "label": "Country"
+      },
+      "complaintDetails": {
+        "label": "Complaint details"
       }
     }
   },

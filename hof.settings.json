@@ -1,9 +1,6 @@
 {
   "appName": "Home Office Forms Demo",
   "theme": "govUK",
-  "behaviours": [
-    "./apps/demo/behaviours/set-form-type"
-  ],
   "routes": [
     "./apps/demo"
   ],

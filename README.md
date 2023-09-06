@@ -18,13 +18,13 @@ source ~/.bash_profile
 Install the correct version of node
 
 ```bash
-nvm install 14.15.0
+nvm install 18.12.1
 ```
 
 Set the node version
 
 ```bash
-nvm use 14.15.0
+nvm use 18.12.1
 ```
 
 Clone the service locally

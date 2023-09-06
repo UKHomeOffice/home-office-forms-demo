@@ -1,4 +1,7 @@
 {
+  "chooseAForm":{
+    "required": "Select an option"
+  },
   "name":{
     "default": "Enter your full name"
   },

@@ -1,4 +1,18 @@
 {
+  "chooseAForm": {
+    "legend": "Select a Form",
+    "options": {
+      "basic": {
+        "label": "Basic Form"
+      },
+      "complex": {
+        "label": "Complex Form"
+      },
+      "build-your-own-form": {
+        "label": "Build your own form"
+      }
+    }
+  },
   "name": {
     "label": "Full name"
   },
@@ -20,8 +34,8 @@
   },
   "incomeTypes" : {
     "label": "Sources of income",
-    "legend": "Select the options where you receive income from",
-    "hint": "Select all options that apply to you.",
+    "legend": "Where does your money come from each month?",
+    "hint": "Select the options where you receive income from. Select all options that apply to you.",
     "options": {
       "salary": {
         "label": "Salary"
@@ -41,7 +55,7 @@
     }
   },
   "countryOfHearing": {
-    "label": "Country of hearing",
+    "legend": "What country was the appeal lodged?",
     "options": {
       "englandAndWales": {
         "label": "England and Wales"
@@ -65,7 +79,8 @@
     "legend": "International phone number"
   },
   "complaintDetails": {
-    "label": "Complaint details"
+    "label": "What are the details of your complaint?",
+    "hint": "Briefly summarise your complaint. Include anything that can help our investigation."
   },
   "countrySelect": {
     "label": "Select a country",
@@ -73,7 +88,8 @@
   },
   "weaponsTypes":{
     "label": "Selected weapon types(s)",
-    "legend": "Select all that apply",
+    "legend": "Which sections do the weapons or components fall under?",
+    "hint": "Select all that apply",
     "options": {
       "unspecified": {
         "label": "Unspecified sections"
