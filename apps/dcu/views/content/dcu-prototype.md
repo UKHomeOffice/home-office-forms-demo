@@ -23,6 +23,6 @@ Please see below links that may help resolve your query:
 * [Protecting children from radicalisation: the prevent duty - GOV.UK (www.gov.uk)](https://www.gov.uk/government/publications/protecting-children-from-radicalisation-the-prevent-duty)
 * [Security Industry Authority - GOV.UK (www.gov.uk)](https://www.gov.uk/government/organisations/security-industry-authority)
 
-If none of these links relate to your query please click 'Continue'.
+If none of these links relate to your query please click 'Continue' to complete the query form.
 
 

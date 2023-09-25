@@ -1,0 +1,29 @@
+{{<partials-page}}
+{{$page-content}}
+<div class="">
+  <h1 class="govuk-heading-l">
+    Contact the Home Office
+  </h1>
+</div>
+<h2 class="govuk-heading-m">You are contacting the Home Office about</h2>
+<p class="search-query">{{values.api-search}}</p>
+<br>
+{{^values.results}}
+<h2 class="govuk-heading-m">No results found</h2>
+{{/values.results}}
+
+{{#values.results.length}}
+<h2 class="govuk-heading-m">The following information may help:</h2>
+  {{#values.results}}
+  <p class="search-results"><a href="https://www.gov.uk{{link}}">{{title}}</a></p>
+  {{/values.results}}
+
+<div class="more-results"><a href="https://www.gov.uk/search?q={{values.api-search}}">More results</a></div>
+
+{{/values.results.length}}
+<br>
+{{#renderField}}still-contact{{/renderField}}
+
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

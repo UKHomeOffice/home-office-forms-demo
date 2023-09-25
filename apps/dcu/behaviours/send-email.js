@@ -6,13 +6,12 @@ const _ = require('lodash');
 
 
 module.exports = superclass => class Submit extends superclass {
-  saveValues(req, res, next) {
+  async saveValues(req, res, next) {
     const reference = uuid.v1();
     const emailSubjectValue = req.form.historicalValues.emailSubject;
-    const emailSubject = _.get( _.find(emailSubjectOptions, e => e.value === emailSubjectValue), 'label', '');
-
-
-    return utils.sendEmail(req.sessionModel.toJSON(), reference, emailSubject)
+    const emailSubject = _.get(_.find(emailSubjectOptions, e => e.value === emailSubjectValue), 'label', '');
+    await utils.sendEmail(req.sessionModel.toJSON(), reference, emailSubject)
+    await utils.sendCaseworkerEmail(req.sessionModel.toJSON(), reference, emailSubject)
       .then(() => Submit.handleSuccess(req, next, reference, true))
       .catch(err => Submit.handleError(req, next, reference, err, true));
   }

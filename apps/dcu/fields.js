@@ -1,9 +1,28 @@
 /* eslint-disable */
 'use strict';
 
-const emailSubjectOptions = require('./lib/emailSubjectOptions')
-
 module.exports = {
+  'api-search': {
+    validate: ['required']
+  },
+  'still-contact': {
+    mixin: 'radio-group',
+    legend: {
+      className: ['bold']
+    },
+    options: [
+      {
+        value: 'yes'
+        // toggle: 'contact-details-fieldset',
+        // child: 'partials/contact-details'
+      },
+      {
+        value: 'no',
+        toggle: 'feedback-link-fieldset',
+        child: 'partials/feedback-link'
+      }
+    ]
+  },
   name: {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 200 }],
   },
@@ -30,14 +49,9 @@ module.exports = {
   emailVerify: {
     validate: ['required', 'email']
   },
-  emailSubject : {
-    mixin: 'select',
-    labelclassName: 'visuallyhidden',
-    validate: ['required'],
-    options: [{
-      value: '',
-      label: 'fields.emailSubject.options.null'
-    }].concat(emailSubjectOptions.getEmailSubjectOptions())
+  emailSubject: {
+    mixin: 'input-text',
+    validate: ['required']
   },
   description: {
     mixin: 'textarea',

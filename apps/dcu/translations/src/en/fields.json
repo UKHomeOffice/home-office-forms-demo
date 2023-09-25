@@ -1,4 +1,15 @@
 {
+  "still-contact": {
+    "legend": "Do you still need to contact the Home Office?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
   "name": {
     "label": "Full name"
   },

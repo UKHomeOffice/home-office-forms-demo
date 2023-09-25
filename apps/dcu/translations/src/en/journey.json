@@ -1,3 +1,6 @@
 {
-  "header": "Home Office"
+  "header": "Home Office",
+  "confirmation": {
+    "message": "Query sent"
+  }
 }

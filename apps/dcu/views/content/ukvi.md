@@ -14,5 +14,5 @@ Please see below links that may help resolve your query:
 
 * [Report an immigration or border crime - GOV.UK (www.gov.uk)](​https://www.gov.uk/report-immigration-crime)
 
-If none of these links relate to your query please click 'Continue' to complete the query form:
+If none of these links relate to your query please click 'Continue'.
 
