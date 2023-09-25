@@ -1,0 +1,31 @@
+{
+  "name":{
+    "default": "Enter your full name"
+  },
+  "building": {
+    "default": "Enter details of your building and street"
+  },
+  "townOrCity": {
+    "default": "Enter a town or city",
+    "regex": "Enter a town or city without including digits"
+  },
+  "postcode": {
+    "default": "Enter your postcode"
+  },
+  "email": {
+    "default": "Enter your email address in the correct format",
+    "notSame": "Your email addresses do not match"
+  },
+  "emailVerify": {
+    "required": "Please enter your email address again",
+    "default": "Enter your email address in the correct format",
+    "notSame": "Your email addresses do not match"
+  },
+  "emailSubject" : {
+    "required": "Select an option below"
+  },
+  "description": {
+    "required": "Describe your query below",
+    "maxlength": "Keep to the 1000 character limit"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "landing-page": {
+    "header": "Home Office"
+  },
+  "ukvi": {
+    "header": "Home Office"
+  },
+  "name": {
+    "header": "What is your full name?"
+  },
+  "address": {
+    "header": "What is your address in the UK?",
+    "intro": "If you have no fixed address, enter an address where we can contact you."
+  },
+  "email": {
+    "header": "Enter your email address"
+  },
+  "email-subject": {
+    "header": "Email query",
+    "intro": "Choose an option from the drop down menu"
+  },
+  "confirm": {
+    "header": "Check your answers before submitting your application.",
+    "sections": {
+      "personalDetails": {
+        "header": "Personal details"
+      },
+      "address": {
+        "header": "Address"
+      },
+      "emailQuery": {
+        "header": "Email query"
+      }
+    }
+  },
+  "confirmation": {
+    "alert": "Application complete",
+    "content": "You should receive an email confirmation shortly"
+  }
+}
