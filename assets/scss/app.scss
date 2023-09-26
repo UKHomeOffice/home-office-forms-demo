@@ -1,6 +1,6 @@
 
 @import "hof/frontend/themes/gov-uk/styles/govuk";
-@import "landing-page";
+
 
 //autocomplete styling
 .tt-menu {
@@ -32,4 +32,10 @@
   }
   .form-guidance {
     margin-top: -50px;
+  }
+
+  ul {
+    @extend .text;
+    @extend .list;
+    @extend .list-bullet;
   }

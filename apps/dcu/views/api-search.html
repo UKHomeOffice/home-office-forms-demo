@@ -1,0 +1,13 @@
+{{<partials-page}}
+{{$page-content}}
+<div class="govuk-form-group {{#errors.api-search}}govuk-form-group--error{{/errors.api-search}}">
+  {{#errors.api-search}}
+      <p class="govuk-error-message">
+        {{errors.api-search.message}}
+      </p>
+    {{/errors.api-search}}
+  <input class="govuk-input {{#errors.api-search}}govuk-input--error{{/errors.api-search}}" type="search" id="query" name="api-search" placeholder="Search...">
+</div>
+  {{#input-submit}}search{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

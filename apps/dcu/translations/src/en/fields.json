@@ -1,0 +1,43 @@
+{
+  "still-contact": {
+    "legend": "Do you still need to contact the Home Office?",
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "name": {
+    "label": "Full name"
+  },
+  "email" : {
+    "label": "Email address"
+  },
+  "building": {
+    "label": "Building and street"
+  },
+  "street": {
+    "label": "Address line 2"
+  },
+  "townOrCity": {
+    "label": "Town or city"
+   },
+  "postcode": {
+    "label": "Postcode"
+  },
+  "emailSubject" : {
+    "label": "Email Subject",
+    "options": {
+      "null": "Select..."
+    }
+  },
+  "emailVerify": {
+    "label": "Confirm email address"
+  },
+  "description": {
+    "label": "Description"
+  }
+}
