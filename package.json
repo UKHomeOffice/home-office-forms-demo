@@ -24,7 +24,7 @@
   "dependencies": {
     "hof": "^20.0.0",
     "homeoffice-countries": "^0.1.0",
-    "jquery": "^3.6.0",
+    "jquery": "^3.7.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "typeahead-aria": "^1.0.4"
