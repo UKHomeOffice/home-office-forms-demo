@@ -43,6 +43,7 @@ module.exports = {
     },
     '/name': {
       fields: ['name'],
+      locals: { showSaveAndExit: true },
       next: '/dob'
     },
     '/dob': {
@@ -109,5 +110,8 @@ module.exports = {
       ],
       next: '/confirm'
     },
+    '/session-timeout': {},
+    '/exit': {},
+    '/save-and-exit': {},
   }
 };
