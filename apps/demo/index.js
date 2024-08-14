@@ -4,6 +4,7 @@
 const CountrySelect = require('./behaviours/country-select')
 const SummaryPageBehaviour = require('hof').components.summary;
 const InternationalPhoneNumber = require('./behaviours/international-number');
+const LogIPAddress = require('./behaviours/log-ipaddress');
 
 module.exports = {
   name: 'demo',
@@ -42,6 +43,7 @@ module.exports = {
       template: 'form-guidance-link'
     },
     '/name': {
+      behaviours: LogIPAddress,
       fields: ['name'],
       next: '/dob'
     },
