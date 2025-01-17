@@ -4,6 +4,9 @@
   "routes": [
     "./apps/demo"
   ],
+  "behaviours": [
+    "hof/components/session-timeout-warning"
+  ],
   "session": {
     "name": "home-office-forms-demo.hof.sid"
   },

@@ -1,7 +1,22 @@
-<title>{{#t}}pages.confirmation.title{{/t}} – GOV.UK</title>
-{{<partials-page}}
-   {{$page-content}}
+{{<layout}}
+  {{$journeyHeader}}
+  {{#t}}journey.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+  {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$pageTitle}}
+  {{#t}}pages.confirmation.title{{/t}} - GOV.UK
+  {{/pageTitle}}
+
+  {{$header}}
+    {{header}}
+  {{/header}}
+
+  {{$content}}
      {{>partials-confirmation-alert}}
      <a href="/" class="button" role="button">{{#t}}buttons.start-again{{/t}}</a>
-   {{/page-content}}
- {{/partials-page}}
+  {{/content}}
+ {{/layout}}
